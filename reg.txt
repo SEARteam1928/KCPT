@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+            generate();
+
+
+
+      //Parser.parse();
+    }
+
+
+    private static void generate(){
+        while (true) {
+            try {
+                Scanner sc = new Scanner(System.in);
+
+            int select = sc.nextInt();
+
+                if (select == 1) {
+                    printWorkTimeGenerateFull();
+                }
+        }catch (Exception e){
+                System.out.println("Введите число еще раз");
+            }
+        }
+    }
+
+    private static void printWorkTimeGenerateFull(){
+        long time = System.nanoTime();
+
+        System.out.println(generateFull()+"auto@gmail.com");
+        System.out.println(generateFull()+"RANDOMSymbols");
+
+        time = System.nanoTime() - time;
+        System.out.printf("Elapsed %,9.3f ms\n", time/1_000_000.0);
+    }
+
+
+    private static String generateFull(){
+        int a1 = (int) (Math.random()*999999999);
+        int a2 = (int) (Math.random()*999999999);
+
+        return a1+""+a2;
+    }
+
+}
