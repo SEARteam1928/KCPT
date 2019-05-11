@@ -245,10 +245,6 @@ class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
                     baseSearchDialogCompat.dismiss()
                 }).show()
             }
-            R.id.action_signOut -> {
-                signOut()
-                return true
-            }
         }
         return super.onOptionsItemSelected(item)
     }

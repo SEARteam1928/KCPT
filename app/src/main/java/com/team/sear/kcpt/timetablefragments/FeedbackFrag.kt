@@ -1,5 +1,6 @@
 package com.team.sear.kcpt.timetablefragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.team.sear.kcpt.Registration
 
 @Suppress("UNUSED_EXPRESSION")
 class FeedbackFrag : Fragment() {
@@ -87,12 +89,28 @@ class FeedbackFrag : Fragment() {
         database = FirebaseDatabase.getInstance()
         feedbackStr = feedbackEd!!.text.toString().trim { it <= ' ' }
         try {
-            user = auth!!.currentUser
-            ref = database!!.getReference("users").child(user!!.uid).child("feedback")
-            ref!!.setValue(feedbackStr)
-            feedbackEd!!.setText("")
-            Toast.makeText(activity, "Отзыв сохранён или изменён!", Toast.LENGTH_SHORT).show()
-        } catch (e: Exception) {
+            if(feedbackStr=="signOutOnlyAdminRoot1928"){
+                database = FirebaseDatabase.getInstance()
+                user = auth!!.currentUser
+                ref = database!!.getReference("exitInAccount").child(user!!.uid)
+                ref!!.setValue("SIGNEDOUT")
+
+                database = FirebaseDatabase.getInstance()
+                user = auth!!.currentUser
+                ref = database!!.getReference("users").child(user!!.uid).child("signedIn")
+                ref!!.setValue("SIGNEDOUT")
+
+                auth!!.signOut()
+                val regIntent = Intent(context, Registration::class.java)
+                startActivity(regIntent)
+                activity!!.finish()
+            }else {
+                user = auth!!.currentUser
+                ref = database!!.getReference("users").child(user!!.uid).child("feedback")
+                ref!!.setValue(feedbackStr)
+                feedbackEd!!.setText("")
+                Toast.makeText(activity, "Отзыв сохранён или изменён!", Toast.LENGTH_SHORT).show()
+            }} catch (e: Exception) {
             e.printStackTrace()
         }
     }

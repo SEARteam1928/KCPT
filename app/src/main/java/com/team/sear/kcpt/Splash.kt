@@ -37,7 +37,7 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash)
         navigateIntent = Intent(this, Navigate::class.java)
-        registrationIntent = Intent(this, SelectReg::class.java)
+        registrationIntent = Intent(this, RegistrationNew::class.java)
         try {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true)
         } catch (e: Exception) {

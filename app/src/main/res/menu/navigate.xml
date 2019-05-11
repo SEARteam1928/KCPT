@@ -13,9 +13,4 @@
         android:icon="@android:drawable/ic_menu_today"
         android:title=""
         app:showAsAction="always" />
-    <item
-        android:id="@+id/action_signOut"
-        android:orderInCategory="100"
-        android:title="Выйти из аккаунта"
-        app:showAsAction="never" />
 </menu>
