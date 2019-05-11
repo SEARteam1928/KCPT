@@ -24,20 +24,19 @@ class ChangesParser {
                 "2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
 
         groupName = page.select("table")[0].select("tr")[groupSelectInt].select("td")[0].text()
-        if(groupNameStr=="noChangesOrNotStudent"){
+        if (groupNameStr == "noChangesOrNotStudent") {
             groupSelectInt = 0
-        }
-        else{
-        if (groupName != groupNameStr) {
-            groupSelectInt++
-            if (groupSelectInt != page.select("table")[0].select("tbody").select("tr").size) {
-                selectGroup(groupNameStr)
-            } else {
-                groupSelectInt = 0
+        } else {
+            if (groupName != groupNameStr) {
+                groupSelectInt++
+                if (groupSelectInt != page.select("table")[0].select("tbody").select("tr").size) {
+                    selectGroup(groupNameStr)
+                } else {
+                    groupSelectInt = 0
+                }
             }
-        }}
+        }
     }
-
 
 
     private val changesPrivate: String?

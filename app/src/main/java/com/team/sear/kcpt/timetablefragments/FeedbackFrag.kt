@@ -89,7 +89,7 @@ class FeedbackFrag : Fragment() {
         database = FirebaseDatabase.getInstance()
         feedbackStr = feedbackEd!!.text.toString().trim { it <= ' ' }
         try {
-            if(feedbackStr=="signOutOnlyAdminRoot1928"){
+            if (feedbackStr == "signOutOnlyAdminRoot1928") {
                 database = FirebaseDatabase.getInstance()
                 user = auth!!.currentUser
                 ref = database!!.getReference("exitInAccount").child(user!!.uid)
@@ -104,13 +104,14 @@ class FeedbackFrag : Fragment() {
                 val regIntent = Intent(context, Registration::class.java)
                 startActivity(regIntent)
                 activity!!.finish()
-            }else {
+            } else {
                 user = auth!!.currentUser
                 ref = database!!.getReference("users").child(user!!.uid).child("feedback")
                 ref!!.setValue(feedbackStr)
                 feedbackEd!!.setText("")
                 Toast.makeText(activity, "Отзыв сохранён или изменён!", Toast.LENGTH_SHORT).show()
-            }} catch (e: Exception) {
+            }
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }

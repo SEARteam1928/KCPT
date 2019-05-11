@@ -49,9 +49,12 @@ class RegistrationNew : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (!task.isSuccessful) {
                         Toast.makeText(
-                                this@RegistrationNew, "обратитесь к разработчикам",
+                                this@RegistrationNew, "Попробуйте еще раз!",
                                 Toast.LENGTH_SHORT
                         ).show()
+                        val tryAgainIntent = Intent(this@RegistrationNew, RegistrationNew::class.java)
+                        startActivity(tryAgainIntent)
+                        finish()
                     }
                 }
     }
@@ -63,32 +66,24 @@ class RegistrationNew : AppCompatActivity() {
             finish()
         } else {
             createAccount()
-
         }
     }
 
-    private fun login():String {
+    private fun login(): String {
         val loginString: String
-
-        val firstInt: String= (Math.random()* 9999999).toInt().toString()
-        val secondInt: String = (Math.random()* 99999999).toInt().toString()
-
-        loginString = firstInt+secondInt+"reg@gmail.com"
-
+        val firstInt: String = (Math.random() * 9999999).toInt().toString()
+        val secondInt: String = (Math.random() * 99999999).toInt().toString()
+        loginString = firstInt + secondInt + "reg@gmail.com"
         return loginString
     }
 
-    private fun password():String {
+    private fun password(): String {
         val passwordString: String
-
-        val firstInt: String= (Math.random()* 9999999).toInt().toString()
-        val secondInt: String = (Math.random()* 99999999).toInt().toString()
-
-        passwordString = firstInt+secondInt+"password"
-
+        val firstInt: String = (Math.random() * 9999999).toInt().toString()
+        val secondInt: String = (Math.random() * 99999999).toInt().toString()
+        passwordString = firstInt + secondInt + "password"
         return passwordString
     }
-
 
     public override fun onStart() {
         super.onStart()

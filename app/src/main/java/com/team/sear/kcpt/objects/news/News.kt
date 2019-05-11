@@ -1,6 +1,6 @@
 package com.team.sear.kcpt.objects.news
 
-class News{
+class News {
     lateinit var title: String
     lateinit var imageLink: String
     lateinit var date: String

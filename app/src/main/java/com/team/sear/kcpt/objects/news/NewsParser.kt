@@ -5,7 +5,7 @@ import java.net.URLEncoder
 
 class NewsParser {
 
-    private fun getTitle(page: Document, elementInt: Int): String{
+    private fun getTitle(page: Document, elementInt: Int): String {
         return try {
             page.select("h4[class=ib]")[elementInt].text()
         } catch (e: Exception) {
@@ -13,11 +13,11 @@ class NewsParser {
         }
     }
 
-    fun title(page: Document, elementInt: Int): String{
-        return getTitle(page,elementInt)
+    fun title(page: Document, elementInt: Int): String {
+        return getTitle(page, elementInt)
     }
 
-    private fun getImageLink(page: Document, elementInt: Int): String{
+    private fun getImageLink(page: Document, elementInt: Int): String {
         var splitedImageLink: String? = null
         var urle: String
         try {
@@ -39,8 +39,8 @@ class NewsParser {
 
     }
 
-    fun imageLink(page: Document, elementInt: Int): String{
-        return getImageLink(page,elementInt)
+    fun imageLink(page: Document, elementInt: Int): String {
+        return getImageLink(page, elementInt)
     }
 
     private fun getDate(page: Document, elementInt: Int): String? {
@@ -56,7 +56,7 @@ class NewsParser {
     }
 
     fun date(page: Document, elementInt: Int): String? {
-        return getDate(page,elementInt)
+        return getDate(page, elementInt)
     }
 
     private fun getDescription(page: Document, elementInt: Int): String? {
@@ -68,7 +68,7 @@ class NewsParser {
     }
 
     fun description(page: Document, elementInt: Int): String? {
-        return getDescription(page,elementInt)
+        return getDescription(page, elementInt)
     }
 
     private fun getMoreLink(page: Document, elementInt: Int): String? {
@@ -80,7 +80,7 @@ class NewsParser {
     }
 
     fun moreLink(page: Document, elementInt: Int): String? {
-        return getMoreLink(page,elementInt)
+        return getMoreLink(page, elementInt)
     }
 
 

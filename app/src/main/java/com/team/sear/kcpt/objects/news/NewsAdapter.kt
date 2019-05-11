@@ -12,13 +12,12 @@ import com.team.sear.kcpt.R
 import uk.co.senab.photoview.PhotoView
 
 
-
-class NewsAdapter(private val news: Array<News?>): RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+class NewsAdapter(private val news: Array<News?>) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
     private lateinit var itemView: View
     override fun getItemCount() = news.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        itemView = LayoutInflater.from(parent.context).inflate(R.layout.news_item_view,parent,false)
+        itemView = LayoutInflater.from(parent.context).inflate(R.layout.news_item_view, parent, false)
         return ViewHolder(itemView)
     }
 
@@ -26,15 +25,11 @@ class NewsAdapter(private val news: Array<News?>): RecyclerView.Adapter<NewsAdap
         holder.titletv?.text = news[position]?.title
         holder.datetv?.text = news[position]?.date
         holder.descriptiontv?.text = news[position]?.description
-        /*holder.moreLinktv?.text = news[position]?.moreLink*/
         Picasso.with(itemView.context).load(news[position]?.imageLink)
                 .into(holder.newsImageView)
         holder.webNews?.visibility = View.GONE
         holder.backBt?.visibility = View.GONE
         holder.moreLinktv!!.setOnClickListener {
-/*
-            var pos = holder.adapterPosition
-*/
 
             holder.webNews!!.visibility = View.VISIBLE
             holder.backBt!!.visibility = View.VISIBLE
@@ -43,8 +38,9 @@ class NewsAdapter(private val news: Array<News?>): RecyclerView.Adapter<NewsAdap
             holder.webNews!!.settings.supportZoom()
             holder.webNews!!.settings.displayZoomControls
             holder.webNews!!.settings.loadWithOverviewMode
-            try{holder.webNews!!.loadUrl(news[position]!!.moreLink)}
-            catch (e: Exception){
+            try {
+                holder.webNews!!.loadUrl(news[position]!!.moreLink)
+            } catch (e: Exception) {
             }
 
             holder.titletv?.visibility = View.GONE
@@ -63,7 +59,7 @@ class NewsAdapter(private val news: Array<News?>): RecyclerView.Adapter<NewsAdap
         }
     }
 
-    class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var titletv: TextView? = null
         var datetv: TextView? = null
         var newsImageView: PhotoView? = null
@@ -71,6 +67,7 @@ class NewsAdapter(private val news: Array<News?>): RecyclerView.Adapter<NewsAdap
         var moreLinktv: TextView? = null
         var webNews: WebView? = null
         var backBt: Button? = null
+
         init {
             titletv = itemView.findViewById(R.id.newsTitle)
             datetv = itemView.findViewById(R.id.newsDate)

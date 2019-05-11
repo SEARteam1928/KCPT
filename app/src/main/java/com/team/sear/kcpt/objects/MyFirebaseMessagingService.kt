@@ -15,8 +15,6 @@ import com.google.firebase.messaging.RemoteMessage
 @Suppress("DEPRECATION")
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
-
-
     override fun onMessageReceived(remoteMessage: RemoteMessage?) {
         sendNotification(remoteMessage!!.notification!!.body)
     }

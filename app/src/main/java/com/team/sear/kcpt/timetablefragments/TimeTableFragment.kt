@@ -199,7 +199,7 @@ class TimeTableFragment : Fragment(), View.OnClickListener {
     private lateinit var lnst11tv: LinearLayout
     private lateinit var lnst12tv: LinearLayout
 
-    private lateinit var mAdView : AdView
+    private lateinit var mAdView: AdView
 
 
     @SuppressLint("SimpleDateFormat")
@@ -246,12 +246,12 @@ class TimeTableFragment : Fragment(), View.OnClickListener {
         Handler().postDelayed({ showHideFromDate() }, 300)
 
 
-        mAdView.adListener = object: AdListener() {
+        mAdView.adListener = object : AdListener() {
             override fun onAdLoaded() {
                 // Code to be executed when an ad finishes loading.
             }
 
-            override fun onAdFailedToLoad(errorCode : Int) {
+            override fun onAdFailedToLoad(errorCode: Int) {
                 // Code to be executed when an ad request fails.
             }
 
