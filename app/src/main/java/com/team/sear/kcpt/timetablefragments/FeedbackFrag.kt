@@ -50,16 +50,16 @@ class FeedbackFrag : Fragment() {
             setFeedbackView()
         }
         try {
-            randomHello = (Math.random() * 5 + 1).toInt()
-            sayHello = when (randomHello) {
-                1 -> "Привет, Газинурушка!!"
-                2 -> "Рад тебя видеть, Газинур!!"
-                3 -> "Слушаюсь, Хозяин!"
-                4 -> "Ты сегодня очень красивый, Газинур))"
-                else -> "Улыбнись, всё будет хорошо :З"
-            }
             val user = auth!!.currentUser
             if (user!!.email == "halitulla@gmail.com") {
+                randomHello = (Math.random() * 5 + 1).toInt()
+                sayHello = when (randomHello) {
+                    1 -> "Привет, Газинурушка!!"
+                    2 -> "Рад тебя видеть, Газинур!!"
+                    3 -> "Слушаюсь, Хозяин!"
+                    4 -> "Ты сегодня очень красивый, Газинур))"
+                    else -> "Улыбнись, всё будет хорошо :З"
+                }
                 Toast.makeText(
                         context,
                         sayHello,

@@ -323,12 +323,19 @@ class TimeTableFragment : Fragment(), View.OnClickListener {
         val date = dform.format(Calendar.getInstance().time)
         when (date) {
             "вс" -> show(mnSHtv, mnSHln)
+            "Sun" -> show(mnSHtv, mnSHln)
             "пн" -> show(mnSHtv, mnSHln)
+            "Mon" -> show(mnSHtv, mnSHln)
             "вт" -> show(tySHtv, tySHln)
+            "Tues" -> show(tySHtv, tySHln)
             "ср" -> show(wdSHtv, wdSHln)
+            "Wed" -> show(wdSHtv, wdSHln)
             "чт" -> show(thSHtv, thSHln)
+            "Thurs" -> show(thSHtv, thSHln)
             "пт" -> show(frSHtv, frSHln)
+            "Fri" -> show(frSHtv, frSHln)
             "сб" -> show(stSHtv, stSHln)
+            "Sat" -> show(stSHtv, stSHln)
             else -> {
             }
         }
