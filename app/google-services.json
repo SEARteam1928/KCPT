@@ -15,19 +15,19 @@
       },
       "oauth_client": [
         {
-          "client_id": "846506539351-9bsqpiq6r47aih0gk3uhphua6qfekvt8.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.developers.sear",
-            "certificate_hash": "891463b203dead8ed4580db1283c1f4afa2c7e06"
-          }
-        },
-        {
           "client_id": "846506539351-9bids8vskrltd8u5u4ug2k3bvmo6nb8m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.developers.sear",
             "certificate_hash": "3bb8f651dbdbc69b55763ff229c0f587baf06a6e"
+          }
+        },
+        {
+          "client_id": "846506539351-9bsqpiq6r47aih0gk3uhphua6qfekvt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.developers.sear",
+            "certificate_hash": "891463b203dead8ed4580db1283c1f4afa2c7e06"
           }
         },
         {
@@ -41,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "846506539351-3j2sraenjf11kren31sdg9nu3p0pnthh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     },
@@ -77,17 +70,16 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846506539351-3j2sraenjf11kren31sdg9nu3p0pnthh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-4313901539584225~7624090689"
     }
   ],
   "configuration_version": "1"
