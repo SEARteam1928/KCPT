@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Splash">
+
+    <TextView
+        android:id="@+id/splash_background_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130sp"
+        android:background="@drawable/splash_background_first" />
+
+    <TextView
+        android:id="@+id/splash_background_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="170dp"
+        android:background="@drawable/splash_background_second" />
+
+    <ImageView
+        android:id="@+id/splash_tcp_logo"
+        android:layout_width="250sp"
+        android:layout_height="200sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:src="@drawable/tcp_logo" />
+
+    <Button
+        android:id="@+id/splash_start_working"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="30sp"
+        android:background="@drawable/newbutton"
+        android:fontFamily="monospace"
+        android:padding="10px"
+        android:text="Загрузка..." />
+
+    <TextView
+        android:id="@+id/splash_kcpt_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="240sp"
+        android:text="КОЛЛЕДЖ ЦИФРОВЫХ И\n ПЕДАГОГИЧЕСКИХ ТЕХНОЛОГИЙ"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+</RelativeLayout>

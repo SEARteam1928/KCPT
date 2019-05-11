@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/timetableItem"
+            android:icon="@android:drawable/ic_menu_today"
+            android:title="Расписание" />
+        <item
+            android:id="@+id/userChangesItem"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="Мои изменения (beta)" />
+        <item
+            android:id="@+id/changesItem"
+            android:icon="@android:drawable/stat_notify_sync"
+            android:title="Изменения" />
+        <item
+            android:id="@+id/zvonkiItem"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Звонки" />
+        <item
+            android:id="@+id/weatherItem"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Погода" />
+        <item
+            android:id="@+id/newsItem"
+            android:icon="@android:drawable/btn_star_big_off"
+            android:title="Новости"/>
+    </group>
+
+    <item android:title="Дополнительно">
+        <menu>
+            <item
+                android:id="@+id/developersItem"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="О разработчиках" />
+            <item
+                android:id="@+id/feedbackItem"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="Оставить отзыв" />
+        </menu>
+    </item>
+
+</menu>

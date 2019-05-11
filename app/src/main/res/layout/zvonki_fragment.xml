@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reg_background"
+    tools:context=".timetablefragments.ZvonkiFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mn_fr_tv_frag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="@drawable/textviewbg"
+                android:fontFamily="monospace"
+                android:text="@string/mn_fr_zv"
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/st_tv_frag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="@drawable/textviewbg"
+                android:fontFamily="monospace"
+                android:text="@string/st_zv"
+                android:textAlignment="center"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
