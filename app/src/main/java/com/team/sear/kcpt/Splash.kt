@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.gms.ads.MobileAds
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -38,6 +39,9 @@ class Splash : AppCompatActivity() {
         setContentView(R.layout.splash)
         navigateIntent = Intent(this, Navigate::class.java)
         registrationIntent = Intent(this, RegistrationNew::class.java)
+
+        MobileAds.initialize(this, "ca-app-pub-4313901539584225~7624090689")
+
         try {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true)
         } catch (e: Exception) {
