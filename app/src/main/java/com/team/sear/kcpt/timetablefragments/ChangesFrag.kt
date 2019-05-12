@@ -13,6 +13,7 @@ import android.content.Context
 import android.webkit.WebSettings
 
 
+@Suppress("DEPRECATION")
 class ChangesFrag : Fragment() {
 
     private lateinit var v: View
