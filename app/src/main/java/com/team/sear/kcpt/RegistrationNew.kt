@@ -36,11 +36,11 @@ class RegistrationNew : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (!task.isSuccessful) {
                         signIn()
-                    }
+                    }else{
                     Toast.makeText(
                             this@RegistrationNew, "Добро пожаловать!",
                             Toast.LENGTH_SHORT
-                    ).show()
+                    ).show()}
                 }
     }
 
@@ -49,7 +49,8 @@ class RegistrationNew : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (!task.isSuccessful) {
                         Toast.makeText(
-                                this@RegistrationNew, "Попробуйте еще раз!",
+                                this@RegistrationNew, "Проверьте соединение к интернету!" +
+                                "\nЕсли это сообщение появится снова, перезапустите приложение",
                                 Toast.LENGTH_SHORT
                         ).show()
                         val tryAgainIntent = Intent(this@RegistrationNew, RegistrationNew::class.java)

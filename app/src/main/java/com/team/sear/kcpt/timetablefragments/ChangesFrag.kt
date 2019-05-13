@@ -12,12 +12,13 @@ import com.team.sear.kcpt.R
 import android.content.Context
 import android.webkit.WebSettings
 
-
 @Suppress("DEPRECATION")
 class ChangesFrag : Fragment() {
 
     private lateinit var v: View
     private lateinit var webChanges: WebView
+
+
 /*
     private lateinit var storage: FirebaseStorage
     private lateinit var storageRef: StorageReference
@@ -31,6 +32,7 @@ class ChangesFrag : Fragment() {
     ): View? {
         v = inflater.inflate(R.layout.changes_fragment, container, false)
         Toast.makeText(context, "Загружаем изменения...", Toast.LENGTH_SHORT).show()
+
         try {
 
             webChanges = v.findViewById(R.id.webChanges)

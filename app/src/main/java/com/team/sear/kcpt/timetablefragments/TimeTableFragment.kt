@@ -13,10 +13,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.*
 import com.team.sear.kcpt.R
 import com.team.sear.kcpt.objects.StatusDetermination
 import com.google.firebase.auth.FirebaseAuth
@@ -199,7 +196,6 @@ class TimeTableFragment : Fragment(), View.OnClickListener {
     private lateinit var lnst11tv: LinearLayout
     private lateinit var lnst12tv: LinearLayout
 
-    private lateinit var mAdView: AdView
 
 
     @SuppressLint("SimpleDateFormat")
@@ -208,15 +204,14 @@ class TimeTableFragment : Fragment(), View.OnClickListener {
             savedInstanceState: Bundle?
     ): View? {
         v = inflater.inflate(R.layout.timetable_fragment, container, false)
+
         findView()
 
-        val adView = AdView(context)
+ /*       val adView = AdView(context)
         adView.adSize = AdSize.BANNER
-        adView.adUnitId = "ca-app-pub-4313901539584225/9098143829"
+        adView.adUnitId = "ca-app-pub-4313901539584225/9098143829"*/
 
-        mAdView = v.findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+
 
 
         try {
@@ -243,36 +238,7 @@ class TimeTableFragment : Fragment(), View.OnClickListener {
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
 
-        Handler().postDelayed({ showHideFromDate() }, 300)
-
-
-        mAdView.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-            }
-
-            override fun onAdFailedToLoad(errorCode: Int) {
-                // Code to be executed when an ad request fails.
-            }
-
-            override fun onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
-
-            override fun onAdClicked() {
-                // Code to be executed when the user clicks on an ad.
-            }
-
-            override fun onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            override fun onAdClosed() {
-                // Code to be executed when the user is about to return
-                // to the app after tapping on an ad.
-            }
-        }
+        Handler().postDelayed({ showHideFromDate() }, 100)
 
 
         return v

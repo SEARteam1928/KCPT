@@ -16,11 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-4313901539584225~7624090689"/>
 
-        <activity android:name=".SelectReg"></activity>
         <activity android:name=".RegistrationNew" />
         <activity android:name=".PrivacyPolytics" />
         <activity
