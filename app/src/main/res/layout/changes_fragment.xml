@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:theme="@style/Theme.AppCompat.NoActionBar"
     android:layout_height="match_parent"
-    android:background="@drawable/reg_back2"
+    android:background="@drawable/reg_background"
     tools:context=".timetablefragments.ChangesFrag">
 
   <WebView
