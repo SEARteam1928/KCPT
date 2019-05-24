@@ -23,7 +23,12 @@ class ChangesParser {
         val page = getPage("https://docs.google.com/document/d/e/" +
                 "2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
 
+
+// добавляю список групп в ArrayList, фигачу его в поиск группы из firebase, вывожу изменения
+
+
         groupName = page.select("table")[0].select("tr")[groupSelectInt].select("td")[0].text()
+
         if (groupNameStr == "noChangesOrNotStudent") {
             groupSelectInt = 0
         } else {

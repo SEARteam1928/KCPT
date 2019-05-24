@@ -1,0 +1,12 @@
+ Elements rows = table.getElementsByTag("tr");
+
+                for(Element row : rows){
+
+                    Change change = new Change();
+
+
+                    if(!row.text().isEmpty() || !row.text().contains("Группа")){
+
+                        Elements cells = row.getElementsByTag("td");
+
+String groupName = cells.get(0).text();
