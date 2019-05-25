@@ -1,9 +1,7 @@
 package com.team.sear.kcpt.objects
 
-import android.content.Context
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-
 import java.io.IOException
 import java.io.UnsupportedEncodingException
 import java.net.URL
@@ -13,6 +11,8 @@ class ChangesParser {
     private var html: String? = null
     private var groupSelectInt = 0
     private var groupName: String? = null
+    private val groupsArray = ArrayList<String>()
+
     @Throws(UnsupportedEncodingException::class)
     fun parseChanges(): String? {
         return changesPrivate
@@ -25,9 +25,18 @@ class ChangesParser {
 
 
 // добавляю список групп в ArrayList, фигачу его в поиск группы из firebase, вывожу изменения
+        for(i in page.select("table")[0].select("tr")){
+            groupsArray.add(i.select("td")[0].text())
+        }
+
+        groupSelectInt = if(groupsArray.indexOf(groupNameStr)==-1){
+            0
+        }else{
+            groupsArray.indexOf(groupNameStr)
+        }
 
 
-        groupName = page.select("table")[0].select("tr")[groupSelectInt].select("td")[0].text()
+    /*    groupName = page.select("table")[0].select("tr")[groupSelectInt].select("td")[0].text()
 
         if (groupNameStr == "noChangesOrNotStudent") {
             groupSelectInt = 0
@@ -40,7 +49,7 @@ class ChangesParser {
                     groupSelectInt = 0
                 }
             }
-        }
+        }*/
     }
 
 

@@ -23,14 +23,12 @@ class UserChanges : Fragment() {
     private lateinit var userChangesTv: TextView
     private lateinit var changesParser: ChangesParser
     private lateinit var changesHTML: String
-
     private var authListener: FirebaseAuth.AuthStateListener? = null
     private lateinit var database: FirebaseDatabase
     private var myRef: DatabaseReference? = null
     private var mAuth: FirebaseAuth? = null
     private var user: FirebaseUser? = null
     private lateinit var groupName: String
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -40,12 +38,6 @@ class UserChanges : Fragment() {
             changesParser = ChangesParser()
             userChangesTv = v.findViewById(R.id.userChangesTv)
             webChanges = v.findViewById(R.id.userWebChanges)
-            webChanges.settings.javaScriptEnabled
-            webChanges.settings.builtInZoomControls
-            webChanges.settings.supportZoom()
-            webChanges.settings.displayZoomControls
-            webChanges.settings.loadWithOverviewMode
-
             mAuth = FirebaseAuth.getInstance()
             authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
                 val user = firebaseAuth.currentUser
@@ -163,11 +155,6 @@ class UserChanges : Fragment() {
 
     @SuppressLint("StaticFieldLeak")
     internal inner class UserChangesParser : AsyncTask<Void, Void, Void>() {
-        override fun onPreExecute() {
-            super.onPreExecute()
-            Toast.makeText(context, "Загружаем ваши изменения", Toast.LENGTH_SHORT).show()
-        }
-
         @SuppressLint("SetTextI18n")
         override fun doInBackground(vararg result: Void?): Void? {
             try {

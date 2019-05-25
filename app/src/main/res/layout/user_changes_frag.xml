@@ -15,7 +15,7 @@
         android:id="@+id/userChangesTv"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Подождите пока изменения загрузятся.\nДанный раздел находится на стадии разработки, поэтому загрузка может занять некоторое время.\nОставляйте отзывы, если хотите, чтобы этот раздел работал быстрее"
+        android:text="Загрузка..."
         android:layout_marginTop="50dp"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
