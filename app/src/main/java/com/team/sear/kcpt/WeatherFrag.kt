@@ -1,13 +1,16 @@
 package com.team.sear.kcpt
 
 import android.annotation.SuppressLint
+import android.databinding.DataBindingUtil
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.team.sear.kcpt.databinding.FragmentWeatherBinding
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import java.io.IOException
@@ -18,6 +21,7 @@ class WeatherFrag : Fragment() {
     private lateinit var v: View
     private var result: String? = null
     var weatherStr: String? = null
+    var binding : FragmentWeatherBinding? = null
 
     private lateinit var mt: WeatherTask
 
@@ -27,11 +31,17 @@ class WeatherFrag : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+/*
         v = inflater.inflate(R.layout.fragment_weather, container, false)
-        weatherTv = v.findViewById(R.id.weatherTv)
+*/
+
+        binding  = DataBindingUtil.inflate(inflater,R.layout.fragment_weather,container,false)
+
+        binding!!.weatherText = "Загружаем данные о погоде…"
+
         mt = WeatherTask()
         mt.execute()
-        return v
+        return binding!!.root
     }
 
     val weather: String
@@ -75,14 +85,14 @@ class WeatherFrag : Fragment() {
             super.onPostExecute(result)
             try {
                 if (weatherStr != null || weatherStr != "null" || result != "null") {
-                    weatherTv.text = weatherStr
+                    binding!!.weatherText = weatherStr
                 } else if (weatherStr == "null") {
-                    weatherTv.text = "Ошибка! Проверьте подключение к интернету"
+                    binding!!.weatherText = "Ошибка! Проверьте подключение к интернету"
                 } else {
-                    weatherTv.text = "Ошибка! Проверьте подключение к интернету"
+                    binding!!.weatherText = "Ошибка! Проверьте подключение к интернету"
                 }
             } catch (e: Exception) {
-                weatherTv.text = "Ошибка! Проверьте подключение к интернету"
+                binding!!.weatherText = "Ошибка! Проверьте подключение к интернету"
             }
         }
     }

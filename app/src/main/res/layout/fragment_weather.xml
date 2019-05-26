@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/reg_background"
-    tools:context=".WeatherFrag">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/weatherTv"
+    <data>
+        <variable name="weatherText" type="String"/>
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50sp"
-        android:layout_marginTop="60sp"
-        android:layout_marginRight="50sp"
-        android:background="@drawable/weather_drawable"
-        android:padding="30sp"
-        android:text="@string/download_data_in_weather"
-        android:textAlignment="center"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="22sp">
+        android:layout_height="match_parent"
+        android:background="@drawable/reg_background"
+        tools:context=".WeatherFrag">
 
-    </TextView>
-</RelativeLayout>
+        <TextView
+            android:id="@+id/weatherTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:layout_marginTop="60sp"
+            android:layout_marginRight="50sp"
+            android:background="@drawable/weather_drawable"
+            android:padding="30sp"
+            android:text="@{weatherText}"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="22sp">
+
+        </TextView>
+    </RelativeLayout>
+</layout>
