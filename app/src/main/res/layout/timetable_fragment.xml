@@ -1,1228 +1,1235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    tools:ignore="HardcodedText"
-    android:layout_height="match_parent"
-    android:background="@drawable/reg_background"
-    tools:context=".timetablefragments.TimeTableFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-    <ScrollView
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
+        tools:ignore="HardcodedText"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        tools:ignore="UselessParent">
+        android:background="@drawable/reg_background"
+        tools:context=".timetablefragments.TimeTableFragment">
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!--ПОНЕДЕЛЬНИК-->
-            <TextView
-                android:id="@+id/mnTvShowHide"
-                style="@style/ButtonShowHideTheme"
-                android:text="Понедельник \\/" />
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:ignore="UselessParent">
 
             <LinearLayout
-                android:id="@+id/mnShowHide"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <!--ПОНЕДЕЛЬНИК-->
                 <TextView
-                    android:id="@+id/mnTv"
+                    android:id="@+id/mnTvShowHide"
                     style="@style/ButtonShowHideTheme"
-                    android:text="Понедельник /\\" />
+                    android:text="Понедельник \\/" />
 
                 <LinearLayout
-                    android:id="@+id/lnmn1tv"
-                    style="@style/lnLessonStyle">
+                    android:id="@+id/mnShowHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/nummn1tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime1" />
+                        android:id="@+id/mnTv"
+                        style="@style/ButtonShowHideTheme"
+                        android:text="Понедельник /\\" />
 
-                    <TextView
-                        android:id="@+id/mn1tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnmn1tv"
+                        style="@style/lnLessonStyle">
 
+                        <TextView
+                            android:id="@+id/nummn1tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime1" />
+
+                        <TextView
+                            android:id="@+id/mn1tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn2tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn2tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime2" />
+
+                        <TextView
+                            android:id="@+id/mn2tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn3tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn3tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime3" />
+
+                        <TextView
+                            android:id="@+id/mn3tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn4tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn4tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime4" />
+
+                        <TextView
+                            android:id="@+id/mn4tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn5tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn5tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime5" />
+
+                        <TextView
+                            android:id="@+id/mn5tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn6tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn6tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime6" />
+
+                        <TextView
+                            android:id="@+id/mn6tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn7tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn7tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime7" />
+
+                        <TextView
+                            android:id="@+id/mn7tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn8tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn8tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime8" />
+
+                        <TextView
+                            android:id="@+id/mn8tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn9tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn9tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime9" />
+
+                        <TextView
+                            android:id="@+id/mn9tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn10tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn10tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime10" />
+
+                        <TextView
+                            android:id="@+id/mn10tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn11tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/nummn11tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime11" />
+
+                        <TextView
+                            android:id="@+id/mn11tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnmn12tv"
+                        style="@style/lnLessonStyle"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/nummn12tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime12" />
+
+                        <TextView
+                            android:id="@+id/mn12tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/lnmn2tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn2tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime2" />
-
-                    <TextView
-                        android:id="@+id/mn2tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn3tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn3tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime3" />
-
-                    <TextView
-                        android:id="@+id/mn3tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn4tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn4tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime4" />
-
-                    <TextView
-                        android:id="@+id/mn4tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn5tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn5tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime5" />
-
-                    <TextView
-                        android:id="@+id/mn5tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn6tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn6tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime6" />
-
-                    <TextView
-                        android:id="@+id/mn6tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn7tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn7tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime7" />
-
-                    <TextView
-                        android:id="@+id/mn7tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn8tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn8tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime8" />
-
-                    <TextView
-                        android:id="@+id/mn8tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn9tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn9tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime9" />
-
-                    <TextView
-                        android:id="@+id/mn9tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn10tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn10tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime10" />
-
-                    <TextView
-                        android:id="@+id/mn10tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn11tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/nummn11tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime11" />
-
-                    <TextView
-                        android:id="@+id/mn11tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnmn12tv"
-                    style="@style/lnLessonStyle"
-                    android:layout_marginBottom="2dp">
-
-                    <TextView
-                        android:id="@+id/nummn12tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime12" />
-
-                    <TextView
-                        android:id="@+id/mn12tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--ВТОРНИК-->
-            <TextView
-                android:id="@+id/tyTvShowHide"
-                style="@style/ButtonShowHideTheme"
-                android:text="Вторник \\/" />
-
-            <LinearLayout
-                android:id="@+id/tyShowHide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
                 <!--ВТОРНИК-->
-
-
                 <TextView
-                    android:id="@+id/tyTv"
+                    android:id="@+id/tyTvShowHide"
                     style="@style/ButtonShowHideTheme"
-                    android:text="Вторник /\\" />
+                    android:text="Вторник \\/" />
 
                 <LinearLayout
-                    android:id="@+id/lnty1tv"
-                    style="@style/lnLessonStyle">
+                    android:id="@+id/tyShowHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--ВТОРНИК-->
+
 
                     <TextView
-                        android:id="@+id/numty1tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime1" />
+                        android:id="@+id/tyTv"
+                        style="@style/ButtonShowHideTheme"
+                        android:text="Вторник /\\" />
 
-                    <TextView
-                        android:id="@+id/ty1tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnty1tv"
+                        style="@style/lnLessonStyle">
 
+                        <TextView
+                            android:id="@+id/numty1tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime1" />
+
+                        <TextView
+                            android:id="@+id/ty1tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty2tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty2tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime2" />
+
+                        <TextView
+                            android:id="@+id/ty2tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty3tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty3tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime3" />
+
+                        <TextView
+                            android:id="@+id/ty3tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty4tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty4tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime4" />
+
+                        <TextView
+                            android:id="@+id/ty4tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty5tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty5tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime5" />
+
+                        <TextView
+                            android:id="@+id/ty5tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/lnty6tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty6tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime6" />
+
+                        <TextView
+                            android:id="@+id/ty6tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty7tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty7tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime7" />
+
+                        <TextView
+                            android:id="@+id/ty7tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty8tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty8tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime8" />
+
+                        <TextView
+                            android:id="@+id/ty8tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty9tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty9tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime9" />
+
+                        <TextView
+                            android:id="@+id/ty9tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty10tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty10tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime10" />
+
+                        <TextView
+                            android:id="@+id/ty10tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty11tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numty11tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime11" />
+
+                        <TextView
+                            android:id="@+id/ty11tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnty12tv"
+                        style="@style/lnLessonStyle"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/numty12tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime12" />
+
+                        <TextView
+                            android:id="@+id/ty12tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty2tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty2tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime2" />
-
-                    <TextView
-                        android:id="@+id/ty2tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty3tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty3tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime3" />
-
-                    <TextView
-                        android:id="@+id/ty3tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty4tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty4tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime4" />
-
-                    <TextView
-                        android:id="@+id/ty4tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty5tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty5tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime5" />
-
-                    <TextView
-                        android:id="@+id/ty5tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/lnty6tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty6tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime6" />
-
-                    <TextView
-                        android:id="@+id/ty6tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty7tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty7tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime7" />
-
-                    <TextView
-                        android:id="@+id/ty7tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty8tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty8tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime8" />
-
-                    <TextView
-                        android:id="@+id/ty8tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty9tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty9tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime9" />
-
-                    <TextView
-                        android:id="@+id/ty9tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty10tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty10tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime10" />
-
-                    <TextView
-                        android:id="@+id/ty10tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty11tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numty11tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime11" />
-
-                    <TextView
-                        android:id="@+id/ty11tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnty12tv"
-                    style="@style/lnLessonStyle"
-                    android:layout_marginBottom="2dp">
-
-                    <TextView
-                        android:id="@+id/numty12tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime12" />
-
-                    <TextView
-                        android:id="@+id/ty12tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--СРЕДА-->
-            <TextView
-                android:id="@+id/wdTvShowHide"
-                style="@style/ButtonShowHideTheme"
-                android:text="Среда \\/" />
-
-            <LinearLayout
-                android:id="@+id/wdShowHide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <!--СРЕДА-->
-
                 <TextView
-                    android:id="@+id/wdTv"
+                    android:id="@+id/wdTvShowHide"
                     style="@style/ButtonShowHideTheme"
-                    android:text="Среда /\\" />
+                    android:text="Среда \\/" />
 
                 <LinearLayout
-                    android:id="@+id/lnwd1tv"
-                    style="@style/lnLessonStyle">
+                    android:id="@+id/wdShowHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--СРЕДА-->
 
                     <TextView
-                        android:id="@+id/numwd1tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime1" />
+                        android:id="@+id/wdTv"
+                        style="@style/ButtonShowHideTheme"
+                        android:text="Среда /\\" />
 
-                    <TextView
-                        android:id="@+id/wd1tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnwd1tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd1tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime1" />
+
+                        <TextView
+                            android:id="@+id/wd1tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd2tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd2tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime2" />
+
+                        <TextView
+                            android:id="@+id/wd2tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd3tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd3tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime3" />
+
+                        <TextView
+                            android:id="@+id/wd3tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd4tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd4tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime4" />
+
+                        <TextView
+                            android:id="@+id/wd4tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd5tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd5tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime5" />
+
+                        <TextView
+                            android:id="@+id/wd5tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd6tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd6tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime6" />
+
+                        <TextView
+                            android:id="@+id/wd6tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd7tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd7tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime7" />
+
+                        <TextView
+                            android:id="@+id/wd7tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd8tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd8tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime8" />
+
+                        <TextView
+                            android:id="@+id/wd8tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd9tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd9tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime9" />
+
+                        <TextView
+                            android:id="@+id/wd9tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd10tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd10tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime10" />
+
+                        <TextView
+                            android:id="@+id/wd10tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd11tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numwd11tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime11" />
+
+                        <TextView
+                            android:id="@+id/wd11tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnwd12tv"
+                        style="@style/lnLessonStyle"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/numwd12tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime12" />
+
+                        <TextView
+                            android:id="@+id/wd12tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/lnwd2tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd2tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime2" />
-
-                    <TextView
-                        android:id="@+id/wd2tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd3tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd3tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime3" />
-
-                    <TextView
-                        android:id="@+id/wd3tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd4tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd4tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime4" />
-
-                    <TextView
-                        android:id="@+id/wd4tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd5tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd5tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime5" />
-
-                    <TextView
-                        android:id="@+id/wd5tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd6tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd6tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime6" />
-
-                    <TextView
-                        android:id="@+id/wd6tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd7tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd7tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime7" />
-
-                    <TextView
-                        android:id="@+id/wd7tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd8tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd8tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime8" />
-
-                    <TextView
-                        android:id="@+id/wd8tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd9tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd9tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime9" />
-
-                    <TextView
-                        android:id="@+id/wd9tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd10tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd10tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime10" />
-
-                    <TextView
-                        android:id="@+id/wd10tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd11tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numwd11tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime11" />
-
-                    <TextView
-                        android:id="@+id/wd11tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnwd12tv"
-                    style="@style/lnLessonStyle"
-                    android:layout_marginBottom="2dp">
-
-                    <TextView
-                        android:id="@+id/numwd12tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime12" />
-
-                    <TextView
-                        android:id="@+id/wd12tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--ЧЕТВЕРГ-->
-            <TextView
-                android:id="@+id/thTvShowHide"
-                style="@style/ButtonShowHideTheme"
-                android:text="Четверг \\/" />
-
-            <LinearLayout
-                android:id="@+id/thShowHide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
                 <!--ЧЕТВЕРГ-->
-
                 <TextView
-                    android:id="@+id/thTv"
+                    android:id="@+id/thTvShowHide"
                     style="@style/ButtonShowHideTheme"
-                    android:text="Четверг /\\" />
+                    android:text="Четверг \\/" />
 
                 <LinearLayout
-                    android:id="@+id/lnth1tv"
-                    style="@style/lnLessonStyle">
+                    android:id="@+id/thShowHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--ЧЕТВЕРГ-->
 
                     <TextView
-                        android:id="@+id/numth1tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime1" />
+                        android:id="@+id/thTv"
+                        style="@style/ButtonShowHideTheme"
+                        android:text="Четверг /\\" />
 
-                    <TextView
-                        android:id="@+id/th1tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnth1tv"
+                        style="@style/lnLessonStyle">
 
+                        <TextView
+                            android:id="@+id/numth1tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime1" />
+
+                        <TextView
+                            android:id="@+id/th1tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth2tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth2tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime2" />
+
+                        <TextView
+                            android:id="@+id/th2tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth3tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth3tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime3" />
+
+                        <TextView
+                            android:id="@+id/th3tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth4tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth4tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime4" />
+
+                        <TextView
+                            android:id="@+id/th4tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth5tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth5tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime5" />
+
+                        <TextView
+                            android:id="@+id/th5tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth6tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth6tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime6" />
+
+                        <TextView
+                            android:id="@+id/th6tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth7tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth7tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime7" />
+
+                        <TextView
+                            android:id="@+id/th7tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth8tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth8tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime8" />
+
+                        <TextView
+                            android:id="@+id/th8tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth9tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth9tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime9" />
+
+                        <TextView
+                            android:id="@+id/th9tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth10tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth10tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime10" />
+
+                        <TextView
+                            android:id="@+id/th10tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth11tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numth11tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime11" />
+
+                        <TextView
+                            android:id="@+id/th11tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnth12tv"
+                        style="@style/lnLessonStyle"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/numth12tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime12" />
+
+                        <TextView
+                            android:id="@+id/th12tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/lnth2tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth2tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime2" />
-
-                    <TextView
-                        android:id="@+id/th2tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth3tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth3tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime3" />
-
-                    <TextView
-                        android:id="@+id/th3tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth4tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth4tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime4" />
-
-                    <TextView
-                        android:id="@+id/th4tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth5tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth5tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime5" />
-
-                    <TextView
-                        android:id="@+id/th5tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth6tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth6tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime6" />
-
-                    <TextView
-                        android:id="@+id/th6tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth7tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth7tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime7" />
-
-                    <TextView
-                        android:id="@+id/th7tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth8tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth8tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime8" />
-
-                    <TextView
-                        android:id="@+id/th8tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth9tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth9tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime9" />
-
-                    <TextView
-                        android:id="@+id/th9tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth10tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth10tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime10" />
-
-                    <TextView
-                        android:id="@+id/th10tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth11tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numth11tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime11" />
-
-                    <TextView
-                        android:id="@+id/th11tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnth12tv"
-                    style="@style/lnLessonStyle"
-                    android:layout_marginBottom="2dp">
-
-                    <TextView
-                        android:id="@+id/numth12tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime12" />
-
-                    <TextView
-                        android:id="@+id/th12tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--ПЯТНИЦА-->
-            <TextView
-                android:id="@+id/frTvShowHide"
-                style="@style/ButtonShowHideTheme"
-                android:text="Пятница \\/" />
-
-            <LinearLayout
-                android:id="@+id/frShowHide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
                 <!--ПЯТНИЦА-->
-
                 <TextView
-                    android:id="@+id/frTv"
+                    android:id="@+id/frTvShowHide"
                     style="@style/ButtonShowHideTheme"
-                    android:text="Пятница /\\" />
+                    android:text="Пятница \\/" />
 
                 <LinearLayout
-                    android:id="@+id/lnfr1tv"
-                    style="@style/lnLessonStyle">
+                    android:id="@+id/frShowHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--ПЯТНИЦА-->
 
                     <TextView
-                        android:id="@+id/numfr1tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime1" />
+                        android:id="@+id/frTv"
+                        style="@style/ButtonShowHideTheme"
+                        android:text="Пятница /\\" />
 
-                    <TextView
-                        android:id="@+id/fr1tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnfr1tv"
+                        style="@style/lnLessonStyle">
 
+                        <TextView
+                            android:id="@+id/numfr1tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime1" />
+
+                        <TextView
+                            android:id="@+id/fr1tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr2tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr2tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime2" />
+
+                        <TextView
+                            android:id="@+id/fr2tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr3tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr3tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime3" />
+
+                        <TextView
+                            android:id="@+id/fr3tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr4tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr4tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime4" />
+
+                        <TextView
+                            android:id="@+id/fr4tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr5tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr5tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime5" />
+
+                        <TextView
+                            android:id="@+id/fr5tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr6tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr6tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime6" />
+
+                        <TextView
+                            android:id="@+id/fr6tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr7tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr7tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime7" />
+
+                        <TextView
+                            android:id="@+id/fr7tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr8tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr8tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime8" />
+
+                        <TextView
+                            android:id="@+id/fr8tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr9tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr9tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime9" />
+
+                        <TextView
+                            android:id="@+id/fr9tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr10tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr10tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime10" />
+
+                        <TextView
+                            android:id="@+id/fr10tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr11tv"
+                        style="@style/lnLessonStyle">
+
+                        <TextView
+                            android:id="@+id/numfr11tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime11" />
+
+                        <TextView
+                            android:id="@+id/fr11tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnfr12tv"
+                        style="@style/lnLessonStyle"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:id="@+id/numfr12tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime12" />
+
+                        <TextView
+                            android:id="@+id/fr12tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr2tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr2tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime2" />
-
-                    <TextView
-                        android:id="@+id/fr2tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr3tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr3tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime3" />
-
-                    <TextView
-                        android:id="@+id/fr3tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr4tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr4tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime4" />
-
-                    <TextView
-                        android:id="@+id/fr4tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr5tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr5tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime5" />
-
-                    <TextView
-                        android:id="@+id/fr5tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr6tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr6tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime6" />
-
-                    <TextView
-                        android:id="@+id/fr6tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr7tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr7tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime7" />
-
-                    <TextView
-                        android:id="@+id/fr7tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr8tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr8tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime8" />
-
-                    <TextView
-                        android:id="@+id/fr8tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr9tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr9tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime9" />
-
-                    <TextView
-                        android:id="@+id/fr9tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr10tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr10tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime10" />
-
-                    <TextView
-                        android:id="@+id/fr10tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr11tv"
-                    style="@style/lnLessonStyle">
-
-                    <TextView
-                        android:id="@+id/numfr11tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime11" />
-
-                    <TextView
-                        android:id="@+id/fr11tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/lnfr12tv"
-                    style="@style/lnLessonStyle"
-                    android:layout_marginBottom="2dp">
-
-                    <TextView
-                        android:id="@+id/numfr12tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime12" />
-
-                    <TextView
-                        android:id="@+id/fr12tv"
-                        style="@style/timetabletvstyle" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--СУББОТА-->
-            <TextView
-                android:id="@+id/stTvShowHide"
-                style="@style/ButtonShowHideTheme"
-                android:text="Суббота \\/" />
-
-            <LinearLayout
-                android:id="@+id/stShowHide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <!--СУББОТА-->
-
                 <TextView
-                    android:id="@+id/stTv"
+                    android:id="@+id/stTvShowHide"
                     style="@style/ButtonShowHideTheme"
-                    android:text="Суббота /\\" />
+                    android:text="Суббота \\/" />
 
                 <LinearLayout
-                    android:id="@+id/lnst1tv"
-                    style="@style/lnLessonStyle">
+                    android:id="@+id/stShowHide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--СУББОТА-->
 
                     <TextView
-                        android:id="@+id/numst1tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime1st" />
+                        android:id="@+id/stTv"
+                        style="@style/ButtonShowHideTheme"
+                        android:text="Суббота /\\" />
 
-                    <TextView
-                        android:id="@+id/st1tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst1tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst1tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime1st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst2tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st1tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst2tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime2st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st2tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst2tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst2tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime2st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst3tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st2tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst3tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime3st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st3tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst3tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst3tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime3st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst4tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st3tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst4tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime4st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st4tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst4tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst4tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime4st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst5tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st4tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst5tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime5st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st5tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst5tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst5tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime5st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst6tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st5tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst6tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime6st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st6tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst6tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst6tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime6st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst7tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st6tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst7tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime7st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st7tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst7tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst7tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime7st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst8tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st7tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst8tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime8st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st8tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst8tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst8tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime8st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst9tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st8tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst9tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime9st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st9tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst9tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst9tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime9st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst10tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st9tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst10tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime10st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st10tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst10tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst10tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime10st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst11tv"
-                    style="@style/lnLessonStyle">
+                        <TextView
+                            android:id="@+id/st10tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst11tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime11st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st11tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst11tv"
+                        style="@style/lnLessonStyle">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/numst11tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime11st" />
 
-                <LinearLayout
-                    android:id="@+id/lnst12tv"
-                    style="@style/lnLessonStyle"
-                    android:layout_marginBottom="2dp">
+                        <TextView
+                            android:id="@+id/st11tv"
+                            style="@style/timetabletvstyle" />
 
-                    <TextView
-                        android:id="@+id/numst12tv"
-                        style="@style/NumTv"
-                        android:text="@string/lessonTime12st" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/st12tv"
-                        style="@style/timetabletvstyle" />
+                    <LinearLayout
+                        android:id="@+id/lnst12tv"
+                        style="@style/lnLessonStyle"
+                        android:layout_marginBottom="2dp">
 
+                        <TextView
+                            android:id="@+id/numst12tv"
+                            style="@style/NumTv"
+                            android:text="@string/lessonTime12st" />
+
+                        <TextView
+                            android:id="@+id/st12tv"
+                            style="@style/timetabletvstyle" />
+
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

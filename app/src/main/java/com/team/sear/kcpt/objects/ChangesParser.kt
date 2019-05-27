@@ -24,7 +24,6 @@ class ChangesParser {
                 "2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
 
 
-// добавляю список групп в ArrayList, фигачу его в поиск группы из firebase, вывожу изменения
         for(i in page.select("table")[0].select("tr")){
             groupsArray.add(i.select("td")[0].text())
         }
@@ -34,22 +33,6 @@ class ChangesParser {
         }else{
             groupsArray.indexOf(groupNameStr)
         }
-
-
-    /*    groupName = page.select("table")[0].select("tr")[groupSelectInt].select("td")[0].text()
-
-        if (groupNameStr == "noChangesOrNotStudent") {
-            groupSelectInt = 0
-        } else {
-            if (groupName != groupNameStr) {
-                groupSelectInt++
-                if (groupSelectInt != page.select("table")[0].select("tbody").select("tr").size) {
-                    selectGroup(groupNameStr)
-                } else {
-                    groupSelectInt = 0
-                }
-            }
-        }*/
     }
 
 
