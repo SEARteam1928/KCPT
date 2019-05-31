@@ -49,6 +49,7 @@ class TimeTableFragment : Fragment() {
         getTimeTable  = StatusDetermination()
 
         try {
+            cl()
             mAuth = getInstance()
             mAuthListener = AuthStateListener { firebaseAuth ->
                 val user = firebaseAuth.currentUser
@@ -74,8 +75,6 @@ class TimeTableFragment : Fragment() {
         }
 
         Handler().postDelayed({ showHideFromDate() }, 100)
-
-        cl()
         return binding!!.root
     }
 
@@ -204,12 +203,12 @@ class TimeTableFragment : Fragment() {
 
     private fun cl() {
         try {
-            binding!!.mnShowHide.setOnClickListener { show(binding!!.mnTvShowHide, binding!!.mnShowHide) }
-            binding!!.tyShowHide.setOnClickListener { show(binding!!.tyTvShowHide, binding!!.tyShowHide) }
-            binding!!.wdShowHide.setOnClickListener { show(binding!!.wdTvShowHide, binding!!.wdShowHide) }
-            binding!!.thShowHide.setOnClickListener { show(binding!!.thTvShowHide, binding!!.thShowHide) }
-            binding!!.frShowHide.setOnClickListener { show(binding!!.frTvShowHide, binding!!.frShowHide) }
-            binding!!.stShowHide.setOnClickListener { show(binding!!.stTvShowHide, binding!!.stShowHide) }
+            binding!!.mnTvShowHide.setOnClickListener { show(binding!!.mnTvShowHide, binding!!.mnShowHide) }
+            binding!!.tyTvShowHide.setOnClickListener { show(binding!!.tyTvShowHide, binding!!.tyShowHide) }
+            binding!!.wdTvShowHide.setOnClickListener { show(binding!!.wdTvShowHide, binding!!.wdShowHide) }
+            binding!!.thTvShowHide.setOnClickListener { show(binding!!.thTvShowHide, binding!!.thShowHide) }
+            binding!!.frTvShowHide.setOnClickListener { show(binding!!.frTvShowHide, binding!!.frShowHide) }
+            binding!!.stTvShowHide.setOnClickListener { show(binding!!.stTvShowHide, binding!!.stShowHide) }
             binding!!.mnTv.setOnClickListener { hide(binding!!.mnTvShowHide, binding!!.mnShowHide) }
             binding!!.tyTv.setOnClickListener { hide(binding!!.tyTvShowHide, binding!!.tyShowHide) }
             binding!!.wdTv.setOnClickListener { hide(binding!!.wdTvShowHide, binding!!.wdShowHide) }
