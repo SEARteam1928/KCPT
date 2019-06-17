@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth.*
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.team.sear.kcpt.objects.TimeTableViewsInit
 import kotlinx.android.synthetic.main.timetable_fragment.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -33,9 +34,8 @@ class TimeTableFragment : Fragment() {
     internal var user: FirebaseUser? = null
     private lateinit var mAuth: FirebaseAuth
     private var mAuthListener: AuthStateListener? = null
-    private lateinit var getTimeTable: StatusDetermination
-
-    var binding: com.team.sear.kcpt.databinding.TimetableFragmentBinding? = null
+    private lateinit var initTT: TimeTableViewsInit
+    var b: com.team.sear.kcpt.databinding.TimetableFragmentBinding? = null
 
 
 
@@ -45,8 +45,8 @@ class TimeTableFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.timetable_fragment, container, false)
-        getTimeTable  = StatusDetermination()
+        b = DataBindingUtil.inflate(inflater, R.layout.timetable_fragment, container, false)
+        initTT = TimeTableViewsInit()
 
         try {
             cl()
@@ -75,92 +75,83 @@ class TimeTableFragment : Fragment() {
         }
 
         Handler().postDelayed({ showHideFromDate() }, 100)
-        return binding!!.root
-    }
-
-    private fun getTT(day: String, lesson: String, dayTv: TextView, dayLn: LinearLayout) {
-        try {
-            getTimeTable.getTimeTable(day, lesson, dayTv, dayLn, mAuth)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
-        }
+        return b!!.root
     }
 
     private fun setTimeTable() {
         try {
-            getTT("mn", "mn1", binding!!.mn1tv, binding!!.lnmn1tv)
-            getTT("mn", "mn2", binding!!.mn2tv, binding!!.lnmn2tv)
-            getTT("mn", "mn3", binding!!.mn3tv, binding!!.lnmn3tv)
-            getTT("mn", "mn4", binding!!.mn4tv, binding!!.lnmn4tv)
-            getTT("mn", "mn5", binding!!.mn5tv, binding!!.lnmn5tv)
-            getTT("mn", "mn6", binding!!.mn6tv, binding!!.lnmn6tv)
-            getTT("mn", "mn7", binding!!.mn7tv, binding!!.lnmn7tv)
-            getTT("mn", "mn8", binding!!.mn8tv, binding!!.lnmn8tv)
-            getTT("mn", "mn9", binding!!.mn9tv, binding!!.lnmn9tv)
-            getTT("mn", "mn10", binding!!.mn10tv, binding!!.lnmn10tv)
-            getTT("mn", "mn11", binding!!.mn11tv, binding!!.lnmn11tv)
-            getTT("mn", "mn12", binding!!.mn12tv, binding!!.lnmn12tv)
-            getTT("ty", "ty1", binding!!.ty1tv, binding!!.lnty1tv)
-            getTT("ty", "ty2", binding!!.ty2tv, binding!!.lnty2tv)
-            getTT("ty", "ty3", binding!!.ty3tv, binding!!.lnty3tv)
-            getTT("ty", "ty4", binding!!.ty4tv, binding!!.lnty4tv)
-            getTT("ty", "ty5", binding!!.ty5tv, binding!!.lnty5tv)
-            getTT("ty", "ty6", binding!!.ty6tv, binding!!.lnty6tv)
-            getTT("ty", "ty7", binding!!.ty7tv, binding!!.lnty7tv)
-            getTT("ty", "ty8", binding!!.ty8tv, binding!!.lnty8tv)
-            getTT("ty", "ty9", binding!!.ty9tv, binding!!.lnty9tv)
-            getTT("ty", "ty10", binding!!.ty10tv, binding!!.lnty10tv)
-            getTT("ty", "ty11", binding!!.ty11tv, binding!!.lnty11tv)
-            getTT("ty", "ty12", binding!!.ty12tv, binding!!.lnty12tv)
-            getTT("wd", "wd1", binding!!.wd1tv, binding!!.lnwd1tv)
-            getTT("wd", "wd2", binding!!.wd2tv, binding!!.lnwd2tv)
-            getTT("wd", "wd3", binding!!.wd3tv, binding!!.lnwd3tv)
-            getTT("wd", "wd4", binding!!.wd4tv, binding!!.lnwd4tv)
-            getTT("wd", "wd5", binding!!.wd5tv, binding!!.lnwd5tv)
-            getTT("wd", "wd6", binding!!.wd6tv, binding!!.lnwd6tv)
-            getTT("wd", "wd7", binding!!.wd7tv, binding!!.lnwd7tv)
-            getTT("wd", "wd8", binding!!.wd8tv, binding!!.lnwd8tv)
-            getTT("wd", "wd9", binding!!.wd9tv, binding!!.lnwd9tv)
-            getTT("wd", "wd10", binding!!.wd10tv, binding!!.lnwd10tv)
-            getTT("wd", "wd11", binding!!.wd11tv, binding!!.lnwd11tv)
-            getTT("wd", "wd12", binding!!.wd12tv, binding!!.lnwd12tv)
-            getTT("th", "th1", binding!!.th1tv, binding!!.lnth1tv)
-            getTT("th", "th2", binding!!.th2tv, binding!!.lnth2tv)
-            getTT("th", "th3", binding!!.th3tv, binding!!.lnth3tv)
-            getTT("th", "th4", binding!!.th4tv, binding!!.lnth4tv)
-            getTT("th", "th5", binding!!.th5tv, binding!!.lnth5tv)
-            getTT("th", "th6", binding!!.th6tv, binding!!.lnth6tv)
-            getTT("th", "th7", binding!!.th7tv, binding!!.lnth7tv)
-            getTT("th", "th8", binding!!.th8tv, binding!!.lnth8tv)
-            getTT("th", "th9", binding!!.th9tv, binding!!.lnth9tv)
-            getTT("th", "th10", binding!!.th10tv, binding!!.lnth10tv)
-            getTT("th", "th11", binding!!.th11tv, binding!!.lnth11tv)
-            getTT("th", "th12", binding!!.th12tv, binding!!.lnth12tv)
-            getTT("fr", "fr1", binding!!.fr1tv, binding!!.lnfr1tv)
-            getTT("fr", "fr2", binding!!.fr2tv, binding!!.lnfr2tv)
-            getTT("fr", "fr3", binding!!.fr3tv, binding!!.lnfr3tv)
-            getTT("fr", "fr4", binding!!.fr4tv, binding!!.lnfr4tv)
-            getTT("fr", "fr5", binding!!.fr5tv, binding!!.lnfr5tv)
-            getTT("fr", "fr6", binding!!.fr6tv, binding!!.lnfr6tv)
-            getTT("fr", "fr7", binding!!.fr7tv, binding!!.lnfr7tv)
-            getTT("fr", "fr8", binding!!.fr8tv, binding!!.lnfr8tv)
-            getTT("fr", "fr9", binding!!.fr9tv, binding!!.lnfr9tv)
-            getTT("fr", "fr10", binding!!.fr10tv, binding!!.lnfr10tv)
-            getTT("fr", "fr11", binding!!.fr11tv, binding!!.lnfr11tv)
-            getTT("fr", "fr12", binding!!.fr12tv, binding!!.lnfr12tv)
-            getTT("st", "st1", binding!!.st1tv, binding!!.lnst1tv)
-            getTT("st", "st2", binding!!.st2tv, binding!!.lnst2tv)
-            getTT("st", "st3", binding!!.st3tv, binding!!.lnst3tv)
-            getTT("st", "st4", binding!!.st4tv, binding!!.lnst4tv)
-            getTT("st", "st5", binding!!.st5tv, binding!!.lnst5tv)
-            getTT("st", "st6", binding!!.st6tv, binding!!.lnst6tv)
-            getTT("st", "st7", binding!!.st7tv, binding!!.lnst7tv)
-            getTT("st", "st8", binding!!.st8tv, binding!!.lnst8tv)
-            getTT("st", "st9", binding!!.st9tv, binding!!.lnst9tv)
-            getTT("st", "st10", binding!!.st10tv, binding!!.lnst10tv)
-            getTT("st", "st11", binding!!.st11tv, binding!!.lnst11tv)
-            getTT("st", "st12", binding!!.st12tv, binding!!.lnst12tv)
+            initTT.getTT("mn", "mn1", b!!.mn1tv, b!!.lnmn1tv,mAuth)
+            initTT.getTT("mn", "mn2", b!!.mn2tv, b!!.lnmn2tv,mAuth)
+            initTT.getTT("mn", "mn3", b!!.mn3tv, b!!.lnmn3tv,mAuth)
+            initTT.getTT("mn", "mn4", b!!.mn4tv, b!!.lnmn4tv,mAuth)
+            initTT.getTT("mn", "mn5", b!!.mn5tv, b!!.lnmn5tv,mAuth)
+            initTT.getTT("mn", "mn6", b!!.mn6tv, b!!.lnmn6tv,mAuth)
+            initTT.getTT("mn", "mn7", b!!.mn7tv, b!!.lnmn7tv,mAuth)
+            initTT.getTT("mn", "mn8", b!!.mn8tv, b!!.lnmn8tv,mAuth)
+            initTT.getTT("mn", "mn9", b!!.mn9tv, b!!.lnmn9tv,mAuth)
+            initTT.getTT("mn", "mn10", b!!.mn10tv, b!!.lnmn10tv,mAuth)
+            initTT.getTT("mn", "mn11", b!!.mn11tv, b!!.lnmn11tv,mAuth)
+            initTT.getTT("mn", "mn12", b!!.mn12tv, b!!.lnmn12tv,mAuth)
+            initTT.getTT("ty", "ty1", b!!.ty1tv, b!!.lnty1tv,mAuth)
+            initTT.getTT("ty", "ty2", b!!.ty2tv, b!!.lnty2tv,mAuth)
+            initTT.getTT("ty", "ty3", b!!.ty3tv, b!!.lnty3tv,mAuth)
+            initTT.getTT("ty", "ty4", b!!.ty4tv, b!!.lnty4tv,mAuth)
+            initTT.getTT("ty", "ty5", b!!.ty5tv, b!!.lnty5tv,mAuth)
+            initTT.getTT("ty", "ty6", b!!.ty6tv, b!!.lnty6tv,mAuth)
+            initTT.getTT("ty", "ty7", b!!.ty7tv, b!!.lnty7tv,mAuth)
+            initTT.getTT("ty", "ty8", b!!.ty8tv, b!!.lnty8tv,mAuth)
+            initTT.getTT("ty", "ty9", b!!.ty9tv, b!!.lnty9tv,mAuth)
+            initTT.getTT("ty", "ty10", b!!.ty10tv, b!!.lnty10tv,mAuth)
+            initTT.getTT("ty", "ty11", b!!.ty11tv, b!!.lnty11tv,mAuth)
+            initTT.getTT("ty", "ty12", b!!.ty12tv, b!!.lnty12tv,mAuth)
+            initTT.getTT("wd", "wd1", b!!.wd1tv, b!!.lnwd1tv,mAuth)
+            initTT.getTT("wd", "wd2", b!!.wd2tv, b!!.lnwd2tv,mAuth)
+            initTT.getTT("wd", "wd3", b!!.wd3tv, b!!.lnwd3tv,mAuth)
+            initTT.getTT("wd", "wd4", b!!.wd4tv, b!!.lnwd4tv,mAuth)
+            initTT.getTT("wd", "wd5", b!!.wd5tv, b!!.lnwd5tv,mAuth)
+            initTT.getTT("wd", "wd6", b!!.wd6tv, b!!.lnwd6tv,mAuth)
+            initTT.getTT("wd", "wd7", b!!.wd7tv, b!!.lnwd7tv,mAuth)
+            initTT.getTT("wd", "wd8", b!!.wd8tv, b!!.lnwd8tv,mAuth)
+            initTT.getTT("wd", "wd9", b!!.wd9tv, b!!.lnwd9tv,mAuth)
+            initTT.getTT("wd", "wd10", b!!.wd10tv, b!!.lnwd10tv,mAuth)
+            initTT.getTT("wd", "wd11", b!!.wd11tv, b!!.lnwd11tv,mAuth)
+            initTT.getTT("wd", "wd12", b!!.wd12tv, b!!.lnwd12tv,mAuth)
+            initTT.getTT("th", "th1", b!!.th1tv, b!!.lnth1tv,mAuth)
+            initTT.getTT("th", "th2", b!!.th2tv, b!!.lnth2tv,mAuth)
+            initTT.getTT("th", "th3", b!!.th3tv, b!!.lnth3tv,mAuth)
+            initTT.getTT("th", "th4", b!!.th4tv, b!!.lnth4tv,mAuth)
+            initTT.getTT("th", "th5", b!!.th5tv, b!!.lnth5tv,mAuth)
+            initTT.getTT("th", "th6", b!!.th6tv, b!!.lnth6tv,mAuth)
+            initTT.getTT("th", "th7", b!!.th7tv, b!!.lnth7tv,mAuth)
+            initTT.getTT("th", "th8", b!!.th8tv, b!!.lnth8tv,mAuth)
+            initTT.getTT("th", "th9", b!!.th9tv, b!!.lnth9tv,mAuth)
+            initTT.getTT("th", "th10", b!!.th10tv, b!!.lnth10tv,mAuth)
+            initTT.getTT("th", "th11", b!!.th11tv, b!!.lnth11tv,mAuth)
+            initTT.getTT("th", "th12", b!!.th12tv, b!!.lnth12tv,mAuth)
+            initTT.getTT("fr", "fr1", b!!.fr1tv, b!!.lnfr1tv,mAuth)
+            initTT.getTT("fr", "fr2", b!!.fr2tv, b!!.lnfr2tv,mAuth)
+            initTT.getTT("fr", "fr3", b!!.fr3tv, b!!.lnfr3tv,mAuth)
+            initTT.getTT("fr", "fr4", b!!.fr4tv, b!!.lnfr4tv,mAuth)
+            initTT.getTT("fr", "fr5", b!!.fr5tv, b!!.lnfr5tv,mAuth)
+            initTT.getTT("fr", "fr6", b!!.fr6tv, b!!.lnfr6tv,mAuth)
+            initTT.getTT("fr", "fr7", b!!.fr7tv, b!!.lnfr7tv,mAuth)
+            initTT.getTT("fr", "fr8", b!!.fr8tv, b!!.lnfr8tv,mAuth)
+            initTT.getTT("fr", "fr9", b!!.fr9tv, b!!.lnfr9tv,mAuth)
+            initTT.getTT("fr", "fr10", b!!.fr10tv, b!!.lnfr10tv,mAuth)
+            initTT.getTT("fr", "fr11", b!!.fr11tv, b!!.lnfr11tv,mAuth)
+            initTT.getTT("fr", "fr12", b!!.fr12tv, b!!.lnfr12tv,mAuth)
+            initTT.getTT("st", "st1", b!!.st1tv, b!!.lnst1tv,mAuth)
+            initTT.getTT("st", "st2", b!!.st2tv, b!!.lnst2tv,mAuth)
+            initTT.getTT("st", "st3", b!!.st3tv, b!!.lnst3tv,mAuth)
+            initTT.getTT("st", "st4", b!!.st4tv, b!!.lnst4tv,mAuth)
+            initTT.getTT("st", "st5", b!!.st5tv, b!!.lnst5tv,mAuth)
+            initTT.getTT("st", "st6", b!!.st6tv, b!!.lnst6tv,mAuth)
+            initTT.getTT("st", "st7", b!!.st7tv, b!!.lnst7tv,mAuth)
+            initTT.getTT("st", "st8", b!!.st8tv, b!!.lnst8tv,mAuth)
+            initTT.getTT("st", "st9", b!!.st9tv, b!!.lnst9tv,mAuth)
+            initTT.getTT("st", "st10", b!!.st10tv, b!!.lnst10tv,mAuth)
+            initTT.getTT("st", "st11", b!!.st11tv, b!!.lnst11tv,mAuth)
+            initTT.getTT("st", "st12", b!!.st12tv, b!!.lnst12tv,mAuth)
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
@@ -171,134 +162,124 @@ class TimeTableFragment : Fragment() {
     private fun showHideFromDate() {
         val dform = SimpleDateFormat("EEE")
         when (dform.format(Calendar.getInstance().time)) {
-            "вс" -> show(binding!!.mnTvShowHide, binding!!.mnShowHide)
-            "Sun" -> show(binding!!.mnTvShowHide, binding!!.mnShowHide)
-            "пн" -> show(binding!!.mnTvShowHide, binding!!.mnShowHide)
-            "Mon" -> show(binding!!.mnTvShowHide, binding!!.mnShowHide)
-            "вт" -> show(binding!!.tyTvShowHide, binding!!.tyShowHide)
-            "Tues" -> show(binding!!.tyTvShowHide, binding!!.tyShowHide)
-            "ср" -> show(binding!!.wdTvShowHide, binding!!.wdShowHide)
-            "Wed" -> show(binding!!.wdTvShowHide, binding!!.wdShowHide)
-            "чт" -> show(binding!!.thTvShowHide, binding!!.thShowHide)
-            "Thurs" -> show(binding!!.thTvShowHide, binding!!.thShowHide)
-            "пт" -> show(binding!!.frTvShowHide, binding!!.frShowHide)
-            "Fri" -> show(binding!!.frTvShowHide, binding!!.frShowHide)
-            "сб" -> show(binding!!.stTvShowHide, binding!!.stShowHide)
-            "Sat" -> show(binding!!.stTvShowHide, binding!!.stShowHide)
+            "вс" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
+            "Sun" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
+            "пн" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
+            "Mon" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
+            "вт" -> initTT.show(b!!.tyTvShowHide, b!!.tyShowHide)
+            "Tues" -> initTT.show(b!!.tyTvShowHide, b!!.tyShowHide)
+            "ср" -> initTT.show(b!!.wdTvShowHide, b!!.wdShowHide)
+            "Wed" -> initTT.show(b!!.wdTvShowHide, b!!.wdShowHide)
+            "чт" -> initTT.show(b!!.thTvShowHide, b!!.thShowHide)
+            "Thurs" -> initTT.show(b!!.thTvShowHide, b!!.thShowHide)
+            "пт" -> initTT.show(b!!.frTvShowHide, b!!.frShowHide)
+            "Fri" -> initTT.show(b!!.frTvShowHide, b!!.frShowHide)
+            "сб" -> initTT.show(b!!.stTvShowHide, b!!.stShowHide)
+            "Sat" -> initTT.show(b!!.stTvShowHide, b!!.stShowHide)
             else -> {
             }
         }
     }
 
 
-    private fun show(tv: TextView, ln: LinearLayout) {
-        tv.visibility = View.GONE
-        ln.visibility = View.VISIBLE
-    }
-
-    private fun hide(tv: TextView, ln: LinearLayout) {
-        tv.visibility = View.VISIBLE
-        ln.visibility = View.GONE
-    }
-
     private fun cl() {
         try {
-            binding!!.mnTvShowHide.setOnClickListener { show(binding!!.mnTvShowHide, binding!!.mnShowHide) }
-            binding!!.tyTvShowHide.setOnClickListener { show(binding!!.tyTvShowHide, binding!!.tyShowHide) }
-            binding!!.wdTvShowHide.setOnClickListener { show(binding!!.wdTvShowHide, binding!!.wdShowHide) }
-            binding!!.thTvShowHide.setOnClickListener { show(binding!!.thTvShowHide, binding!!.thShowHide) }
-            binding!!.frTvShowHide.setOnClickListener { show(binding!!.frTvShowHide, binding!!.frShowHide) }
-            binding!!.stTvShowHide.setOnClickListener { show(binding!!.stTvShowHide, binding!!.stShowHide) }
-            binding!!.mnTv.setOnClickListener { hide(binding!!.mnTvShowHide, binding!!.mnShowHide) }
-            binding!!.tyTv.setOnClickListener { hide(binding!!.tyTvShowHide, binding!!.tyShowHide) }
-            binding!!.wdTv.setOnClickListener { hide(binding!!.wdTvShowHide, binding!!.wdShowHide) }
-            binding!!.thTv.setOnClickListener { hide(binding!!.thTvShowHide, binding!!.thShowHide) }
-            binding!!.frTv.setOnClickListener { hide(binding!!.frTvShowHide, binding!!.frShowHide) }
-            binding!!.stTv.setOnClickListener { hide(binding!!.stTvShowHide, binding!!.stShowHide) }
+            initTT.setShowCl(b!!.mnTvShowHide, b!!.mnShowHide)
+            initTT.setShowCl(b!!.tyTvShowHide, b!!.tyShowHide)
+            initTT.setShowCl(b!!.wdTvShowHide, b!!.wdShowHide)
+            initTT.setShowCl(b!!.thTvShowHide, b!!.thShowHide)
+            initTT.setShowCl(b!!.frTvShowHide, b!!.frShowHide)
+            initTT.setShowCl(b!!.stTvShowHide, b!!.stShowHide)
+            initTT.setHideCl(b!!.mnTv, b!!.mnShowHide)
+            initTT.setHideCl(b!!.tyTv, b!!.tyShowHide)
+            initTT.setHideCl(b!!.wdTv, b!!.wdShowHide)
+            initTT.setHideCl(b!!.thTv, b!!.thShowHide)
+            initTT.setHideCl(b!!.frTv, b!!.frShowHide)
+            initTT.setHideCl(b!!.stTv, b!!.stShowHide)
         }catch (e: Exception){
             e.printStackTrace()
         }
     }
 
     private fun setInvisibleAll() {
-        binding!!.mnShowHide.visibility = View.GONE
-        binding!!.tyShowHide.visibility = View.GONE
-        binding!!.wdShowHide.visibility = View.GONE
-        binding!!.thShowHide.visibility = View.GONE
-        binding!!.frShowHide.visibility = View.GONE
-        binding!!.stShowHide.visibility = View.GONE
-        binding!!.lnmn1tv.visibility = View.GONE
-        binding!!.lnmn2tv.visibility = View.GONE
-        binding!!.lnmn3tv.visibility = View.GONE
-        binding!!.lnmn4tv.visibility = View.GONE
-        binding!!.lnmn5tv.visibility = View.GONE
-        binding!!.lnmn6tv.visibility = View.GONE
-        binding!!.lnmn7tv.visibility = View.GONE
-        binding!!.lnmn8tv.visibility = View.GONE
-        binding!!.lnmn9tv.visibility = View.GONE
-        binding!!.lnmn10tv.visibility = View.GONE
-        binding!!.lnmn11tv.visibility = View.GONE
-        binding!!.lnmn12tv.visibility = View.GONE
-        binding!!.lnty1tv.visibility = View.GONE
-        binding!!.lnty2tv.visibility = View.GONE
-        binding!!.lnty3tv.visibility = View.GONE
-        binding!!.lnty4tv.visibility = View.GONE
-        binding!!.lnty5tv.visibility = View.GONE
-        binding!!.lnty6tv.visibility = View.GONE
-        binding!!.lnty7tv.visibility = View.GONE
-        binding!!.lnty8tv.visibility = View.GONE
-        binding!!.lnty9tv.visibility = View.GONE
-        binding!!.lnty10tv.visibility = View.GONE
-        binding!!.lnty11tv.visibility = View.GONE
-        binding!!.lnty12tv.visibility = View.GONE
-        binding!!.lnwd1tv.visibility = View.GONE
-        binding!!.lnwd2tv.visibility = View.GONE
-        binding!!.lnwd3tv.visibility = View.GONE
-        binding!!.lnwd4tv.visibility = View.GONE
-        binding!!.lnwd5tv.visibility = View.GONE
-        binding!!.lnwd6tv.visibility = View.GONE
-        binding!!.lnwd7tv.visibility = View.GONE
-        binding!!.lnwd8tv.visibility = View.GONE
-        binding!!.lnwd9tv.visibility = View.GONE
-        binding!!.lnwd10tv.visibility = View.GONE
-        binding!!.lnwd11tv.visibility = View.GONE
-        binding!!.lnwd12tv.visibility = View.GONE
-        binding!!.lnth1tv.visibility = View.GONE
-        binding!!.lnth2tv.visibility = View.GONE
-        binding!!.lnth3tv.visibility = View.GONE
-        binding!!.lnth4tv.visibility = View.GONE
-        binding!!.lnth5tv.visibility = View.GONE
-        binding!!.lnth6tv.visibility = View.GONE
-        binding!!.lnth7tv.visibility = View.GONE
-        binding!!.lnth8tv.visibility = View.GONE
-        binding!!.lnth9tv.visibility = View.GONE
-        binding!!.lnth10tv.visibility = View.GONE
-        binding!!.lnth11tv.visibility = View.GONE
-        binding!!.lnth12tv.visibility = View.GONE
-        binding!!.lnfr1tv.visibility = View.GONE
-        binding!!.lnfr2tv.visibility = View.GONE
-        binding!!.lnfr3tv.visibility = View.GONE
-        binding!!.lnfr4tv.visibility = View.GONE
-        binding!!.lnfr5tv.visibility = View.GONE
-        binding!!.lnfr6tv.visibility = View.GONE
-        binding!!.lnfr7tv.visibility = View.GONE
-        binding!!.lnfr8tv.visibility = View.GONE
-        binding!!.lnfr9tv.visibility = View.GONE
-        binding!!.lnfr10tv.visibility = View.GONE
-        binding!!.lnfr11tv.visibility = View.GONE
-        binding!!.lnfr12tv.visibility = View.GONE
-        binding!!.lnst1tv.visibility = View.GONE
-        binding!!.lnst2tv.visibility = View.GONE
-        binding!!.lnst3tv.visibility = View.GONE
-        binding!!.lnst4tv.visibility = View.GONE
-        binding!!.lnst5tv.visibility = View.GONE
-        binding!!.lnst6tv.visibility = View.GONE
-        binding!!.lnst7tv.visibility = View.GONE
-        binding!!.lnst8tv.visibility = View.GONE
-        binding!!.lnst9tv.visibility = View.GONE
-        binding!!.lnst10tv.visibility = View.GONE
-        binding!!.lnst11tv.visibility = View.GONE
-        binding!!.lnst12tv.visibility = View.GONE
+        initTT.invisView(b!!.mnShowHide)
+        initTT.invisView(b!!.tyShowHide)
+        initTT.invisView(b!!.wdShowHide)
+        initTT.invisView(b!!.thShowHide)
+        initTT.invisView(b!!.frShowHide)
+        initTT.invisView(b!!.stShowHide)
+        initTT.invisView(b!!.lnmn1tv)
+        initTT.invisView(b!!.lnmn2tv)
+        initTT.invisView(b!!.lnmn3tv)
+        initTT.invisView(b!!.lnmn4tv)
+        initTT.invisView(b!!.lnmn5tv)
+        initTT.invisView(b!!.lnmn6tv)
+        initTT.invisView(b!!.lnmn7tv)
+        initTT.invisView(b!!.lnmn8tv)
+        initTT.invisView(b!!.lnmn9tv)
+        initTT.invisView(b!!.lnmn10tv)
+        initTT.invisView(b!!.lnmn11tv)
+        initTT.invisView(b!!.lnmn12tv)
+        initTT.invisView(b!!.lnty1tv)
+        initTT.invisView(b!!.lnty2tv)
+        initTT.invisView(b!!.lnty3tv)
+        initTT.invisView(b!!.lnty4tv)
+        initTT.invisView(b!!.lnty5tv)
+        initTT.invisView(b!!.lnty6tv)
+        initTT.invisView(b!!.lnty7tv)
+        initTT.invisView(b!!.lnty8tv)
+        initTT.invisView(b!!.lnty9tv)
+        initTT.invisView(b!!.lnty10tv)
+        initTT.invisView(b!!.lnty11tv)
+        initTT.invisView(b!!.lnty12tv)
+        initTT.invisView(b!!.lnwd1tv)
+        initTT.invisView(b!!.lnwd2tv)
+        initTT.invisView(b!!.lnwd3tv)
+        initTT.invisView(b!!.lnwd4tv)
+        initTT.invisView(b!!.lnwd5tv)
+        initTT.invisView(b!!.lnwd6tv)
+        initTT.invisView(b!!.lnwd7tv)
+        initTT.invisView(b!!.lnwd8tv)
+        initTT.invisView(b!!.lnwd9tv)
+        initTT.invisView(b!!.lnwd10tv)
+        initTT.invisView(b!!.lnwd11tv)
+        initTT.invisView(b!!.lnwd12tv)
+        initTT.invisView(b!!.lnth1tv)
+        initTT.invisView(b!!.lnth2tv)
+        initTT.invisView(b!!.lnth3tv)
+        initTT.invisView(b!!.lnth4tv)
+        initTT.invisView(b!!.lnth5tv)
+        initTT.invisView(b!!.lnth6tv)
+        initTT.invisView(b!!.lnth7tv)
+        initTT.invisView(b!!.lnth8tv)
+        initTT.invisView(b!!.lnth9tv)
+        initTT.invisView(b!!.lnth10tv)
+        initTT.invisView(b!!.lnth11tv)
+        initTT.invisView(b!!.lnth12tv)
+        initTT.invisView(b!!.lnfr1tv)
+        initTT.invisView(b!!.lnfr2tv)
+        initTT.invisView(b!!.lnfr3tv)
+        initTT.invisView(b!!.lnfr4tv)
+        initTT.invisView(b!!.lnfr5tv)
+        initTT.invisView(b!!.lnfr6tv)
+        initTT.invisView(b!!.lnfr7tv)
+        initTT.invisView(b!!.lnfr8tv)
+        initTT.invisView(b!!.lnfr9tv)
+        initTT.invisView(b!!.lnfr10tv)
+        initTT.invisView(b!!.lnfr11tv)
+        initTT.invisView(b!!.lnfr12tv)
+        initTT.invisView(b!!.lnst1tv)
+        initTT.invisView(b!!.lnst2tv)
+        initTT.invisView(b!!.lnst3tv)
+        initTT.invisView(b!!.lnst4tv)
+        initTT.invisView(b!!.lnst5tv)
+        initTT.invisView(b!!.lnst6tv)
+        initTT.invisView(b!!.lnst7tv)
+        initTT.invisView(b!!.lnst8tv)
+        initTT.invisView(b!!.lnst9tv)
+        initTT.invisView(b!!.lnst10tv)
+        initTT.invisView(b!!.lnst11tv)
+        initTT.invisView(b!!.lnst12tv)
     }
 
     override fun onStart() {
