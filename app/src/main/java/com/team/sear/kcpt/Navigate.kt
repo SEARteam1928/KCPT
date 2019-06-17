@@ -27,6 +27,7 @@ import ir.mirrajabi.searchdialog.core.SearchResultListener
 class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var ttFrag: TimeTableFragment
+    private lateinit var ttFragNew: NewTimeTableFrag
     private lateinit var zvonkiFrag: ZvonkiFrag
     private lateinit var changesFrag: ChangesFrag
     private lateinit var feedbackFrag: FeedbackFrag
@@ -55,8 +56,9 @@ class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
         navigateIntent = Intent(this, Navigate::class.java)
         try {
             ttFrag = TimeTableFragment()
+            ttFragNew = NewTimeTableFrag()
             val ftrans = supportFragmentManager.beginTransaction()
-            ftrans.replace(R.id.navigate, ttFrag)
+            ftrans.replace(R.id.navigate, ttFragNew)
             ftrans.commit()
         } catch (e: Exception) {
             Toast.makeText(this@Navigate, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
@@ -70,6 +72,7 @@ class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
             weatherFrag = WeatherFrag()
             newsFrag = NewsFrag()
             userChangesFrag = UserChanges()
+
         } catch (e: Exception) {
             Toast.makeText(this@Navigate, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
         }
@@ -355,7 +358,7 @@ class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
         val ftrans = supportFragmentManager.beginTransaction()
 
         when (id) {
-            R.id.timetableItem -> ftrans.replace(R.id.navigate, ttFrag)
+            R.id.timetableItem -> ftrans.replace(R.id.navigate, ttFragNew)
             R.id.changesItem -> ftrans.replace(R.id.navigate, changesFrag)
             R.id.zvonkiItem -> ftrans.replace(R.id.navigate, zvonkiFrag)
             R.id.feedbackItem -> ftrans.replace(R.id.navigate, feedbackFrag)

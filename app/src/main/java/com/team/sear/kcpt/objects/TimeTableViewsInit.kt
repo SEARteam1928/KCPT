@@ -9,9 +9,9 @@ class TimeTableViewsInit{
 
     private lateinit var getTimeTable: StatusDetermination
 
-   fun getTT(day: String, lesson: String, dayTv: TextView, dayLn: LinearLayout, auth: FirebaseAuth) {
+   fun getTT(day: String, lesson: String, ttStr: String?, dayLn: LinearLayout, auth: FirebaseAuth) {
         try {
-            getTimeTable.getTimeTable(day, lesson, dayTv, dayLn, auth)
+            getTimeTable.getTimeTable(day, lesson, ttStr!!, dayLn, auth)
         } catch (e: Exception) {
             e.printStackTrace()
         }

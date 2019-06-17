@@ -22,7 +22,7 @@ class StatusDetermination {
     private fun getUserStatusPrivate(
             day: String,
             lesson: String,
-            dayTv: TextView,
+            ttStr: String,
             ln: LinearLayout,
             mAuth: FirebaseAuth
     ) {
@@ -45,15 +45,15 @@ class StatusDetermination {
                     if (statusStr == null || statusStr == "") {
                     }
                     if (statusStr == "STUDENT") {
-                        student!!.getTimeTableStudent(day, lesson, dayTv, ln, mAuth)
+                        student!!.getTimeTableStudent(day, lesson, ttStr, ln, mAuth)
                     }
                     if (statusStr == "TEACHER") {
-                        teacher!!.getTimeTable(day, lesson, dayTv, ln, mAuth)
+                        teacher!!.getTimeTable(day, lesson, ttStr, ln, mAuth)
                     }
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
-                    dayTv.text = "Ошибка загрузки"
+                    ttStr = "Ошибка загрузки"
                     ln.visibility = View.VISIBLE
                 }
             })
@@ -62,7 +62,7 @@ class StatusDetermination {
         }
     }
 
-    fun getTimeTable(day: String, lesson: String, dayTv: TextView, ln: LinearLayout, mAuth: FirebaseAuth) {
-        getUserStatusPrivate(day, lesson, dayTv, ln, mAuth)
+    fun getTimeTable(day: String, lesson: String, ttStr: String, ln: LinearLayout, mAuth: FirebaseAuth) {
+        getUserStatusPrivate(day, lesson, ttStr, ln, mAuth)
     }
 }

@@ -1,5 +1,6 @@
 package com.team.sear.kcpt.objects
 
+import android.renderscript.Sampler
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -25,7 +26,7 @@ class Student {
     private fun getTimeTablePrivate(
             day: String,
             lesson: String,
-            dayTv: TextView,
+            ttStr: String,
             ln: LinearLayout,
             mAuth: FirebaseAuth
     ) {
@@ -45,7 +46,7 @@ class Student {
                         allGroupTimtetable = dataSnapshot.getValue(String::class.java)
 
                         if (allGroupTimtetable != null && allGroupTimtetable != "") {
-                            dayTv.text = allGroupTimtetable
+                            ttStr = allGroupTimtetable as String
                             ln.visibility = View.VISIBLE
                         } else {
                             finalDatabase[0] = FirebaseDatabase.getInstance()
@@ -59,7 +60,7 @@ class Student {
                                 }
 
                                 override fun onCancelled(databaseError: DatabaseError) {
-                                    dayTv.text = "Ошибка загрузки"
+                                    ttStr = "Ошибка загрузки"
                                     ln.visibility = View.VISIBLE
                                 }
                             })
@@ -71,24 +72,24 @@ class Student {
 
                                     if (firstSubGroupTimetable != null && firstSubGroupTimetable != "" && secondSubGroupTimtetable != null && secondSubGroupTimtetable != "") {
                                         timetable = "1. $firstSubGroupTimetable\n2. $secondSubGroupTimtetable"
-                                        dayTv.text = timetable
+                                        ttStr = timetable as String
                                         ln.visibility = View.VISIBLE
                                     } else {
                                         if (firstSubGroupTimetable != null && firstSubGroupTimetable != "") {
                                             timetable = "1. $firstSubGroupTimetable"
-                                            dayTv.text = timetable
+                                            ttStr = timetable as String
                                             ln.visibility = View.VISIBLE
                                         }
                                         if (secondSubGroupTimtetable != null && secondSubGroupTimtetable != "") {
                                             timetable = "2. $secondSubGroupTimtetable"
-                                            dayTv.text = timetable
+                                            ttStr = timetable as String
                                             ln.visibility = View.VISIBLE
                                         }
                                     }
                                 }
 
                                 override fun onCancelled(databaseError: DatabaseError) {
-                                    dayTv.text = "Ошибка загрузки"
+                                    ttStr = "Ошибка загрузки"
                                     ln.visibility = View.VISIBLE
                                 }
                             })
@@ -96,7 +97,7 @@ class Student {
                     }
 
                     override fun onCancelled(databaseError: DatabaseError) {
-                        dayTv.text = "Ошибка загрузки"
+                        ttStr = "Ошибка загрузки"
                         ln.visibility = View.VISIBLE
                     }
                 })
@@ -110,7 +111,7 @@ class Student {
         })
     }
 
-    fun getTimeTableStudent(day: String, lesson: String, dayTv: TextView, ln: LinearLayout, mAuth: FirebaseAuth) {
-        getTimeTablePrivate(day, lesson, dayTv, ln, mAuth)
+    fun getTimeTableStudent(day: String, lesson: String, ttStr: String, ln: LinearLayout, mAuth: FirebaseAuth) {
+        getTimeTablePrivate(day, lesson, ttStr, ln, mAuth)
     }
 }
