@@ -47,7 +47,7 @@ class TimeTableFragment : Fragment() {
 
         b = DataBindingUtil.inflate(inflater, R.layout.timetable_fragment, container, false)
         initTT = TimeTableViewsInit()
-
+/*
         try {
             cl()
             mAuth = getInstance()
@@ -65,7 +65,9 @@ class TimeTableFragment : Fragment() {
             val date = df.format(Calendar.getInstance().time)
             myRef.setValue(date + "SIGNEDIN")
             try {
+*//*
                 setTimeTable()
+*//*
             } catch (e: Exception) {
                 Toast.makeText(context, "Обновите или выберите расписание", Toast.LENGTH_SHORT).show()
             }
@@ -74,9 +76,10 @@ class TimeTableFragment : Fragment() {
             e.printStackTrace()
         }
 
-        Handler().postDelayed({ showHideFromDate() }, 100)
+        Handler().postDelayed({ showHideFromDate() }, 100)*/
         return b!!.root
     }
+/*
 
     private fun setTimeTable() {
         try {
@@ -157,12 +160,13 @@ class TimeTableFragment : Fragment() {
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
     }
-
+*/
+/*
     @SuppressLint("SimpleDateFormat")
     private fun showHideFromDate() {
         val dform = SimpleDateFormat("EEE")
-        when (dform.format(Calendar.getInstance().time)) {
-            "вс" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
+        when (dform.format(Calendar.getInstance().time)) {*/
+/*            "вс" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
             "Sun" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
             "пн" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
             "Mon" -> initTT.show(b!!.mnTvShowHide, b!!.mnShowHide)
@@ -175,8 +179,8 @@ class TimeTableFragment : Fragment() {
             "пт" -> initTT.show(b!!.frTvShowHide, b!!.frShowHide)
             "Fri" -> initTT.show(b!!.frTvShowHide, b!!.frShowHide)
             "сб" -> initTT.show(b!!.stTvShowHide, b!!.stShowHide)
-            "Sat" -> initTT.show(b!!.stTvShowHide, b!!.stShowHide)
-            else -> {
+            "Sat" -> initTT.show(b!!.stTvShowHide, b!!.stShowHide)*/
+/*            else -> {
             }
         }
     }
@@ -280,7 +284,7 @@ class TimeTableFragment : Fragment() {
         initTT.invisView(b!!.lnst10tv)
         initTT.invisView(b!!.lnst11tv)
         initTT.invisView(b!!.lnst12tv)
-    }
+    }*/
 
     override fun onStart() {
         super.onStart()

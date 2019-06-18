@@ -9,22 +9,13 @@ class TimeTableViewsInit{
 
     private lateinit var getTimeTable: StatusDetermination
 
-   fun getTT(day: String, lesson: String, ttStr: String?, dayLn: LinearLayout, auth: FirebaseAuth) {
+   fun getTT(day: String, lesson: String,dayLn: LinearLayout, auth: FirebaseAuth, tv: TextView) {
         try {
-            getTimeTable.getTimeTable(day, lesson, ttStr!!, dayLn, auth)
+            getTimeTable = StatusDetermination()
+            getTimeTable.getTimeTable(day, lesson,  dayLn, auth, tv)
         } catch (e: Exception) {
             e.printStackTrace()
         }
-    }
-
-     fun show(tv: TextView, ln: LinearLayout) {
-        tv.visibility = View.GONE
-        ln.visibility = View.VISIBLE
-    }
-
-     fun hide(tv: TextView, ln: LinearLayout) {
-        tv.visibility = View.VISIBLE
-        ln.visibility = View.GONE
     }
 
     fun invisView(v: View){
@@ -32,10 +23,10 @@ class TimeTableViewsInit{
     }
 
     fun setShowCl(v1: TextView, v2: LinearLayout){
-        v1.setOnClickListener { show(v1, v2) }
+        v1.setOnClickListener { }
     }
 
     fun setHideCl(v1: TextView, v2: LinearLayout){
-        v1.setOnClickListener { hide(v1, v2) }
+        v1.setOnClickListener {  }
     }
 }

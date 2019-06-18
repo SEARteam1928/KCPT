@@ -11,6 +11,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.team.sear.kcpt.NewTimeTableFrag
+import com.team.sear.kcpt.databinding.FragmentNewTimeTableBinding
 
 class Student {
     internal var database: FirebaseDatabase? = null
@@ -26,9 +28,9 @@ class Student {
     private fun getTimeTablePrivate(
             day: String,
             lesson: String,
-            ttStr: String,
             ln: LinearLayout,
-            mAuth: FirebaseAuth
+            mAuth: FirebaseAuth,
+            tv: TextView
     ) {
         val database: FirebaseDatabase = FirebaseDatabase.getInstance()
         val user: FirebaseUser? = mAuth.currentUser
@@ -46,7 +48,7 @@ class Student {
                         allGroupTimtetable = dataSnapshot.getValue(String::class.java)
 
                         if (allGroupTimtetable != null && allGroupTimtetable != "") {
-                            ttStr = allGroupTimtetable as String
+                            tv.text = allGroupTimtetable as String
                             ln.visibility = View.VISIBLE
                         } else {
                             finalDatabase[0] = FirebaseDatabase.getInstance()
@@ -60,7 +62,7 @@ class Student {
                                 }
 
                                 override fun onCancelled(databaseError: DatabaseError) {
-                                    ttStr = "Ошибка загрузки"
+                                    tv.text = "Ошибка загрузки"
                                     ln.visibility = View.VISIBLE
                                 }
                             })
@@ -72,24 +74,24 @@ class Student {
 
                                     if (firstSubGroupTimetable != null && firstSubGroupTimetable != "" && secondSubGroupTimtetable != null && secondSubGroupTimtetable != "") {
                                         timetable = "1. $firstSubGroupTimetable\n2. $secondSubGroupTimtetable"
-                                        ttStr = timetable as String
+                                        tv.text = timetable
                                         ln.visibility = View.VISIBLE
                                     } else {
                                         if (firstSubGroupTimetable != null && firstSubGroupTimetable != "") {
                                             timetable = "1. $firstSubGroupTimetable"
-                                            ttStr = timetable as String
+                                            tv.text = timetable
                                             ln.visibility = View.VISIBLE
                                         }
                                         if (secondSubGroupTimtetable != null && secondSubGroupTimtetable != "") {
                                             timetable = "2. $secondSubGroupTimtetable"
-                                            ttStr = timetable as String
+                                            tv.text = timetable
                                             ln.visibility = View.VISIBLE
                                         }
                                     }
                                 }
 
                                 override fun onCancelled(databaseError: DatabaseError) {
-                                    ttStr = "Ошибка загрузки"
+                                    tv.text = "Ошибка загрузки"
                                     ln.visibility = View.VISIBLE
                                 }
                             })
@@ -97,7 +99,7 @@ class Student {
                     }
 
                     override fun onCancelled(databaseError: DatabaseError) {
-                        ttStr = "Ошибка загрузки"
+                        tv.text  = "Ошибка загрузки"
                         ln.visibility = View.VISIBLE
                     }
                 })
@@ -111,7 +113,7 @@ class Student {
         })
     }
 
-    fun getTimeTableStudent(day: String, lesson: String, ttStr: String, ln: LinearLayout, mAuth: FirebaseAuth) {
-        getTimeTablePrivate(day, lesson, ttStr, ln, mAuth)
+    fun getTimeTableStudent(day: String, lesson: String, ln: LinearLayout, mAuth: FirebaseAuth, tv: TextView) {
+        getTimeTablePrivate(day, lesson,  ln, mAuth, tv)
     }
 }

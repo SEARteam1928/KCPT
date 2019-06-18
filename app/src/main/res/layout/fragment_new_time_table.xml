@@ -68,17 +68,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvShowHide"
-                    style="@style/ButtonShowHideTheme"
-                    android:text="@{dayName1}" />
-
-                <LinearLayout
-                    android:id="@+id/showHide"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
                     <TextView
                         android:id="@+id/tv"
                         style="@style/ButtonShowHideTheme"
@@ -276,10 +265,10 @@
                             style="@style/timetabletvstyle" />
 
                     </LinearLayout>
-                </LinearLayout>
+
 
                 <WebView
-                    android:id="@+id/userWebChanges"
+                    android:id="@+id/userWebChangesOnMainScreen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:ignore="WebViewLayout" />

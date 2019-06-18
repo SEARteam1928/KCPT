@@ -22,9 +22,9 @@ class StatusDetermination {
     private fun getUserStatusPrivate(
             day: String,
             lesson: String,
-            ttStr: String,
             ln: LinearLayout,
-            mAuth: FirebaseAuth
+            mAuth: FirebaseAuth,
+            tv: TextView
     ) {
         val database: FirebaseDatabase
         val user: FirebaseUser?
@@ -45,15 +45,15 @@ class StatusDetermination {
                     if (statusStr == null || statusStr == "") {
                     }
                     if (statusStr == "STUDENT") {
-                        student!!.getTimeTableStudent(day, lesson, ttStr, ln, mAuth)
+                        student!!.getTimeTableStudent(day, lesson, ln, mAuth, tv)
                     }
                     if (statusStr == "TEACHER") {
-                        teacher!!.getTimeTable(day, lesson, ttStr, ln, mAuth)
+                        teacher!!.getTimeTable(day, lesson, ln, mAuth, tv)
                     }
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
-                    ttStr = "Ошибка загрузки"
+                    tv.text = "Ошибка загрузки"
                     ln.visibility = View.VISIBLE
                 }
             })
@@ -62,7 +62,7 @@ class StatusDetermination {
         }
     }
 
-    fun getTimeTable(day: String, lesson: String, ttStr: String, ln: LinearLayout, mAuth: FirebaseAuth) {
-        getUserStatusPrivate(day, lesson, ttStr, ln, mAuth)
+    fun getTimeTable(day: String, lesson: String,  ln: LinearLayout, mAuth: FirebaseAuth, tv: TextView) {
+        getUserStatusPrivate(day, lesson,  ln, mAuth, tv)
     }
 }
