@@ -70,6 +70,7 @@
 
                     <TextView
                         android:id="@+id/tv"
+                        android:textAlignment="center"
                         style="@style/ButtonShowHideTheme"
                         android:text="@{dayName2}" />
 

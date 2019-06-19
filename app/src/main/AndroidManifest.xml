@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".timetablefragments.TimeTableActivity"></activity>
         <activity android:name=".RegistrationNew" />
         <activity android:name=".PrivacyPolytics" />
         <activity

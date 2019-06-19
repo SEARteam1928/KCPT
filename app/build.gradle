@@ -25,7 +25,7 @@ android {
         targetCompatibility = '1.8'
     }
 
-    dataBinding{
+    dataBinding {
         enabled true
     }
 

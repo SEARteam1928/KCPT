@@ -120,7 +120,7 @@ class ChangesParser {
                 result = html
                 groupSelectInt = 0
             } else {
-                result = page.toString()
+                result = null
             }
         } catch (e: Exception) {
             e.printStackTrace()
