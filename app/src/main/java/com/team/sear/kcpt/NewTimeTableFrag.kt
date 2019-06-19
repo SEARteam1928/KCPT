@@ -10,7 +10,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -96,7 +95,28 @@ class NewTimeTableFrag : Fragment() {
 
         cl()
         Handler().postDelayed({ showHideFromDate() }, 100)
+        b.todayBtStr = setDateOnTextViewsTodayTomorrow(0)
+        b.tomorrowBtStr = setDateOnTextViewsTodayTomorrow(1)
         return b.root
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun setDateOnTextViewsTodayTomorrow(sw: Int): String{
+        val mount = SimpleDateFormat("dd")
+        val d =  mount.format(Calendar.getInstance().time)
+        return when(sw){
+            0 -> d
+            1 -> {
+                val d1 = Calendar.getInstance()
+                d1.time = mount.parse(d)
+                d1.add(Calendar.DATE,1)
+                val d1Str = mount.format(d1.time).toString()
+                d1Str
+            }
+            else -> {
+                ""
+            }
+        }
     }
 
     @SuppressLint("SimpleDateFormat")
