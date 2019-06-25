@@ -399,7 +399,6 @@ class NewTimeTableFrag : Fragment() {
             } catch (e: Exception) {
                 e.printStackTrace()
                 println(e.message)
-                Toast.makeText(context, "Не удалось", Toast.LENGTH_SHORT).show()
                 null
             }
         }

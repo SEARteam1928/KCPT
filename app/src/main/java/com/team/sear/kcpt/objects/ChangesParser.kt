@@ -120,11 +120,11 @@ class ChangesParser {
                 result = html
                 groupSelectInt = 0
             } else {
-                result = null
+                result = "<!Doctype html><html><head><style type=\"text/css\">\n$styleStr</style></head><body><p class=\"c23\">Изменений нет! но лучше проверьте, могут быть ошибки))</p><body></html>"
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            result = null
+            result = "<!Doctype html><html><head><style type=\"text/css\">\n</style></head><body><p class=\"c23\">Изменений нет! но лучше проверьте, могут быть ошибки))</p><body></html>"
         }
     }
 

@@ -53,8 +53,6 @@ class RegistrationNew : AppCompatActivity() {
                                 "\nЕсли это сообщение появится снова, перезапустите приложение",
                                 Toast.LENGTH_SHORT
                         ).show()
-                        val tryAgainIntent = Intent(this@RegistrationNew, RegistrationNew::class.java)
-                        startActivity(tryAgainIntent)
                         finish()
                     }
                 }

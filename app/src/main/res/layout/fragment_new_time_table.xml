@@ -1,54 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="lesson1"
             type="String" />
+
         <variable
             name="lesson2"
             type="String" />
+
         <variable
             name="lesson3"
             type="String" />
+
         <variable
             name="lesson4"
             type="String" />
+
         <variable
             name="lesson5"
             type="String" />
+
         <variable
             name="lesson6"
             type="String" />
+
         <variable
             name="lesson7"
             type="String" />
+
         <variable
             name="lesson8"
             type="String" />
+
         <variable
             name="lesson9"
             type="String" />
+
         <variable
             name="lesson10"
             type="String" />
+
         <variable
             name="lesson11"
             type="String" />
+
         <variable
             name="lesson12"
             type="String" />
+
         <variable
             name="dayName1"
             type="String" />
+
         <variable
             name="dayName2"
             type="String" />
+
         <variable
             name="todayBtStr"
             type="String" />
+
         <variable
             name="tomorrowBtStr"
             type="String" />
@@ -56,53 +72,34 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        tools:ignore="HardcodedText"
         android:layout_height="match_parent"
         android:background="@drawable/reg_background"
-        tools:context=".timetablefragments.TimeTableFragment">
+        tools:context=".timetablefragments.TimeTableFragment"
+        tools:ignore="HardcodedText">
 
-
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
             tools:ignore="UselessParent">
 
-            <LinearLayout
+
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                tools:ignore="UselessParent">
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:id="@+id/todayBt"
-                        android:layout_weight="1"
-                        android:text="@{todayBtStr}"
-                        android:background="@drawable/fileds"
-                        style="@style/ButtonShowHideTheme"
-                        android:textColor="#FFFFFF"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:text="@{tomorrowBtStr}"
-                        style="@style/ButtonShowHideTheme"
-                        android:textColor="#FFFFFF"
-                        android:id="@+id/tomorrowBt"
-                        android:background="@drawable/fileds"
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tv"
-                        android:textAlignment="center"
                         style="@style/ButtonShowHideTheme"
-                        android:text="@{dayName2}" />
+                        android:text="@{dayName2}"
+                        android:textAlignment="center" />
 
                     <LinearLayout
                         android:id="@+id/ln1tv"
@@ -115,8 +112,8 @@
 
                         <TextView
                             android:id="@+id/tv1"
-                            android:text="@{lesson1}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson1}" />
 
                     </LinearLayout>
 
@@ -131,8 +128,8 @@
 
                         <TextView
                             android:id="@+id/tv2"
-                            android:text="@{lesson2}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson2}" />
 
                     </LinearLayout>
 
@@ -147,8 +144,8 @@
 
                         <TextView
                             android:id="@+id/tv3"
-                            android:text="@{lesson3}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson3}" />
 
                     </LinearLayout>
 
@@ -163,8 +160,8 @@
 
                         <TextView
                             android:id="@+id/tv4"
-                            android:text="@{lesson4}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson4}" />
 
                     </LinearLayout>
 
@@ -179,8 +176,8 @@
 
                         <TextView
                             android:id="@+id/tv5"
-                            android:text="@{lesson5}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson5}" />
 
                     </LinearLayout>
 
@@ -195,8 +192,8 @@
 
                         <TextView
                             android:id="@+id/tv6"
-                            android:text="@{lesson6}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson6}" />
 
                     </LinearLayout>
 
@@ -211,8 +208,8 @@
 
                         <TextView
                             android:id="@+id/tv7"
-                            android:text="@{lesson7}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson7}" />
 
                     </LinearLayout>
 
@@ -227,8 +224,8 @@
 
                         <TextView
                             android:id="@+id/tv8"
-                            android:text="@{lesson8}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson8}" />
 
                     </LinearLayout>
 
@@ -243,8 +240,8 @@
 
                         <TextView
                             android:id="@+id/tv9"
-                            android:text="@{lesson9}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson9}" />
 
                     </LinearLayout>
 
@@ -259,8 +256,8 @@
 
                         <TextView
                             android:id="@+id/tv10"
-                            android:text="@{lesson10}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson10}" />
 
                     </LinearLayout>
 
@@ -275,8 +272,8 @@
 
                         <TextView
                             android:id="@+id/tv11"
-                            android:text="@{lesson11}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson11}" />
 
                     </LinearLayout>
 
@@ -292,19 +289,48 @@
 
                         <TextView
                             android:id="@+id/tv12"
-                            android:text="@{lesson12}"
-                            style="@style/timetabletvstyle" />
+                            style="@style/timetabletvstyle"
+                            android:text="@{lesson12}" />
 
                     </LinearLayout>
 
 
-                <WebView
-                    android:id="@+id/userWebChangesOnMainScreen"
+                    <WebView
+                        android:id="@+id/userWebChangesOnMainScreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="WebViewLayout" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/todayTomorrowLn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/todayBt"
+                    style="@style/ButtonShowHideTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:ignore="WebViewLayout" />
+                    android:layout_weight="1"
+                    android:background="@drawable/fileds"
+                    android:text="@{todayBtStr}"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="NestedWeights" />
 
+                <TextView
+                    android:id="@+id/tomorrowBt"
+                    style="@style/ButtonShowHideTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/fileds"
+                    android:text="@{tomorrowBtStr}"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
     </RelativeLayout>
 </layout>
