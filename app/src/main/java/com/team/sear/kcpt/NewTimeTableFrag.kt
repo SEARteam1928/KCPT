@@ -40,7 +40,7 @@ class NewTimeTableFrag : Fragment() {
     @SuppressLint("SimpleDateFormat")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        b = DataBindingUtil.inflate(inflater,R.layout.fragment_new_time_table,container,false)
+        b = DataBindingUtil.inflate(inflater, R.layout.fragment_new_time_table, container, false)
         initTT = TimeTableViewsInit()
 
         setInvisibleAll()
@@ -64,7 +64,7 @@ class NewTimeTableFrag : Fragment() {
             val date = df.format(Calendar.getInstance().time)
             myRef.setValue(date + "SIGNEDIN")
             try {
-               /* setTimeTable()*/
+                /* setTimeTable()*/
             } catch (e: Exception) {
                 Toast.makeText(context, "Обновите или выберите расписание", Toast.LENGTH_SHORT).show()
             }
@@ -101,20 +101,44 @@ class NewTimeTableFrag : Fragment() {
     }
 
     @SuppressLint("SimpleDateFormat")
-    private fun setDateOnTextViewsTodayTomorrow(sw: Int): String{
+    private fun setDateOnTextViewsTodayTomorrow(sw: Int): String {
         val mount = SimpleDateFormat("dd")
-        val d =  mount.format(Calendar.getInstance().time)
-        return when(sw){
-            0 -> d
+        val d = mount.format(Calendar.getInstance().time)
+        return when (sw) {
+            0 -> d + " " + getDayOfWeek()
             1 -> {
                 val d1 = Calendar.getInstance()
                 d1.time = mount.parse(d)
-                d1.add(Calendar.DATE,1)
+                d1.add(Calendar.DATE, 1)
                 val d1Str = mount.format(d1.time).toString()
                 d1Str
             }
             else -> {
                 ""
+            }
+        }
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getDayOfWeek(): String {
+        val dform = SimpleDateFormat("EEE")
+        return when (dform.format(Calendar.getInstance().time)) {
+            "вс" -> "Понедельник"
+            "Sun" -> "Понедельник"
+            "пн" -> "Понедельник"
+            "Mon" -> "Понедельник"
+            "вт" -> "Вторник"
+            "Tues" -> "Вторник"
+            "ср" -> "Среда"
+            "Wed" -> "Среда"
+            "чт" -> "Четверг"
+            "Thurs" -> "Четверг"
+            "пт" -> "Пятница"
+            "Fri" -> "Пятница"
+            "сб" -> "Суббота"
+            "Sat" -> "Суббота"
+            else -> {
+                "Не удалось определить день недели"
             }
         }
     }
@@ -145,150 +169,150 @@ class NewTimeTableFrag : Fragment() {
         }
     }
 
-    private fun getTimeTableMn(){
+    private fun getTimeTableMn() {
         try {
             setInvisibleAll()
             b.dayName1 = "Понедельник"
             b.dayName2 = "Понедельник"
-            initTT.getTT("mn", "mn1",  b.ln1tv,mAuth, b.tv1)
-            initTT.getTT("mn", "mn2", b.ln2tv,mAuth, b.tv2)
-            initTT.getTT("mn", "mn3", b.ln3tv,mAuth, b.tv3)
-            initTT.getTT("mn", "mn4", b.ln4tv,mAuth, b.tv4)
-            initTT.getTT("mn", "mn5", b.ln5tv,mAuth, b.tv5)
-            initTT.getTT("mn", "mn6", b.ln6tv,mAuth, b.tv6)
-            initTT.getTT("mn", "mn7", b.ln7tv,mAuth, b.tv7)
-            initTT.getTT("mn", "mn8", b.ln8tv,mAuth, b.tv8)
-            initTT.getTT("mn", "mn9", b.ln9tv,mAuth, b.tv9)
-            initTT.getTT("mn", "mn10", b.ln10tv,mAuth, b.tv10)
-            initTT.getTT("mn", "mn11", b.ln11tv,mAuth, b.tv11)
-            initTT.getTT("mn", "mn12", b.ln12tv,mAuth, b.tv12)
+            initTT.getTT("mn", "mn1", b.ln1tv, mAuth, b.tv1)
+            initTT.getTT("mn", "mn2", b.ln2tv, mAuth, b.tv2)
+            initTT.getTT("mn", "mn3", b.ln3tv, mAuth, b.tv3)
+            initTT.getTT("mn", "mn4", b.ln4tv, mAuth, b.tv4)
+            initTT.getTT("mn", "mn5", b.ln5tv, mAuth, b.tv5)
+            initTT.getTT("mn", "mn6", b.ln6tv, mAuth, b.tv6)
+            initTT.getTT("mn", "mn7", b.ln7tv, mAuth, b.tv7)
+            initTT.getTT("mn", "mn8", b.ln8tv, mAuth, b.tv8)
+            initTT.getTT("mn", "mn9", b.ln9tv, mAuth, b.tv9)
+            initTT.getTT("mn", "mn10", b.ln10tv, mAuth, b.tv10)
+            initTT.getTT("mn", "mn11", b.ln11tv, mAuth, b.tv11)
+            initTT.getTT("mn", "mn12", b.ln12tv, mAuth, b.tv12)
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
-    private fun getTimeTableTy(){
+    private fun getTimeTableTy() {
         try {
             setInvisibleAll()
             b.dayName1 = "Вторник"
             b.dayName2 = "Вторник"
-            initTT.getTT("ty", "ty1", b.ln1tv,mAuth, b.tv1)
-            initTT.getTT("ty", "ty2", b.ln2tv,mAuth, b.tv2)
-            initTT.getTT("ty", "ty3", b.ln3tv,mAuth, b.tv3)
-            initTT.getTT("ty", "ty4", b.ln4tv,mAuth, b.tv4)
-            initTT.getTT("ty", "ty5", b.ln5tv,mAuth, b.tv5)
-            initTT.getTT("ty", "ty6", b.ln6tv,mAuth, b.tv6)
-            initTT.getTT("ty", "ty7", b.ln7tv,mAuth, b.tv7)
-            initTT.getTT("ty", "ty8", b.ln8tv,mAuth, b.tv8)
-            initTT.getTT("ty", "ty9", b.ln9tv,mAuth, b.tv9)
-            initTT.getTT("ty", "ty10", b.ln10tv,mAuth, b.tv10)
-            initTT.getTT("ty", "ty11", b.ln11tv,mAuth, b.tv11)
-            initTT.getTT("ty", "ty12", b.ln12tv,mAuth, b.tv12)
+            initTT.getTT("ty", "ty1", b.ln1tv, mAuth, b.tv1)
+            initTT.getTT("ty", "ty2", b.ln2tv, mAuth, b.tv2)
+            initTT.getTT("ty", "ty3", b.ln3tv, mAuth, b.tv3)
+            initTT.getTT("ty", "ty4", b.ln4tv, mAuth, b.tv4)
+            initTT.getTT("ty", "ty5", b.ln5tv, mAuth, b.tv5)
+            initTT.getTT("ty", "ty6", b.ln6tv, mAuth, b.tv6)
+            initTT.getTT("ty", "ty7", b.ln7tv, mAuth, b.tv7)
+            initTT.getTT("ty", "ty8", b.ln8tv, mAuth, b.tv8)
+            initTT.getTT("ty", "ty9", b.ln9tv, mAuth, b.tv9)
+            initTT.getTT("ty", "ty10", b.ln10tv, mAuth, b.tv10)
+            initTT.getTT("ty", "ty11", b.ln11tv, mAuth, b.tv11)
+            initTT.getTT("ty", "ty12", b.ln12tv, mAuth, b.tv12)
 
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
-    private fun getTimeTableWd(){
+    private fun getTimeTableWd() {
         try {
             setInvisibleAll()
             b.dayName1 = "Среда"
             b.dayName2 = "Среда"
-            initTT.getTT("wd", "wd1", b.ln1tv,mAuth, b.tv1)
-            initTT.getTT("wd", "wd2", b.ln2tv,mAuth, b.tv2)
-            initTT.getTT("wd", "wd3", b.ln3tv,mAuth, b.tv3)
-            initTT.getTT("wd", "wd4", b.ln4tv,mAuth, b.tv4)
-            initTT.getTT("wd", "wd5", b.ln5tv,mAuth, b.tv5)
-            initTT.getTT("wd", "wd6", b.ln6tv,mAuth, b.tv6)
-            initTT.getTT("wd", "wd7", b.ln7tv,mAuth, b.tv7)
-            initTT.getTT("wd", "wd8", b.ln8tv,mAuth, b.tv8)
-            initTT.getTT("wd", "wd9", b.ln9tv,mAuth, b.tv9)
-            initTT.getTT("wd", "wd10", b.ln10tv,mAuth, b.tv10)
-            initTT.getTT("wd", "wd11", b.ln11tv,mAuth, b.tv11)
-            initTT.getTT("wd", "wd12", b.ln12tv,mAuth, b.tv12)
+            initTT.getTT("wd", "wd1", b.ln1tv, mAuth, b.tv1)
+            initTT.getTT("wd", "wd2", b.ln2tv, mAuth, b.tv2)
+            initTT.getTT("wd", "wd3", b.ln3tv, mAuth, b.tv3)
+            initTT.getTT("wd", "wd4", b.ln4tv, mAuth, b.tv4)
+            initTT.getTT("wd", "wd5", b.ln5tv, mAuth, b.tv5)
+            initTT.getTT("wd", "wd6", b.ln6tv, mAuth, b.tv6)
+            initTT.getTT("wd", "wd7", b.ln7tv, mAuth, b.tv7)
+            initTT.getTT("wd", "wd8", b.ln8tv, mAuth, b.tv8)
+            initTT.getTT("wd", "wd9", b.ln9tv, mAuth, b.tv9)
+            initTT.getTT("wd", "wd10", b.ln10tv, mAuth, b.tv10)
+            initTT.getTT("wd", "wd11", b.ln11tv, mAuth, b.tv11)
+            initTT.getTT("wd", "wd12", b.ln12tv, mAuth, b.tv12)
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
-    private fun getTimeTableTh(){
+    private fun getTimeTableTh() {
         try {
             setInvisibleAll()
             b.dayName1 = "Четверг"
             b.dayName2 = "Четверг"
-            initTT.getTT("th", "th1", b.ln1tv,mAuth, b.tv1)
-            initTT.getTT("th", "th2", b.ln2tv,mAuth, b.tv2)
-            initTT.getTT("th", "th3", b.ln3tv,mAuth, b.tv3)
-            initTT.getTT("th", "th4", b.ln4tv,mAuth, b.tv4)
-            initTT.getTT("th", "th5", b.ln5tv,mAuth, b.tv5)
-            initTT.getTT("th", "th6", b.ln6tv,mAuth, b.tv6)
-            initTT.getTT("th", "th7", b.ln7tv,mAuth, b.tv7)
-            initTT.getTT("th", "th8", b.ln8tv,mAuth, b.tv8)
-            initTT.getTT("th", "th9", b.ln9tv,mAuth, b.tv9)
-            initTT.getTT("th", "th10", b.ln10tv,mAuth, b.tv10)
-            initTT.getTT("th", "th11", b.ln11tv,mAuth, b.tv11)
-            initTT.getTT("th", "th12", b.ln12tv,mAuth, b.tv12)
+            initTT.getTT("th", "th1", b.ln1tv, mAuth, b.tv1)
+            initTT.getTT("th", "th2", b.ln2tv, mAuth, b.tv2)
+            initTT.getTT("th", "th3", b.ln3tv, mAuth, b.tv3)
+            initTT.getTT("th", "th4", b.ln4tv, mAuth, b.tv4)
+            initTT.getTT("th", "th5", b.ln5tv, mAuth, b.tv5)
+            initTT.getTT("th", "th6", b.ln6tv, mAuth, b.tv6)
+            initTT.getTT("th", "th7", b.ln7tv, mAuth, b.tv7)
+            initTT.getTT("th", "th8", b.ln8tv, mAuth, b.tv8)
+            initTT.getTT("th", "th9", b.ln9tv, mAuth, b.tv9)
+            initTT.getTT("th", "th10", b.ln10tv, mAuth, b.tv10)
+            initTT.getTT("th", "th11", b.ln11tv, mAuth, b.tv11)
+            initTT.getTT("th", "th12", b.ln12tv, mAuth, b.tv12)
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
-    private fun getTimeTableFr(){
+    private fun getTimeTableFr() {
         try {
             setInvisibleAll()
             b.dayName1 = "Пятница"
             b.dayName2 = "Пятница"
-            initTT.getTT("fr", "fr1", b.ln1tv,mAuth, b.tv1)
-            initTT.getTT("fr", "fr2", b.ln2tv,mAuth, b.tv2)
-            initTT.getTT("fr", "fr3", b.ln3tv,mAuth, b.tv3)
-            initTT.getTT("fr", "fr4", b.ln4tv,mAuth, b.tv4)
-            initTT.getTT("fr", "fr5", b.ln5tv,mAuth, b.tv5)
-            initTT.getTT("fr", "fr6", b.ln6tv,mAuth, b.tv6)
-            initTT.getTT("fr", "fr7", b.ln7tv,mAuth, b.tv7)
-            initTT.getTT("fr", "fr8", b.ln8tv,mAuth, b.tv8)
-            initTT.getTT("fr", "fr9", b.ln9tv,mAuth, b.tv9)
-            initTT.getTT("fr", "fr10", b.ln10tv,mAuth, b.tv10)
-            initTT.getTT("fr", "fr11", b.ln11tv,mAuth, b.tv11)
-            initTT.getTT("fr", "fr12", b.ln12tv,mAuth, b.tv12)
+            initTT.getTT("fr", "fr1", b.ln1tv, mAuth, b.tv1)
+            initTT.getTT("fr", "fr2", b.ln2tv, mAuth, b.tv2)
+            initTT.getTT("fr", "fr3", b.ln3tv, mAuth, b.tv3)
+            initTT.getTT("fr", "fr4", b.ln4tv, mAuth, b.tv4)
+            initTT.getTT("fr", "fr5", b.ln5tv, mAuth, b.tv5)
+            initTT.getTT("fr", "fr6", b.ln6tv, mAuth, b.tv6)
+            initTT.getTT("fr", "fr7", b.ln7tv, mAuth, b.tv7)
+            initTT.getTT("fr", "fr8", b.ln8tv, mAuth, b.tv8)
+            initTT.getTT("fr", "fr9", b.ln9tv, mAuth, b.tv9)
+            initTT.getTT("fr", "fr10", b.ln10tv, mAuth, b.tv10)
+            initTT.getTT("fr", "fr11", b.ln11tv, mAuth, b.tv11)
+            initTT.getTT("fr", "fr12", b.ln12tv, mAuth, b.tv12)
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
-    private fun getTimeTableSt(){
+    private fun getTimeTableSt() {
         try {
             setInvisibleAll()
             b.dayName1 = "Суббота"
             b.dayName2 = "Суббота"
-            initTT.getTT("st", "st1", b.ln1tv,mAuth, b.tv1)
-            initTT.getTT("st", "st2", b.ln2tv,mAuth, b.tv2)
-            initTT.getTT("st", "st3", b.ln3tv,mAuth, b.tv3)
-            initTT.getTT("st", "st4", b.ln4tv,mAuth, b.tv4)
-            initTT.getTT("st", "st5", b.ln5tv,mAuth, b.tv5)
-            initTT.getTT("st", "st6", b.ln6tv,mAuth, b.tv6)
-            initTT.getTT("st", "st7", b.ln7tv,mAuth, b.tv7)
-            initTT.getTT("st", "st8", b.ln8tv,mAuth, b.tv8)
-            initTT.getTT("st", "st9", b.ln9tv,mAuth, b.tv9)
-            initTT.getTT("st", "st10", b.ln10tv,mAuth, b.tv10)
-            initTT.getTT("st", "st11", b.ln11tv,mAuth, b.tv11)
-            initTT.getTT("st", "st12", b.ln12tv,mAuth, b.tv12)
+            initTT.getTT("st", "st1", b.ln1tv, mAuth, b.tv1)
+            initTT.getTT("st", "st2", b.ln2tv, mAuth, b.tv2)
+            initTT.getTT("st", "st3", b.ln3tv, mAuth, b.tv3)
+            initTT.getTT("st", "st4", b.ln4tv, mAuth, b.tv4)
+            initTT.getTT("st", "st5", b.ln5tv, mAuth, b.tv5)
+            initTT.getTT("st", "st6", b.ln6tv, mAuth, b.tv6)
+            initTT.getTT("st", "st7", b.ln7tv, mAuth, b.tv7)
+            initTT.getTT("st", "st8", b.ln8tv, mAuth, b.tv8)
+            initTT.getTT("st", "st9", b.ln9tv, mAuth, b.tv9)
+            initTT.getTT("st", "st10", b.ln10tv, mAuth, b.tv10)
+            initTT.getTT("st", "st11", b.ln11tv, mAuth, b.tv11)
+            initTT.getTT("st", "st12", b.ln12tv, mAuth, b.tv12)
         } catch (e: Exception) {
             e.printStackTrace()
             Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
         }
-        }
+    }
 
 
     private fun cl() {
         try {
 
-        }catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }

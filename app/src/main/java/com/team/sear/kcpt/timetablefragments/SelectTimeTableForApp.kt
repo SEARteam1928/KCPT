@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ScrollView
 import android.widget.Toast
-import com.team.sear.kcpt.Navigate
+import com.team.sear.kcpt.oldclasses.Navigate
 import com.team.sear.kcpt.objects.SearchModel
 import com.team.sear.kcpt.objects.SelectTimeTable
 import com.team.sear.kcpt.R

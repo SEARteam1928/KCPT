@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/bottom_dev_item"
-        android:title="First"
-        android:icon="@drawable/ic_menu_manage"/>
+        android:title="Больше"
+        android:icon="@drawable/baseline_widgets_24"/>
     <item android:id="@+id/bottom_weather_item"
-        android:title="Second"
-        android:icon="@drawable/ic_menu_gallery"/>
+        android:title="Главная"
+        android:icon="@drawable/baseline_home_24"/>
     <item android:id="@+id/bottom_news_item"
-        android:title="Third"
-        android:icon="@drawable/ic_menu_share"/>
+        android:title="Профиль"
+        android:icon="@drawable/baseline_menu_24"/>
 </menu>

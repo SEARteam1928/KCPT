@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.team.sear.kcpt.Registration
+import com.team.sear.kcpt.oldclasses.Registration
 
 @Suppress("UNUSED_EXPRESSION")
 class FeedbackFrag : Fragment() {

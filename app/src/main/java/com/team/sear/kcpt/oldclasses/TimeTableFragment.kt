@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.team.sear.kcpt.timetablefragments
+package com.team.sear.kcpt.oldclasses
 
 import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil

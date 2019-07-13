@@ -73,8 +73,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/reg_background"
-        tools:context=".timetablefragments.TimeTableFragment"
+        android:background="#1A000000"
+        tools:context=".oldclasses.TimeTableFragment"
         tools:ignore="HardcodedText">
 
         <LinearLayout
@@ -87,6 +87,11 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="1"
                 tools:ignore="UselessParent">
 
@@ -94,12 +99,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv"
-                        style="@style/ButtonShowHideTheme"
-                        android:text="@{dayName2}"
-                        android:textAlignment="center" />
+                    <!--
+                                        <TextView
+                                            android:id="@+id/tv"
+                                            style="@style/ButtonShowHideTheme"
+                                            android:text="@{dayName2}"
+                                            android:textAlignment="center" />-->
 
                     <LinearLayout
                         android:id="@+id/ln1tv"
@@ -316,8 +321,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/fileds"
+                    android:background="@drawable/tt_background_tv"
                     android:text="@{todayBtStr}"
+                    android:textAlignment="center"
                     android:textColor="#FFFFFF"
                     tools:ignore="NestedWeights" />
 
@@ -327,8 +333,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/fileds"
+                    android:background="@drawable/tt_background_tv"
                     android:text="@{tomorrowBtStr}"
+                    android:textAlignment="center"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
         </LinearLayout>

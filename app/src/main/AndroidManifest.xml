@@ -30,13 +30,13 @@
         </service>
 
         <activity
-            android:name=".Registration"
+            android:name=".oldclasses.Registration"
             android:screenOrientation="portrait" />
         <activity
             android:name=".OneMinuteGame"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Navigate"
+            android:name=".oldclasses.Navigate"
             android:label="КЦПТ"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

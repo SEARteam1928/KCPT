@@ -7,7 +7,7 @@ import android.graphics.BitmapFactory
 import android.media.RingtoneManager
 import android.support.v4.app.NotificationCompat
 
-import com.team.sear.kcpt.Navigate
+import com.team.sear.kcpt.oldclasses.Navigate
 import com.team.sear.kcpt.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage

@@ -1,4 +1,4 @@
-package com.team.sear.kcpt
+package com.team.sear.kcpt.oldclasses
 
 
 import android.content.Intent
@@ -10,6 +10,8 @@ import android.widget.*
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.team.sear.kcpt.PrivacyPolytics
+import com.team.sear.kcpt.R
 import com.team.sear.kcpt.timetablefragments.SelectTimeTableForApp
 
 class Registration : AppCompatActivity(), View.OnClickListener {

@@ -11,7 +11,7 @@
         tools:ignore="HardcodedText"
         android:layout_height="match_parent"
         android:background="@drawable/reg_background"
-        tools:context=".timetablefragments.TimeTableFragment">
+        tools:context=".oldclasses.TimeTableFragment">
 
 
         <ScrollView

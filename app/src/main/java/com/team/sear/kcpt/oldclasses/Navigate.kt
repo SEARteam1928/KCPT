@@ -1,6 +1,6 @@
 @file:Suppress("NAME_SHADOWING")
 
-package com.team.sear.kcpt
+package com.team.sear.kcpt.oldclasses
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,6 +17,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.team.sear.kcpt.NewTimeTableFrag
+import com.team.sear.kcpt.R
+import com.team.sear.kcpt.WeatherFrag
 import com.team.sear.kcpt.objects.SearchModel
 import com.team.sear.kcpt.objects.SelectTimeTable
 import com.team.sear.kcpt.timetablefragments.*
