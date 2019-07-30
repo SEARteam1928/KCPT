@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/bottom_dev_item"
+    <item android:id="@+id/bottom_more_item"
         android:title="Больше"
-        android:icon="@drawable/baseline_widgets_24"/>
-    <item android:id="@+id/bottom_weather_item"
-        android:title="Главная"
-        android:icon="@drawable/baseline_home_24"/>
-    <item android:id="@+id/bottom_news_item"
-        android:title="Профиль"
         android:icon="@drawable/baseline_menu_24"/>
+    <item android:id="@+id/bottom_main_item"
+        android:title="Главная"
+        android:checked="true"
+        android:icon="@drawable/bottom_nav_main" />
+    <item android:id="@+id/bottom_profile_item"
+        android:title="Профиль"
+        android:icon="@drawable/bottom_nav_profile"/>
 </menu>

@@ -94,4 +94,5 @@
     <string name="lessonTime10st">15:55 10)\n16:40</string>
     <string name="lessonTime11st">16:45 11)\n17:30</string>
     <string name="lessonTime12st">17:30 12)\n18:15</string>
+    <string name="example_text">Example text</string>
 </resources>

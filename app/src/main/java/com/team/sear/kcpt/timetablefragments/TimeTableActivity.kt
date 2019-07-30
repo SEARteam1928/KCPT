@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.team.sear.kcpt.NewTimeTableFrag
 import com.team.sear.kcpt.R
+import com.team.sear.kcpt.timetablePackage.RecyclerTimeTable
 import com.team.sear.kcpt.WeatherFrag
 
 class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
@@ -19,7 +20,7 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
     private lateinit var dfrag: DevelopersFrag
     private lateinit var weatherFrag: WeatherFrag
     private lateinit var newsFrag: NewsFrag
-
+    private lateinit var recyclerTimeTable: RecyclerTimeTable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,7 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
             Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
         }*/
         try {
+            recyclerTimeTable = RecyclerTimeTable()
             zvonkiFrag = ZvonkiFrag()
             changesFrag = ChangesFrag()
             feedbackFrag = FeedbackFrag()
@@ -44,6 +46,9 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
         } catch (e: Exception) {
             Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
         }
+        val ftrans = supportFragmentManager.beginTransaction()
+        ftrans.replace(R.id.bottom_nav_container, ttFragNew)
+        ftrans.commit()
 
         val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBottom.setOnNavigationItemSelectedListener(this)
@@ -53,9 +58,9 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
         val id = item.itemId
         val ftrans = supportFragmentManager.beginTransaction()
         when(id){
-            R.id.bottom_dev_item -> ftrans.replace(R.id.bottom_nav_container, dfrag)
-            R.id.bottom_weather_item -> ftrans.replace(R.id.bottom_nav_container, ttFragNew)
-            R.id.bottom_news_item -> ftrans.replace(R.id.bottom_nav_container, zvonkiFrag)
+            R.id.bottom_more_item -> ftrans.replace(R.id.bottom_nav_container, dfrag)
+            R.id.bottom_main_item -> ftrans.replace(R.id.bottom_nav_container, ttFragNew)
+            R.id.bottom_profile_item -> ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
             else ->{
 
             }
