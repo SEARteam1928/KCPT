@@ -16,7 +16,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/lessonNum"
+                android:id="@+id/lessonNumTV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#304FFE"
@@ -35,7 +36,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_weight="0.8"
@@ -44,15 +45,16 @@
             android:paddingBottom="6dp">
 
             <TextView
+                android:id="@+id/lessonTV"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginBottom="4dp"
                 android:layout_weight="0.8"
                 android:fontFamily="sans-serif-medium"
                 android:paddingBottom="4dp"
-                android:id="@+id/lessonText"
                 android:textColor="#000"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                tools:ignore="NestedWeights" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,64 +64,35 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/baseline_room_24" />
+                    android:src="@drawable/baseline_room_24"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
+                    android:id="@+id/roomNumTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="2dp"
-                    android:id="@+id/room"/>
+                    android:padding="2dp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/baseline_person_24" />
+                    android:src="@drawable/baseline_person_24"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
+                    android:id="@+id/anybodyNameTV"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/teacherName"/>
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
         </LinearLayout>
 
         <TextView
+            android:id="@+id/lessonTimeTV"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingStart="4dp"
             android:paddingTop="4dp"
-            android:paddingEnd="4dp"
-            android:id="@+id/lessonTime"/>
+            android:paddingEnd="4dp" />
     </LinearLayout>
-
-
-    <!--
-
-    <TextView
-        android:id="@+id/timetableTitle"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textSize="18sp"
-        android:textColor="#FFF"
-        android:text="Заголовок"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp" />
-    <LinearLayout
-        android:id="@+id/ln1tv"
-        style="@style/lnLessonStyle">
-
-        <TextView
-            android:id="@+id/num1tv"
-            style="@style/NumTv"
-            android:text="@string/lessonTime1" />
-
-        <TextView
-            android:id="@+id/tv1"
-            style="@style/timetabletvstyle"
-            android:text="@{lesson1}" />
-
-    </LinearLayout>
--->
-
-
 </LinearLayout>

@@ -47,21 +47,11 @@ class RecyclerTimeTable : Fragment() {
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
-            setFeedbackView()
+            setFakeLessons()
+            /*setFeedbackView()*/
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        auth!!.addAuthStateListener(authListener!!)
-    }
-
-    override fun onStop() {
-        super.onStop()
-        if (authListener != null) {
-            auth!!.removeAuthStateListener(authListener!!)
-        }
-    }
 
     private fun groupName(): String {
         return "ССА 18-11-2"
@@ -150,7 +140,49 @@ class RecyclerTimeTable : Fragment() {
         }
     }
 
+    private fun setFakeLessons(){
+        lessonList = ArrayList(13)
+        lessonList.add(setLesson("1. Инженерная и компьютерная графика\n 2. Инженерная и компьютерная графика","1","mn","ССА 18-11-2","Литус А.А.\nПопов кто-то","999\n777","8:00\n8:01","allGroup"))
+        lessonList.add(setLesson("1. Инженерная и компьютерная графика\n 2. Инженерная и компьютерная графика","2","mn","ССА 18-11-2","Литус А.А.\nПопов кто-то","999\n777","9:00\n9:01","allGroup"))
+        lessonList.add(setLesson("Программирование","3","mn","ССА 18-11-2","Гуляев И. П.","414","10:00\n10:01","allGroup"))
+        lessonList.add(setLesson("Программирование","4","mn","ССА 18-11-2","Гуляев И.П.","414","11:00\n11:01","allGroup"))
+        lessonList.add(setLesson("Технологии физического уровня передачи данных","5","mn","ССА 18-11-2","Бородина С.В.","105","12:00\n12:01","allGroup"))
+        lessonList.add(setLesson("Технологии физического уровня передачи данных","6","mn","ССА 18-11-2","Бородина С.В.","105","13:00\n13:01","allGroup"))
+        lessonList.add(setLesson("Технические средства информатизации","7","mn","ССА 18-11-2","Полищук А.А.","415","14:00\n14:01","allGroup"))
+        lessonList.add(setLesson("Технические средства информатизации","8","mn","ССА 18-11-2","Полищук А.А.","415","15:00\n15:01","allGroup"))
+        lessonList.add(setLesson("Физическая культура","9","mn","ССА 18-11-2","Кто-то там","Спорт. Зал","16:00\n16:01","allGroup"))
+        lessonList.add(setLesson("Физическая культура","10","mn","ССА 18-11-2","Еще кто-то там","Спорт. Зал","17:00\n17:01","allGroup"))
+        lessonList.add(setLesson("Основы Теории Информации","11","mn","ССА 18-11-2","Полищук А. А.","415","18:00\n18:01","allGroup"))
+        lessonList.add(setLesson("Основы Теории Информации","12","mn","ССА 18-11-2","Полищук А. А","415","19:00\n19:01","allGroup"))
+        setAdapter(lessonList)
+    }
+
+    private fun setLesson(lesson: String, lessonNum: String, dayOfWeek: String, groupName: String, teacherName: String, roomNum: String, lessonTime: String, groupOrSubGroup: String): Lesson{
+        val l = Lesson()
+        l.lesson = lesson
+        l.lessonNum = lessonNum
+        l.dayofweek = dayOfWeek
+        l.groupName = groupName
+        l.teacherName = teacherName
+        l.roomNum = roomNum
+        l.lessonTime = lessonTime
+        l.groupOrSubGroup = groupOrSubGroup
+        return l
+    }
+
     private fun setAdapter(lessons: ArrayList<Lesson?>) {
         lessonRecycler.adapter = LessonAdapter(lessons)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        auth!!.addAuthStateListener(authListener!!)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (authListener != null) {
+            auth!!.removeAuthStateListener(authListener!!)
+        }
     }
 }
