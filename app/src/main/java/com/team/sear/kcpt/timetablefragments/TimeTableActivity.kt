@@ -10,7 +10,7 @@ import com.team.sear.kcpt.R
 import com.team.sear.kcpt.timetablePackage.RecyclerTimeTable
 import com.team.sear.kcpt.WeatherFrag
 
-class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
+class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     private lateinit var ttFragNew: NewTimeTableFrag
@@ -26,14 +26,7 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_time_table)
         ttFragNew = NewTimeTableFrag()
-     /*   try {
 
-            val ftrans = supportFragmentManager.beginTransaction()
-            ftrans.replace(R.id.navigate, ttFragNew)
-            ftrans.commit()
-        } catch (e: Exception) {
-            Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
-        }*/
         try {
             recyclerTimeTable = RecyclerTimeTable()
             zvonkiFrag = ZvonkiFrag()
@@ -46,9 +39,14 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
         } catch (e: Exception) {
             Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
         }
-        val ftrans = supportFragmentManager.beginTransaction()
-        ftrans.replace(R.id.bottom_nav_container, ttFragNew)
-        ftrans.commit()
+
+        try {
+            val ftrans = supportFragmentManager.beginTransaction()
+            ftrans.replace(R.id.bottom_nav_container, ttFragNew)
+            ftrans.commit()
+        } catch (e: Exception) {
+            Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
+        }
 
         val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBottom.setOnNavigationItemSelectedListener(this)
@@ -57,11 +55,11 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         val ftrans = supportFragmentManager.beginTransaction()
-        when(id){
+        when (id) {
             R.id.bottom_more_item -> ftrans.replace(R.id.bottom_nav_container, dfrag)
-            R.id.bottom_main_item -> ftrans.replace(R.id.bottom_nav_container, ttFragNew)
-            R.id.bottom_profile_item -> ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
-            else ->{
+            R.id.bottom_main_item -> ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
+            R.id.bottom_profile_item -> ftrans.replace(R.id.bottom_nav_container, ttFragNew)
+            else -> {
 
             }
         }
