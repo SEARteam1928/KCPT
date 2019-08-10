@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.team.sear.kcpt"
     android:versionCode="16"
-    android:versionName="2.6.1">
+    android:versionName="2.6.1"
+    >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".timetablefragments.TimeTableActivity"></activity>
+        <activity android:name=".moreactivities.WeatherActivity"></activity>
+        <activity android:name=".moreactivities.TimetableActivity" />
+        <activity android:name=".timetablefragments.TimeTableActivity" />
         <activity android:name=".RegistrationNew" />
         <activity android:name=".PrivacyPolytics" />
         <activity

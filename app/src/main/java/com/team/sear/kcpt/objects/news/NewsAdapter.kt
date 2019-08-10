@@ -1,6 +1,6 @@
 package com.team.sear.kcpt.objects.news
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,8 +25,7 @@ class NewsAdapter(private val news: Array<News?>) : RecyclerView.Adapter<NewsAda
         holder.titletv?.text = news[position]?.title
         holder.datetv?.text = news[position]?.date
         holder.descriptiontv?.text = news[position]?.description
-        Picasso.with(itemView.context).load(news[position]?.imageLink)
-                .into(holder.newsImageView)
+        Picasso.get().load(news[position]?.imageLink).into(holder.newsImageView)
         holder.webNews?.visibility = View.GONE
         holder.backBt?.visibility = View.GONE
         holder.moreLinktv!!.setOnClickListener {

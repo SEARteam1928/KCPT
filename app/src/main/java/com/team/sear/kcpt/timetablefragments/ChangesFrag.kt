@@ -2,7 +2,7 @@ package com.team.sear.kcpt.timetablefragments
 
 import android.net.ConnectivityManager
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -87,8 +87,8 @@ class ChangesFrag : Fragment() {
             val conManager = context!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
             return (conManager.activeNetworkInfo != null
-                    && conManager.activeNetworkInfo.isAvailable
-                    && conManager.activeNetworkInfo.isConnected)
+                    && conManager.activeNetworkInfo!!.isAvailable
+                    && conManager.activeNetworkInfo!!.isConnected)
         }
     }
 

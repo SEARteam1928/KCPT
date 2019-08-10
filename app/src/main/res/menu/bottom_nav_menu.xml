@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/bottom_more_item"
-        android:title="Больше"
+    <item android:id="@+id/bottom_today_item"
+        android:title="На сегодня"
         android:icon="@drawable/baseline_menu_24"/>
     <item android:id="@+id/bottom_main_item"
         android:title="Главная"

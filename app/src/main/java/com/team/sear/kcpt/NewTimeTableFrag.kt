@@ -2,15 +2,14 @@ package com.team.sear.kcpt
 
 
 import android.annotation.SuppressLint
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -108,7 +107,7 @@ class NewTimeTableFrag : Fragment() {
             0 -> d + " " + getDayOfWeek()
             1 -> {
                 val d1 = Calendar.getInstance()
-                d1.time = mount.parse(d)
+                d1.time = mount.parse(d)!!
                 d1.add(Calendar.DATE, 1)
                 val d1Str = mount.format(d1.time).toString()
                 d1Str

@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.media.RingtoneManager
-import android.support.v4.app.NotificationCompat
+import androidx.core.app.NotificationCompat
 
 import com.team.sear.kcpt.oldclasses.Navigate
 import com.team.sear.kcpt.R

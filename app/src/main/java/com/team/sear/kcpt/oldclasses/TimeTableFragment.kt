@@ -3,29 +3,19 @@
 package com.team.sear.kcpt.oldclasses
 
 import android.annotation.SuppressLint
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Bundle
-import android.os.Handler
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentTransaction
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
-import com.google.android.gms.ads.*
 import com.team.sear.kcpt.R
-import com.team.sear.kcpt.objects.StatusDetermination
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuth.*
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.team.sear.kcpt.objects.TimeTableViewsInit
-import kotlinx.android.synthetic.main.timetable_fragment.*
-import java.text.SimpleDateFormat
-import java.util.*
 
 class TimeTableFragment : Fragment() {
 

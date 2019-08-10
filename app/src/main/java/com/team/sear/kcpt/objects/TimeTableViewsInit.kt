@@ -21,12 +21,12 @@ class TimeTableViewsInit{
     fun invisView(v: View){
         v.visibility = View.GONE
     }
-
+/*
     fun setShowCl(v1: TextView, v2: LinearLayout){
         v1.setOnClickListener { }
     }
 
     fun setHideCl(v1: TextView, v2: LinearLayout){
         v1.setOnClickListener {  }
-    }
+    }*/
 }

@@ -1,6 +1,5 @@
 package com.team.sear.kcpt.objects
 
-import android.renderscript.Sampler
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -11,8 +10,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.team.sear.kcpt.NewTimeTableFrag
-import com.team.sear.kcpt.databinding.FragmentNewTimeTableBinding
 
 class Student {
     internal var database: FirebaseDatabase? = null

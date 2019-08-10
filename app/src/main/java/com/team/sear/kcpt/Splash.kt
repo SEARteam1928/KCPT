@@ -1,20 +1,18 @@
 package com.team.sear.kcpt
 
 import android.content.Intent
-import android.databinding.DataBindingUtil
+import androidx.databinding.DataBindingUtil
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.team.sear.kcpt.databinding.SplashBinding
 import com.team.sear.kcpt.timetablefragments.TimeTableActivity
 
 class Splash : AppCompatActivity() {
@@ -28,7 +26,7 @@ class Splash : AppCompatActivity() {
     internal var user: FirebaseUser? = null
     private lateinit var mAuth: FirebaseAuth
     private var mAuthListener: FirebaseAuth.AuthStateListener? = null
-    var binding: com.team.sear.kcpt.databinding.SplashBinding? = null
+    var binding: SplashBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
