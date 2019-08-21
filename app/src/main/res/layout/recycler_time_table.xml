@@ -3,10 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".timetablePackage.RecyclerTimeTable">
+    tools:context=".timetablePackage.RecyclerTimeTable"
+    tools:ignore="UselessParent, WebViewLayout">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lessonRecycler"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <WebView
+            android:id="@+id/userChangesWebView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lessonRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </FrameLayout>
