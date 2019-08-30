@@ -9,6 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.team.sear.kcpt.databinding.FragmentMoreBinding
+import com.team.sear.kcpt.moreactivities.TimetableActivity
+import com.team.sear.kcpt.moreactivities.WeatherActivity
 
 class MoreFrag : Fragment(), View.OnClickListener {
 
@@ -18,7 +20,14 @@ class MoreFrag : Fragment(), View.OnClickListener {
                               savedInstanceState: Bundle?): View? {
         bind = DataBindingUtil.inflate(inflater, R.layout.fragment_more, container, false)
 
-
+        bind!!.changesITV.setOnClickListener(this)
+        bind!!.timetableITV.setOnClickListener(this)
+        bind!!.changesITV.setOnClickListener(this)
+        bind!!.zvonkiITV.setOnClickListener(this)
+        bind!!.weatherITV.setOnClickListener(this)
+        bind!!.newsITV.setOnClickListener(this)
+        bind!!.developersITV.setOnClickListener(this)
+        bind!!.feedbackITV.setOnClickListener(this)
         return bind!!.root
     }
 
@@ -37,7 +46,7 @@ class MoreFrag : Fragment(), View.OnClickListener {
     }
 
     private fun onTimetableITVClick() {
-
+        startIntent(TimetableActivity())
     }
 
     private fun onChangesITVClick() {
@@ -49,7 +58,7 @@ class MoreFrag : Fragment(), View.OnClickListener {
     }
 
     private fun onWeatherITVClick() {
-
+        startIntent(WeatherActivity())
     }
 
     private fun onNewsITVClick() {

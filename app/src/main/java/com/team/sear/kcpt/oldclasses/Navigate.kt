@@ -145,7 +145,7 @@ class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
                 finish()
             }
             R.id.timetableItem -> {
-                val ttIntent = Intent(this@Navigate,TimeTableActivity::class.java)
+                val ttIntent = Intent(this@Navigate,MainActivity::class.java)
                 startActivity(ttIntent)
             }
         }

@@ -4,11 +4,7 @@
     package="com.team.sear.kcpt"
     android:versionCode="16"
     android:versionName="2.6.1"
-    >
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    tools:ignore="GradleOverrides,LockedOrientationActivity">
 
     <application
         android:allowBackup="true"
@@ -20,22 +16,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".moreactivities.WeatherActivity"></activity>
         <activity android:name=".moreactivities.TimetableActivity" />
-        <activity android:name=".timetablefragments.TimeTableActivity" />
+        <activity android:name=".timetablefragments.MainActivity" />
         <activity android:name=".RegistrationNew" />
         <activity android:name=".PrivacyPolytics" />
         <activity
             android:name=".timetablefragments.SelectTimeTableForApp"
             android:screenOrientation="portrait" />
 
-        <service android:name=".objects.MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
         <activity
             android:name=".oldclasses.Registration"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".OneMinuteGame"
             android:screenOrientation="portrait" />
@@ -53,6 +44,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".objects.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

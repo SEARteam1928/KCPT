@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
     tools:context=".ProfileFrag">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:contentDescription="ic_launcher"
+            android:src="@drawable/web_hi_res_512_round"
+            android:layout_margin="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="Status: STUDENT"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="Group: ССА 18-11-2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:textColor="#FFF"
+            android:id="@+id/searchProfileBt"
+            android:background="#8F0B47BF"
+            android:text="Выбрать"/>
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

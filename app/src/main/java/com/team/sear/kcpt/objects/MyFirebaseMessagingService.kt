@@ -1,5 +1,6 @@
 package com.team.sear.kcpt.objects
 
+import android.annotation.SuppressLint
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
@@ -12,11 +13,12 @@ import com.team.sear.kcpt.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
+@SuppressLint("MissingFirebaseInstanceTokenRefresh")
 @Suppress("DEPRECATION")
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
-    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
-        sendNotification(remoteMessage!!.notification!!.body)
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        sendNotification(remoteMessage.notification!!.body)
     }
 
     private fun sendNotification(messageBody: String?) {

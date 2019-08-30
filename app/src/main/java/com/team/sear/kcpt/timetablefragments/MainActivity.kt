@@ -8,7 +8,7 @@ import android.widget.Toast
 import com.team.sear.kcpt.*
 import com.team.sear.kcpt.timetablePackage.RecyclerTimeTable
 
-class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     private lateinit var recyclerTimeTable: RecyclerTimeTable
@@ -17,7 +17,7 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_time_table)
+        setContentView(R.layout.main_activity)
 
         try {
             recyclerTimeTable = RecyclerTimeTable()
@@ -25,15 +25,15 @@ class TimeTableActivity : AppCompatActivity(), BottomNavigationView.OnNavigation
             profileFrag = ProfileFrag()
 
         } catch (e: Exception) {
-            Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
         }
 
         try {
             val ftrans = supportFragmentManager.beginTransaction()
-            ftrans.replace(R.id.bottom_nav_container, moreFrag)
+            ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
             ftrans.commit()
         } catch (e: Exception) {
-            Toast.makeText(this@TimeTableActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
         }
 
         val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)

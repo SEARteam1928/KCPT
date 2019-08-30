@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 import com.team.sear.kcpt.databinding.SplashBinding
-import com.team.sear.kcpt.timetablefragments.TimeTableActivity
+import com.team.sear.kcpt.timetablefragments.MainActivity
 
 class Splash : AppCompatActivity() {
 
@@ -32,7 +32,7 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.splash)
 
-        navigateIntent = Intent(this, TimeTableActivity::class.java)
+        navigateIntent = Intent(this, MainActivity::class.java)
         registrationIntent = Intent(this, RegistrationNew::class.java)
 
         try {

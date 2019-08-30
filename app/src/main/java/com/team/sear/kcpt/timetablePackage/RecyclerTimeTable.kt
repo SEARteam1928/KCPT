@@ -8,12 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
+import android.webkit.WebView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.team.sear.kcpt.MyCallback
 import com.team.sear.kcpt.R
+import com.team.sear.kcpt.objects.Style
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -25,6 +28,8 @@ class RecyclerTimeTable : Fragment() {
     private lateinit var lessonList: ArrayList<Lesson?>
     private lateinit var lessons: Array<Lesson?>
     private var idLessons: ArrayList<String?>? = null
+    @SuppressLint("StaticFieldLeak")
+    private lateinit var webChanges: WebView
 
 
     private var database: FirebaseDatabase? = null
@@ -48,9 +53,31 @@ class RecyclerTimeTable : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.recycler_time_table, container, false)
+        val style = Style()
+        val styleStr = style.style
         lessonRecycler = v.findViewById(R.id.lessonRecycler)
         lessonRecycler.layoutManager = LinearLayoutManager(context)
-
+        webChanges = v.findViewById(R.id.userChangesWebView)
+        webChanges.settings.javaScriptEnabled
+        webChanges.settings.builtInZoomControls
+        webChanges.settings.supportZoom()
+        webChanges.settings.displayZoomControls
+        webChanges.settings.loadWithOverviewMode
+        webChanges.settings.defaultFixedFontSize = 15
+        webChanges.settings.setAppCacheMaxSize(20 * 1024 * 1024)
+        webChanges.settings.setAppCachePath(context!!.cacheDir.absolutePath)
+        webChanges.settings.allowFileAccess
+        webChanges.settings.setAppCacheEnabled(true)
+        webChanges.settings.cacheMode = WebSettings.LOAD_DEFAULT
+        val html = "<!Doctype html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<p>ЗДЕСЬ БУДУТ \nИЗМЕНЕНИЯ</p>" +
+                "</body>\n" +
+                "</html>"
+        webChanges.loadData(html, "text/html; charset=UTF-8", null)
         auth = FirebaseAuth.getInstance()
         authComplete()
 
@@ -66,9 +93,9 @@ class RecyclerTimeTable : Fragment() {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
             runGetThenSetTimeTable()
-/*
+
             setFakeLessons()
-*/
+
             /*setFeedbackView()*/
         }
     }
@@ -565,9 +592,11 @@ class RecyclerTimeTable : Fragment() {
                                                         lessonList.add(lesson)
                                                         setAdapterInt++
                                                         if (setAdapterInt == childrenInt) {
+
 /*
                                                             setAdapter(lessonList)
 */
+
                                                         }
                                                     }
 
