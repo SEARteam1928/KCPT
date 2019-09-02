@@ -15,8 +15,8 @@ import android.webkit.WebSettings
 @Suppress("DEPRECATION")
 class ChangesFrag : Fragment() {
 
-    private lateinit var v: View
-    private lateinit var webChanges: WebView
+    private var v: View? = null
+    private var webChanges: WebView? = null
 
 
 /*
@@ -35,25 +35,25 @@ class ChangesFrag : Fragment() {
 
         try {
 
-            webChanges = v.findViewById(R.id.webChanges)
-            webChanges.settings.javaScriptEnabled
-            webChanges.settings.builtInZoomControls
-            webChanges.settings.supportZoom()
-            webChanges.settings.displayZoomControls
-            webChanges.settings.loadWithOverviewMode
-            webChanges.settings.defaultFixedFontSize = 15
-            webChanges.settings.setAppCacheMaxSize(20 * 1024 * 1024)
-            webChanges.settings.setAppCachePath(context!!.cacheDir.absolutePath)
-            webChanges.settings.allowFileAccess
-            webChanges.settings.setAppCacheEnabled(true)
-            webChanges.settings.cacheMode = WebSettings.LOAD_DEFAULT
+            webChanges = v!!.findViewById(R.id.webChanges)
+            webChanges!!.settings.javaScriptEnabled
+            webChanges!!.settings.builtInZoomControls
+            webChanges!!.settings.supportZoom()
+            webChanges!!.settings.displayZoomControls
+            webChanges!!.settings.loadWithOverviewMode
+            webChanges!!.settings.defaultFixedFontSize = 15
+            webChanges!!.settings.setAppCacheMaxSize(20 * 1024 * 1024)
+            webChanges!!.settings.setAppCachePath(context!!.cacheDir.absolutePath)
+            webChanges!!.settings.allowFileAccess
+            webChanges!!.settings.setAppCacheEnabled(true)
+            webChanges!!.settings.cacheMode = WebSettings.LOAD_DEFAULT
 
             if (!DetectConnection.checkInternetConnection(this.context)) {
                 Toast.makeText(context, "Отсутствует подключение!", Toast.LENGTH_SHORT).show()
-                webChanges.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
+                webChanges!!.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
             }
 
-            webChanges.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
+            webChanges!!.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
 
 
             /*changesImage = v.findViewById(R.id.changesImage_frag)
