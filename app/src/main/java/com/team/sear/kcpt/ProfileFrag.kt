@@ -17,6 +17,7 @@ import ir.mirrajabi.searchdialog.core.SearchResultListener
 class ProfileFrag : Fragment(),View.OnClickListener {
     private var v: View? = null
     private var searchBt: Button? = null
+    var arr: ArrayList<String>? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_profile, container, false)
@@ -28,11 +29,7 @@ class ProfileFrag : Fragment(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.searchProfileBt ->{
-                SimpleSearchDialogCompat(context, "Поиск", "Что вы хотите найти?", null,
-                        initData(), SearchResultListener { baseSearchDialogCompat, item, _ ->
-                    Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
-                    baseSearchDialogCompat.dismiss()
-                }).show()
+                putDataInArrayList()
             }
             else ->{
 
@@ -49,19 +46,22 @@ class ProfileFrag : Fragment(),View.OnClickListener {
         intentNavigate()*/
     }
 
+private fun putDataInArrayList(){
+    arr= ArrayList(8)
+    arr!!.add("10")
+    arr!!.add("SGDGDSF")
+    Handler().postDelayed({
+        SimpleSearchDialogCompat(context, "Поиск", "Что вы хотите найти?", null,
+                initData(), SearchResultListener { baseSearchDialogCompat, item, _ ->
+            Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+            baseSearchDialogCompat.dismiss()
+        }).show()
+    },5000)
+}
+
     private fun initData(): ArrayList<SearchModel> {
-        var arr: ArrayList<String> = ArrayList(8)
-        arr.add("10")
-        arr.add("SGDGDSF")
-        arr.add("fgsdg")
-        arr.add("@))@)!")
-        arr.add("vcvxc")
-        arr.add("32431")
-        arr.add("x3344")
-        arr.add("7")
-        Handler().postDelayed(Runnable { Toast.makeText(context,"sgdfsd",Toast.LENGTH_SHORT).show() },3000)
         return ArrayList<SearchModel>().also {
-            for (i in arr){
+            for (i in arr!!){
                 it.add(SearchModel(i))
             }
         }
