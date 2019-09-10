@@ -118,7 +118,7 @@ class RecyclerTimeTable : Fragment() {
                 var uId = auth!!.uid
 
                 setAdapter("STUDENT",lessons)
-
+                updateList()
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
@@ -161,7 +161,9 @@ class RecyclerTimeTable : Fragment() {
         ref!!.addChildEventListener(object : ChildEventListener{
             override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
                 lessons.add(datasnapshot.getValue(Lesson::class.java))
+/*
                 setNotify("STUDENT")
+*/
             }
 
             override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
@@ -184,7 +186,7 @@ class RecyclerTimeTable : Fragment() {
 
     private fun getItemIndex(lessons: ArrayList<Lesson?>): Int{ return lessons.size}
 
-    private fun setFakeLessons() {
+/*    private fun setFakeLessons() {
         lessonList = ArrayList(13)
         lessonList.add(setLesson("1. Инженерная и компьютерная графика\n 2. Инженерная и компьютерная графика", "1", "mn", "ССА 18-11-2", "Литус А.А.\nПопов кто-то", "999\n777", "8:00\n8:01", "allGroup"))
         lessonList.add(setLesson("1. Инженерная и компьютерная графика\n 2. Инженерная и компьютерная графика", "2", "mn", "ССА 18-11-2", "Литус А.А.\nПопов кто-то", "999\n777", "9:00\n9:01", "allGroup"))
@@ -199,7 +201,7 @@ class RecyclerTimeTable : Fragment() {
         lessonList.add(setLesson("Основы Теории Информации", "11", "mn", "ССА 18-11-2", "Полищук А. А.", "415", "18:00\n18:01", "allGroup"))
         lessonList.add(setLesson("Основы Теории Информации", "12", "mn", "ССА 18-11-2", "Полищук А. А", "415", "19:00\n19:01", "allGroup"))
         setAdapter("STUDENT", lessonList)
-    }
+    }*/
 
     private fun setLesson(lesson: String, lessonNum: String, dayOfWeek: String, groupName: String, teacherName: String, roomNum: String, lessonTime: String, groupOrSubGroup: String): Lesson {
         val l = Lesson()
