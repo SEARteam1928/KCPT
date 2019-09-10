@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.team.sear.kcpt.R
 
 class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerView.Adapter<StudentLessonAdapter.ViewHolder>() {
+
     private lateinit var itemView: View
 
     override fun getItemCount() = lessons.size
@@ -23,20 +24,6 @@ class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
             holder.roomNumTV!!.text = lessons[p]!!.roomNum
             holder.anybodyNameTV!!.text = lessons[p]!!.teacherName
             holder.lessonTimeTV!!.text = lessons[p]!!.lessonTime
-        //Xijwiodfaskfoen334
-        /* database = FirebaseDatabase.getInstance()
-
-         ref = database!!.getReference("newTimeTable").child("Xijwiodfaskfoen334").child("lesson")
-         ref!!.addValueEventListener(
-                 object : ValueEventListener {
-                     override fun onDataChange(dataSnapshot: DataSnapshot) {
-                         holder.titletv?.text  = dataSnapshot.getValue(String::class.java)
-                     }
-
-                     override fun onCancelled(error: DatabaseError) {
-                     }
-                 })
-         //holder.titletv?.text = lessons[position]?.lessonNum*/
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var lessonNumTV: TextView? = null

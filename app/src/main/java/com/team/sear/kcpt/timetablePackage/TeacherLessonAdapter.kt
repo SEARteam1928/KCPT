@@ -8,6 +8,7 @@ import android.widget.TextView
 import com.team.sear.kcpt.R
 
 class TeacherLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerView.Adapter<TeacherLessonAdapter.ViewHolder>() {
+
     private lateinit var itemView: View
 
     override fun getItemCount() = lessons.size
