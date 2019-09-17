@@ -88,6 +88,7 @@ class RecyclerTimeTable : Fragment() {
                 "</head>\n" +
                 "<body>\n" +
 
+/*
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
@@ -101,6 +102,7 @@ class RecyclerTimeTable : Fragment() {
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+*/
 
                 "<p>ЗДЕСЬ БУДУТ \nИЗМЕНЕНИЯ</p>" +
                 "</body>\n" +
@@ -114,7 +116,7 @@ class RecyclerTimeTable : Fragment() {
             if (user != null) {
 
                 database = FirebaseDatabase.getInstance()
-                ref = database!!.reference.child("newTimeTable")
+                ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child("ССА 18-11-2")
                 var uId = auth!!.uid
 
                 setAdapter("STUDENT",lessons)
@@ -125,6 +127,69 @@ class RecyclerTimeTable : Fragment() {
         }
     }
 
+
+    private fun updateList(){
+        ref!!.addChildEventListener(object : ChildEventListener{
+            override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
+                val lesson = datasnapshot.getValue(Lesson::class.java)
+                lessons.add(lesson)
+                setNotify("STUDENT")
+            }
+
+            override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
+                val lesson: Lesson? = datasnapshot.getValue(Lesson::class.java)
+                val index: Int = getItemIndex(lessons)
+
+                lessons[index] = lesson
+            }
+
+            override fun onChildRemoved(datasnapshot: DataSnapshot) {
+            }
+
+            override fun onChildMoved(datasnapshot: DataSnapshot, p1: String?) {
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+            }
+        })
+    }
+
+    private fun getItemIndex(lessons: ArrayList<Lesson?>): Int{ return lessons.size}
+
+
+    private fun setAdapter(status: String, lessons: ArrayList<Lesson?>) {
+        if (status == "STUDENT") {
+            lessonRecycler.adapter = StudentLessonAdapter(lessons)
+        }
+        if (status == "TEACHER") {
+            lessonRecycler.adapter = TeacherLessonAdapter(lessons)
+        }
+    }
+
+    private fun setNotify(status: String) {
+        if (status == "STUDENT") {
+            studentAdapter = StudentLessonAdapter(lessons)
+            studentAdapter.notifyDataSetChanged()
+        }
+        if (status == "TEACHER") {
+            teacherAdapter.notifyDataSetChanged()
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        auth!!.addAuthStateListener(authListener!!)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (authListener != null) {
+            auth!!.removeAuthStateListener(authListener!!)
+        }
+    }
+
+}
+/*
     @SuppressLint("SimpleDateFormat")
     private fun getToday(): String {
         val dform = SimpleDateFormat("EEE")
@@ -156,35 +221,7 @@ class RecyclerTimeTable : Fragment() {
     private fun teacherName(): String {
         return "Полищук А. А."
     }
-
-    private fun updateList(){
-        ref!!.addChildEventListener(object : ChildEventListener{
-            override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
-                lessons.add(datasnapshot.getValue(Lesson::class.java))
-/*
-                setNotify("STUDENT")
 */
-            }
-
-            override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
-                val lesson: Lesson? = datasnapshot.getValue(Lesson::class.java)
-                val index: Int = getItemIndex(lessons)
-
-                lessons[index] = lesson
-            }
-
-            override fun onChildRemoved(datasnapshot: DataSnapshot) {
-            }
-
-            override fun onChildMoved(datasnapshot: DataSnapshot, p1: String?) {
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-            }
-        })
-    }
-
-    private fun getItemIndex(lessons: ArrayList<Lesson?>): Int{ return lessons.size}
 
 /*    private fun setFakeLessons() {
         lessonList = ArrayList(13)
@@ -202,7 +239,7 @@ class RecyclerTimeTable : Fragment() {
         lessonList.add(setLesson("Основы Теории Информации", "12", "mn", "ССА 18-11-2", "Полищук А. А", "415", "19:00\n19:01", "allGroup"))
         setAdapter("STUDENT", lessonList)
     }*/
-
+/*
     private fun setLesson(lesson: String, lessonNum: String, dayOfWeek: String, groupName: String, teacherName: String, roomNum: String, lessonTime: String, groupOrSubGroup: String): Lesson {
         val l = Lesson()
         l.lesson = lesson
@@ -215,40 +252,7 @@ class RecyclerTimeTable : Fragment() {
         l.groupOrSubGroup = groupOrSubGroup
         return l
     }
-
-    private fun setAdapter(status: String, lessons: ArrayList<Lesson?>) {
-        if (status == "STUDENT") {
-            lessonRecycler.adapter = StudentLessonAdapter(lessons)
-        }
-        if (status == "TEACHER") {
-            lessonRecycler.adapter = TeacherLessonAdapter(lessons)
-        }
-    }
-
-    private fun setNotify(status: String) {
-        if (status == "STUDENT") {
-            studentAdapter.notifyDataSetChanged()
-        }
-        if (status == "TEACHER") {
-            teacherAdapter.notifyDataSetChanged()
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        auth!!.addAuthStateListener(authListener!!)
-    }
-
-    override fun onStop() {
-        super.onStop()
-        if (authListener != null) {
-            auth!!.removeAuthStateListener(authListener!!)
-        }
-    }
-
-}
-
-
+    */
 /*    private fun removeLesson(position: Int){
         ref!!.child(lessons.get(position).lesson).removeValue()
     }*/
