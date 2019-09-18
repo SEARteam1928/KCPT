@@ -15,15 +15,12 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
-import com.team.sear.kcpt.MyCallback
 import com.team.sear.kcpt.R
 import com.team.sear.kcpt.objects.Style
 import kotlinx.android.synthetic.main.recycler_time_table.*
-import java.lang.invoke.MethodHandleInfo
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 class RecyclerTimeTable : Fragment() {
     private lateinit var v: View
@@ -120,9 +117,14 @@ class RecyclerTimeTable : Fragment() {
                 ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
                 var uId = auth!!.uid
 
-                setAdapter("STUDENT",lessons)
-                updateList()
-                checkIfEmpty()
+                try{
+                    setAdapter("STUDENT",lessons)
+                    updateList()
+                    checkIfEmpty()
+                }catch (e: Exception){
+                    updateList()
+                    checkIfEmpty()
+                }
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
@@ -137,7 +139,7 @@ class RecyclerTimeTable : Fragment() {
 
                 lessons.add(lesson)
 
-                setNotify("STUDENT")
+                setNotifyDataSet("STUDENT")
                 checkIfEmpty()
             }
 
@@ -146,6 +148,7 @@ class RecyclerTimeTable : Fragment() {
                 val index: Int = getItemIndex(lessons)
 
                 lessons[index] = lesson
+                setNotifyItemChanged("STUDENT", index)
             }
 
             override fun onChildRemoved(datasnapshot: DataSnapshot) {
@@ -171,7 +174,7 @@ class RecyclerTimeTable : Fragment() {
         }
     }
 
-    private fun setNotify(status: String) {
+    private fun setNotifyDataSet(status: String) {
         if (status == "STUDENT") {
             studentAdapter = StudentLessonAdapter(lessons)
             studentAdapter.notifyDataSetChanged()
@@ -181,6 +184,18 @@ class RecyclerTimeTable : Fragment() {
             teacherAdapter.notifyDataSetChanged()
         }
     }
+
+    private fun setNotifyItemChanged(status: String, pos: Int) {
+        if (status == "STUDENT") {
+            studentAdapter = StudentLessonAdapter(lessons)
+            studentAdapter.notifyItemChanged(pos)
+        }
+        if (status == "TEACHER") {
+            teacherAdapter = TeacherLessonAdapter(lessons)
+            teacherAdapter.notifyItemChanged(pos)
+        }
+    }
+
 
     @SuppressLint("SimpleDateFormat")
     private fun getToday(): String {
