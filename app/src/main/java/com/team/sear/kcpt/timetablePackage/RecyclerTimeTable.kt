@@ -18,6 +18,7 @@ import com.google.firebase.database.*
 import com.team.sear.kcpt.MyCallback
 import com.team.sear.kcpt.R
 import com.team.sear.kcpt.objects.Style
+import kotlinx.android.synthetic.main.recycler_time_table.*
 import java.lang.invoke.MethodHandleInfo
 import java.text.SimpleDateFormat
 import java.util.*
@@ -32,8 +33,6 @@ class RecyclerTimeTable : Fragment() {
     private lateinit var studentAdapter: StudentLessonAdapter
     private lateinit var teacherAdapter: TeacherLessonAdapter
 
-    private lateinit var lessonList: ArrayList<Lesson?>
-    private var idLessons: ArrayList<String?>? = null
     @SuppressLint("StaticFieldLeak")
     private lateinit var webChanges: WebView
 
@@ -45,11 +44,13 @@ class RecyclerTimeTable : Fragment() {
     private var user: FirebaseUser? = null
     private var authListener: FirebaseAuth.AuthStateListener? = null
 
+    private lateinit var status: String
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.recycler_time_table, container, false)
-
+        status = "STUDENT"
         noDataTv = v.findViewById(R.id.text_no_data)
 
         lessons = ArrayList()
@@ -116,24 +117,28 @@ class RecyclerTimeTable : Fragment() {
             if (user != null) {
 
                 database = FirebaseDatabase.getInstance()
-                ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child("ССА 18-11-2")
+                ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
                 var uId = auth!!.uid
 
                 setAdapter("STUDENT",lessons)
                 updateList()
+                checkIfEmpty()
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-
     private fun updateList(){
         ref!!.addChildEventListener(object : ChildEventListener{
             override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
+
                 val lesson = datasnapshot.getValue(Lesson::class.java)
+
                 lessons.add(lesson)
+
                 setNotify("STUDENT")
+                checkIfEmpty()
             }
 
             override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
@@ -172,8 +177,41 @@ class RecyclerTimeTable : Fragment() {
             studentAdapter.notifyDataSetChanged()
         }
         if (status == "TEACHER") {
+            teacherAdapter = TeacherLessonAdapter(lessons)
             teacherAdapter.notifyDataSetChanged()
         }
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getToday(): String {
+        val dform = SimpleDateFormat("EEE")
+        return when (dform.format(Calendar.getInstance().time)) {
+            "вс" -> "Понедельник"
+            "Sun" -> "Понедельник"
+            "пн" -> "Понедельник"
+            "Mon" -> "Понедельник"
+            "вт" -> "Вторник"
+            "Tues" -> "Вторник"
+            "ср" -> "Среда"
+            "Wed" -> "Среда"
+            "чт" -> "Четверг"
+            "Thurs" -> "Четверг"
+            "пт" -> "Пятница"
+            "Fri" -> "Пятница"
+            "сб" -> "Суббота"
+            "Sat" -> "Суббота"
+            else -> {
+                ""
+            }
+        }
+    }
+
+    private fun groupName(): String {
+        return "ССА 18-11-2"
+    }
+
+    private fun teacherName(): String {
+        return "Полищук А. А."
     }
 
     override fun onStart() {
@@ -188,40 +226,16 @@ class RecyclerTimeTable : Fragment() {
         }
     }
 
-}
-/*
-    @SuppressLint("SimpleDateFormat")
-    private fun getToday(): String {
-        val dform = SimpleDateFormat("EEE")
-        return when (dform.format(Calendar.getInstance().time)) {
-            "вс" -> "mn"
-            "Sun" -> "mn"
-            "пн" -> "mn"
-            "Mon" -> "mn"
-            "вт" -> "ty"
-            "Tues" -> "ty"
-            "ср" -> "wd"
-            "Wed" -> "wd"
-            "чт" -> "th"
-            "Thurs" -> "th"
-            "пт" -> "fr"
-            "Fri" -> "fr"
-            "сб" -> "st"
-            "Sat" -> "st"
-            else -> {
-                ""
-            }
+    private fun checkIfEmpty(){
+        if(lessons.size == 0){
+            lessonRecycler.visibility = View.INVISIBLE
+            text_no_data.visibility = View.VISIBLE
+        }else{
+            lessonRecycler.visibility = View.VISIBLE
+            text_no_data.visibility = View.INVISIBLE
         }
     }
-
-    private fun groupName(): String {
-        return "ССА 18-11-2"
-    }
-
-    private fun teacherName(): String {
-        return "Полищук А. А."
-    }
-*/
+}
 
 /*    private fun setFakeLessons() {
         lessonList = ArrayList(13)

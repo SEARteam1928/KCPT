@@ -31,8 +31,8 @@ class Lesson {
         this.lessonTime = lessonTime
         this.groupOrSubGroup = groupOrSubGroup
     }
-
-    fun toMap(): Map<String, Any>{
+}
+/*    fun toMap(): Map<String, Any>{
         var result: HashMap<String, Any> = HashMap()
 
         result["lesson"] = lesson!!
@@ -45,5 +45,4 @@ class Lesson {
         result["groupOrSubGroup"] = groupOrSubGroup!!
 
         return result
-    }
-}
+    }*/

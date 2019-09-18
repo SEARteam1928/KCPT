@@ -25,12 +25,14 @@ class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
             holder.teacherName!!.text = lessons[p]!!.teacherName
             holder.lessonTime!!.text = lessons[p]!!.lessonTime
     }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var lessonNum: TextView? = null
         var lesson: TextView? = null
         var roomNum: TextView? = null
         var teacherName: TextView? = null
         var lessonTime: TextView? = null
+
         init {
             lessonNum = itemView.findViewById(R.id.lessonNumTV)
             lesson = itemView.findViewById(R.id.lessonTV)

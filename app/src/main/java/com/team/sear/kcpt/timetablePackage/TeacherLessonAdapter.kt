@@ -19,26 +19,26 @@ class TeacherLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, p: Int) {
-            holder.lessonNumTV!!.text = lessons[p]!!.lessonNum
-            holder.lessonTV!!.text = lessons[p]!!.lesson
-            holder.roomNumTV!!.text = lessons[p]!!.roomNum
-            holder.anybodyNameTV!!.text = lessons[p]!!.groupName
-            holder.lessonTimeTV!!.text = lessons[p]!!.lessonTime
+            holder.lessonNum!!.text = lessons[p]!!.lessonNum
+            holder.lesson!!.text = lessons[p]!!.lesson
+            holder.roomNum!!.text = lessons[p]!!.roomNum
+            holder.groupName!!.text = lessons[p]!!.groupName
+            holder.lessonTime!!.text = lessons[p]!!.lessonTime
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var lessonNumTV: TextView? = null
-        var lessonTV: TextView? = null
-        var roomNumTV: TextView? = null
-        var anybodyNameTV: TextView? = null
-        var lessonTimeTV: TextView? = null
+        var lessonNum: TextView? = null
+        var lesson: TextView? = null
+        var roomNum: TextView? = null
+        var groupName: TextView? = null
+        var lessonTime: TextView? = null
 
         init {
-            lessonNumTV = itemView.findViewById(R.id.lessonNumTV)
-            lessonTV = itemView.findViewById(R.id.lessonTV)
-            roomNumTV = itemView.findViewById(R.id.roomNumTV)
-            anybodyNameTV = itemView.findViewById(R.id.anybodyNameTV)
-            lessonTimeTV = itemView.findViewById(R.id.lessonTimeTV)
+            lessonNum = itemView.findViewById(R.id.lessonNumTV)
+            lesson = itemView.findViewById(R.id.lessonTV)
+            roomNum = itemView.findViewById(R.id.roomNumTV)
+            groupName = itemView.findViewById(R.id.anybodyNameTV)
+            lessonTime = itemView.findViewById(R.id.lessonTimeTV)
         }
     }
 }
