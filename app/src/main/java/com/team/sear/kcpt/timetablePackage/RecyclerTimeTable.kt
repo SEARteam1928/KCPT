@@ -61,7 +61,21 @@ class RecyclerTimeTable : Fragment() {
         putChangesInWebView()
         auth = FirebaseAuth.getInstance()
         authComplete()
-
+        try{
+            database = FirebaseDatabase.getInstance()
+            ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
+            var uId = auth!!.uid
+            setAdapter("STUDENT",lessons)
+            lessons.clear()
+            updateList()
+            checkIfEmpty()
+        }catch (e: Exception){
+            database = FirebaseDatabase.getInstance()
+            ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
+            var uId = auth!!.uid
+            lessons.clear()
+            updateList()
+        }
         return v
     }
 
@@ -112,19 +126,6 @@ class RecyclerTimeTable : Fragment() {
         authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             val user = firebaseAuth.currentUser
             if (user != null) {
-
-                database = FirebaseDatabase.getInstance()
-                ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
-                var uId = auth!!.uid
-
-                try{
-                    setAdapter("STUDENT",lessons)
-                    updateList()
-                    checkIfEmpty()
-                }catch (e: Exception){
-                    updateList()
-                    checkIfEmpty()
-                }
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
