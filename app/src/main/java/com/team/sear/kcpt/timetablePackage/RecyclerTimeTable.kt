@@ -16,15 +16,18 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.team.sear.kcpt.R
+/*
 import com.team.sear.kcpt.objects.Style
-import kotlinx.android.synthetic.main.recycler_time_table.*
+*/
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
 class RecyclerTimeTable : Fragment() {
+    @SuppressLint("StaticFieldLeak")
     private lateinit var v: View
 
+    @SuppressLint("StaticFieldLeak")
     private lateinit var lessonRecycler: RecyclerView
     private lateinit var lessons: ArrayList<Lesson?>
     private lateinit var studentAdapter: StudentLessonAdapter
@@ -47,7 +50,6 @@ class RecyclerTimeTable : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.recycler_time_table, container, false)
-        status = "STUDENT"
         noDataTv = v.findViewById(R.id.text_no_data)
 
         lessons = ArrayList()
@@ -56,32 +58,18 @@ class RecyclerTimeTable : Fragment() {
         lessonRecycler.setHasFixedSize(true)
         val llm = LinearLayoutManager(context)
         llm.orientation = LinearLayoutManager.VERTICAL
-        lessonRecycler.layoutManager =llm
+        lessonRecycler.layoutManager = llm
 
         putChangesInWebView()
         auth = FirebaseAuth.getInstance()
         authComplete()
-        try{
-            database = FirebaseDatabase.getInstance()
-            ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
-            var uId = auth!!.uid
-            setAdapter("STUDENT",lessons)
-            lessons.clear()
-            updateList()
-            checkIfEmpty()
-        }catch (e: Exception){
-            database = FirebaseDatabase.getInstance()
-            ref = database!!.reference.child("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(groupName()).child("Понедельник")
-            var uId = auth!!.uid
-            lessons.clear()
-            updateList()
-        }
+
         return v
     }
 
-    private fun putChangesInWebView(){
-        val style = Style()
-        val styleStr = style.style
+    private fun putChangesInWebView() {
+/*        val style = Style()
+        val styleStr = style.style*/
         webChanges = v.findViewById(R.id.userChangesWebView)
         webChanges.settings.javaScriptEnabled
         webChanges.settings.builtInZoomControls
@@ -89,7 +77,9 @@ class RecyclerTimeTable : Fragment() {
         webChanges.settings.displayZoomControls
         webChanges.settings.loadWithOverviewMode
         webChanges.settings.defaultFixedFontSize = 15
+/*
         webChanges.settings.setAppCacheMaxSize(20 * 1024 * 1024)
+*/
         webChanges.settings.setAppCachePath(context!!.cacheDir.absolutePath)
         webChanges.settings.allowFileAccess
         webChanges.settings.setAppCacheEnabled(true)
@@ -124,23 +114,53 @@ class RecyclerTimeTable : Fragment() {
 
     private fun authComplete() {
         authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
-            val user = firebaseAuth.currentUser
+            user = firebaseAuth.currentUser
             if (user != null) {
+                database = FirebaseDatabase.getInstance()
+                ref = database!!.getReference("Учреждения")
+                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                        .child("users")
+                        .child(user!!.uid)
+                        .child("groupOrTeacherName")
+
+                ref!!.addValueEventListener(
+                        object : ValueEventListener {
+                            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                val groupOrTeacherName = dataSnapshot.getValue(String::class.java)
+                                ref = database!!.reference.child("Учреждения")
+                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                        .child("Расписание")
+                                        .child(groupOrTeacherName!!)
+                                        .child("Понедельник")
+
+                                user = firebaseAuth.currentUser
+                                setAdapter(lessons)
+                                /*lessons.clear()*/
+                                updateList(groupOrTeacherName)
+                                checkIfEmpty()
+                            }
+
+                            override fun onCancelled(error: DatabaseError) {
+                            }
+                        })
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun updateList(){
-        ref!!.addChildEventListener(object : ChildEventListener{
+    private fun updateList(groupOrTeacherName: String) {
+        ref = database!!.reference.child("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("Расписание")
+                .child(groupOrTeacherName)
+                .child("Понедельник")
+
+        ref!!.addChildEventListener(object : ChildEventListener {
             override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
-
                 val lesson = datasnapshot.getValue(Lesson::class.java)
-
                 lessons.add(lesson)
-
-                setNotifyDataSet("STUDENT")
+                setNotifyDataSet()
                 checkIfEmpty()
             }
 
@@ -149,7 +169,7 @@ class RecyclerTimeTable : Fragment() {
                 val index: Int = getItemIndex(lessons)
 
                 lessons[index] = lesson
-                setNotifyItemChanged("STUDENT", index)
+                setNotifyItemChanged(index)
             }
 
             override fun onChildRemoved(datasnapshot: DataSnapshot) {
@@ -163,40 +183,85 @@ class RecyclerTimeTable : Fragment() {
         })
     }
 
-    private fun getItemIndex(lessons: ArrayList<Lesson?>): Int{ return lessons.size}
-
-
-    private fun setAdapter(status: String, lessons: ArrayList<Lesson?>) {
-        if (status == "STUDENT") {
-            lessonRecycler.adapter = StudentLessonAdapter(lessons)
-        }
-        if (status == "TEACHER") {
-            lessonRecycler.adapter = TeacherLessonAdapter(lessons)
-        }
+    private fun getItemIndex(lessons: ArrayList<Lesson?>): Int {
+        return lessons.size
     }
 
-    private fun setNotifyDataSet(status: String) {
-        if (status == "STUDENT") {
-            studentAdapter = StudentLessonAdapter(lessons)
-            studentAdapter.notifyDataSetChanged()
-        }
-        if (status == "TEACHER") {
-            teacherAdapter = TeacherLessonAdapter(lessons)
-            teacherAdapter.notifyDataSetChanged()
-        }
+    private fun setAdapter(lessons: ArrayList<Lesson?>) {
+        ref = database!!.getReference("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("users")
+                .child(user!!.uid)
+                .child("status")
+
+        ref!!.addValueEventListener(
+                object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        val status = dataSnapshot.getValue(String::class.java)
+                        if (status == "Группы") {
+                            lessonRecycler.adapter = StudentLessonAdapter(lessons)
+                        }
+                        if (status == "Преподаватели") {
+                            lessonRecycler.adapter = TeacherLessonAdapter(lessons)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                    }
+                })
     }
 
-    private fun setNotifyItemChanged(status: String, pos: Int) {
-        if (status == "STUDENT") {
-            studentAdapter = StudentLessonAdapter(lessons)
-            studentAdapter.notifyItemChanged(pos)
-        }
-        if (status == "TEACHER") {
-            teacherAdapter = TeacherLessonAdapter(lessons)
-            teacherAdapter.notifyItemChanged(pos)
-        }
+    private fun setNotifyDataSet() {
+        ref = database!!.getReference("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("users")
+                .child(user!!.uid)
+                .child("status")
+
+        ref!!.addValueEventListener(
+                object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        val status = dataSnapshot.getValue(String::class.java)
+                        if (status == "Группы") {
+                            studentAdapter = StudentLessonAdapter(lessons)
+                            studentAdapter.notifyDataSetChanged()
+                        }
+                        if (status == "Преподаватели") {
+                            teacherAdapter = TeacherLessonAdapter(lessons)
+                            teacherAdapter.notifyDataSetChanged()
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                    }
+                })
     }
 
+    private fun setNotifyItemChanged(pos: Int) {
+        ref = database!!.getReference("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("users")
+                .child(user!!.uid)
+                .child("status")
+
+        ref!!.addValueEventListener(
+                object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        val status = dataSnapshot.getValue(String::class.java)
+                        if (status == "Группы") {
+                            studentAdapter = StudentLessonAdapter(lessons)
+                            studentAdapter.notifyItemChanged(pos)
+                        }
+                        if (status == "Преподаватели") {
+                            teacherAdapter = TeacherLessonAdapter(lessons)
+                            teacherAdapter.notifyItemChanged(pos)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                    }
+                })
+    }
 
     @SuppressLint("SimpleDateFormat")
     private fun getToday(): String {
@@ -222,14 +287,6 @@ class RecyclerTimeTable : Fragment() {
         }
     }
 
-    private fun groupName(): String {
-        return "ССА 18-11-2"
-    }
-
-    private fun teacherName(): String {
-        return "Полищук А. А."
-    }
-
     override fun onStart() {
         super.onStart()
         auth!!.addAuthStateListener(authListener!!)
@@ -242,16 +299,21 @@ class RecyclerTimeTable : Fragment() {
         }
     }
 
-    private fun checkIfEmpty(){
-        if(lessons.size == 0){
+    private fun checkIfEmpty() {
+        if (lessons.size == 0) {
             lessonRecycler.visibility = View.INVISIBLE
-            text_no_data.visibility = View.VISIBLE
-        }else{
+            noDataTv!!.visibility = View.VISIBLE
+        } else {
             lessonRecycler.visibility = View.VISIBLE
-            text_no_data.visibility = View.INVISIBLE
+            noDataTv!!.visibility = View.INVISIBLE
         }
     }
 }
+/*
+ref = database!!.getReference("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("users").child(user!!.uid).child("status")
+ref!!.setValue(status)
+ref = database!!.getReference("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("users").child(user!!.uid).child("groupOrTeacherName")
+ref!!.setValue(item.title)*/
 
 /*    private fun setFakeLessons() {
         lessonList = ArrayList(13)

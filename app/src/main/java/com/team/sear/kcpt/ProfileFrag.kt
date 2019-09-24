@@ -19,7 +19,8 @@ import ir.mirrajabi.searchdialog.core.SearchResultListener
 
 class ProfileFrag : Fragment(), View.OnClickListener {
     private var v: View? = null
-    private var searchBt: Button? = null
+    private var studentProfileBt: Button? = null
+    private var teacherProfileBt: Button? = null
     var arr: ArrayList<String>? = null
 
     private var database: FirebaseDatabase? = null
@@ -31,8 +32,10 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_profile, container, false)
-        searchBt = v!!.findViewById(R.id.searchProfileBt)
-        searchBt!!.setOnClickListener(this)
+        studentProfileBt = v!!.findViewById(R.id.studentProfileBt)
+        studentProfileBt!!.setOnClickListener(this)
+        teacherProfileBt = v!!.findViewById(R.id.teacherProfileBt)
+        teacherProfileBt!!.setOnClickListener(this)
         arr = ArrayList()
         auth = FirebaseAuth.getInstance()
         authComplete()
@@ -49,43 +52,38 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         }
     }
 
-
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.searchProfileBt -> {
+            R.id.studentProfileBt -> {
                 arr!!.clear()
                 setFeedbackView("Группы")
-/*
-                putDataInArrayList()
-*/
+            }
+            R.id.teacherProfileBt -> {
+                arr!!.clear()
+                setFeedbackView("Преподаватели")
             }
             else -> {
-
             }
         }
     }
 
-    private fun setSItem(groupStr: String) {
-        /*      selectTimeTable.setStudent(groupStr, auth)
-              intentNavigate()*/
-    }
-
-    private fun setTItem(teacherName: String) {
-/*        selectTimeTable.setTeacher(teacherName, auth)
-        intentNavigate()*/
-    }
-
-/*    private fun putDataInArrayList() {
-        arr = ArrayList(8)
-        arr!!.add("10")
-        arr!!.add("SGDGDSF")
-        searchDialog(initData())
-    }*/
-
-    private fun searchDialog(data: ArrayList<SearchModel>) {
+    private fun searchDialog(data: ArrayList<SearchModel>, status: String) {
         SimpleSearchDialogCompat(context, "Поиск", "Что вы хотите найти?", null,
                 data, SearchResultListener { baseSearchDialogCompat, item, _ ->
-            Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("status")
+            ref!!.setValue(status)
+
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("groupOrTeacherName")
+            ref!!.setValue(item.title)
+
             baseSearchDialogCompat.dismiss()
         }).show()
     }
@@ -94,38 +92,32 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         try {
             database = FirebaseDatabase.getInstance()
             user = auth!!.currentUser
-            ref = database!!.getReference("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child(status)
-            ref!!.addChildEventListener(object : ChildEventListener{
-                override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
-                    val str = datasnapshot.getValue(String::class.java)
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child(status)
 
-                    arr!!.add(str!!)
-                    searchDialog(initData(arr!!))
+            ref!!.addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
                 }
 
-                override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
-                    val str = datasnapshot.getValue(String::class.java)
-                    val index: Int = getItemIndex(arr!!)
-
-                    arr!![index] = str!!
+                override fun onDataChange(datasnapshot: DataSnapshot) {
+                    for (i in datasnapshot.children) {
+                        val str = i.getValue(String::class.java)
+                        arr!!.add(str!!)
+                    }
+                    searchDialog(initData(arr!!), status)
                 }
 
-                override fun onChildRemoved(datasnapshot: DataSnapshot) {
-                }
-
-                override fun onChildMoved(datasnapshot: DataSnapshot, p1: String?) {
-                }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-                }
             })
-
         } catch (e: Exception) {
             e.printStackTrace()
 
         }
     }
-    private fun getItemIndex(arr: ArrayList<String>): Int{ return arr.size}
+
+    private fun getItemIndex(arr: ArrayList<String>): Int {
+        return arr.size
+    }
 
     private fun initData(array: ArrayList<String>): ArrayList<SearchModel> {
         return ArrayList<SearchModel>().also {

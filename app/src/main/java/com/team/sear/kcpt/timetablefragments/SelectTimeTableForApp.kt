@@ -41,7 +41,7 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
             }
         }
 
-        searchBt.setOnClickListener {
+ /*       searchBt.setOnClickListener {
             SimpleSearchDialogCompat(this@SelectTimeTableForApp, "Поиск", "Что вы хотите найти?", null,
                     initData(), SearchResultListener { baseSearchDialogCompat, item, _ ->
                 when {
@@ -51,7 +51,7 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this@SelectTimeTableForApp, item.title, Toast.LENGTH_SHORT).show()
                 baseSearchDialogCompat.dismiss()
             }).show()
-        }
+        }*/
     }
 
     private fun setSItem(groupStr: String) {
