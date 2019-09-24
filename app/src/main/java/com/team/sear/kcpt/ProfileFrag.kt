@@ -1,6 +1,7 @@
 package com.team.sear.kcpt
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -13,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.team.sear.kcpt.objects.SearchModel
+import com.team.sear.kcpt.timetablefragments.MainActivity
 import ir.mirrajabi.searchdialog.SimpleSearchDialogCompat
 import ir.mirrajabi.searchdialog.core.SearchResultListener
 
@@ -83,10 +85,17 @@ class ProfileFrag : Fragment(), View.OnClickListener {
                     .child(user!!.uid)
                     .child("groupOrTeacherName")
             ref!!.setValue(item.title)
-
+            intentOnRecycler()
+            activity!!.finish()
             baseSearchDialogCompat.dismiss()
         }).show()
     }
+
+    private fun intentOnRecycler(){
+        val intent = Intent(context, MainActivity::class.java)
+        startActivity(intent)
+    }
+
 
     private fun setFeedbackView(status: String) {
         try {

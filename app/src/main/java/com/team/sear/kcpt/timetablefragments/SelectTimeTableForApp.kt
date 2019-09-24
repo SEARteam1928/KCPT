@@ -12,46 +12,51 @@ import com.team.sear.kcpt.objects.SearchModel
 import com.team.sear.kcpt.objects.SelectTimeTable
 import com.team.sear.kcpt.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.*
+import com.team.sear.kcpt.timetablePackage.RecyclerTimeTable
 import ir.mirrajabi.searchdialog.SimpleSearchDialogCompat
 import ir.mirrajabi.searchdialog.core.SearchResultListener
 import kotlinx.android.synthetic.main.select_time_table_for_app.*
 
 class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
-    private var AT1609: Button? = null
-
 
     private var groupSV: ScrollView? = null
-    private var auth: FirebaseAuth? = null
-    private var authListener: FirebaseAuth.AuthStateListener? = null
     private lateinit var selectTimeTable: SelectTimeTable
     private lateinit var navigateIntent: Intent
+
+    private var studentProfileBt: Button? = null
+    private var teacherProfileBt: Button? = null
+
+    var arr: ArrayList<String>? = null
+
+    private var database: FirebaseDatabase? = null
+    private var ref: DatabaseReference? = null
+    private var auth: FirebaseAuth? = null
+    private var user: FirebaseUser? = null
+    private var authListener: FirebaseAuth.AuthStateListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.select_time_table_for_app)
         selectTimeTable = SelectTimeTable()
         navigateIntent = Intent(this, Navigate::class.java)
-        findViewByID()
-        setInvisible()
         auth = FirebaseAuth.getInstance()
+        arr = ArrayList()
+        authComplete()
+    }
+
+    private fun authComplete() {
         authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             val user = firebaseAuth.currentUser
             if (user != null) {
+                studentProfileBt = findViewById(R.id.studentStatusBt)
+                studentProfileBt!!.setOnClickListener(this)
+                teacherProfileBt = findViewById(R.id.teacherStatusBt)
+                teacherProfileBt!!.setOnClickListener(this)
             } else {
             }
         }
-
- /*       searchBt.setOnClickListener {
-            SimpleSearchDialogCompat(this@SelectTimeTableForApp, "Поиск", "Что вы хотите найти?", null,
-                    initData(), SearchResultListener { baseSearchDialogCompat, item, _ ->
-                when {
-                    item.title == "Арефьев Е. А." -> setTItem("ArefyevEA")
-
-                }
-                Toast.makeText(this@SelectTimeTableForApp, item.title, Toast.LENGTH_SHORT).show()
-                baseSearchDialogCompat.dismiss()
-            }).show()
-        }*/
     }
 
     private fun setSItem(groupStr: String) {
@@ -71,12 +76,6 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun findViewByID() {
-
-        groupSV = findViewById(R.id.groupSVselect)
-        AT1609 = findViewById(R.id.AT1609select)
-
-    }
 
     private fun intentNavigate() {
         val navigateIntent = Intent(this, Navigate::class.java)
@@ -84,34 +83,24 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
         finish()
     }
 
-    override fun onClick(v: View) {
-        when (v.id) {
-            R.id.studentStatusBt -> setGroupVisible()
-            R.id.AT1609select -> setSItem("AT1609")
-
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.studentStatusBt -> {
+                arr!!.clear()
+                setFeedbackView("Группы")
+            }
+            R.id.teacherStatusBt -> {
+                arr!!.clear()
+                setFeedbackView("Преподаватели")
+            }
+            else -> {
+            }
         }
     }
 
-    private fun setClickListen() {
-
-        cL(AT1609!!)
-
-    }
-
-    private fun cL(bt: Button) {
-        bt.setOnClickListener(this)
-    }
-
-    private fun setInvisible() {
-
-        AT1609!!.visibility = View.GONE
-
-    }
-
-
-    private fun setGroupVisible() {
-        AT1609!!.visibility = View.VISIBLE
-
+    private fun intentOnRecycler(){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     public override fun onStart() {
@@ -119,6 +108,63 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
         auth!!.addAuthStateListener(authListener!!)
     }
 
+    private fun setFeedbackView(status: String) {
+        try {
+            database = FirebaseDatabase.getInstance()
+            user = auth!!.currentUser
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child(status)
+
+            ref!!.addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
+                }
+
+                override fun onDataChange(datasnapshot: DataSnapshot) {
+                    for (i in datasnapshot.children) {
+                        val str = i.getValue(String::class.java)
+                        arr!!.add(str!!)
+                    }
+                    searchDialog(initData(arr!!), status)
+                }
+
+            })
+        } catch (e: Exception) {
+            e.printStackTrace()
+
+        }
+    }
+
+    private fun searchDialog(data: ArrayList<SearchModel>, status: String) {
+        SimpleSearchDialogCompat(this, "Поиск", "Что вы хотите найти?", null,
+                data, SearchResultListener { baseSearchDialogCompat, item, _ ->
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("status")
+            ref!!.setValue(status)
+
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("groupOrTeacherName")
+            ref!!.setValue(item.title)
+            intentOnRecycler()
+            finish()
+            baseSearchDialogCompat.dismiss()
+        }).show()
+    }
+
+
+    private fun initData(array: ArrayList<String>): ArrayList<SearchModel> {
+        return ArrayList<SearchModel>().also {
+            for (i in array) {
+                it.add(SearchModel(i))
+            }
+        }
+    }
     public override fun onStop() {
         super.onStop()
         if (authListener != null) {

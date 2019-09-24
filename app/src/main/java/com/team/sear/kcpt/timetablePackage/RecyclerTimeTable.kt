@@ -1,6 +1,7 @@
 package com.team.sear.kcpt.timetablePackage
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.team.sear.kcpt.R
+import com.team.sear.kcpt.timetablefragments.SelectTimeTableForApp
 /*
 import com.team.sear.kcpt.objects.Style
 */
@@ -43,9 +45,6 @@ class RecyclerTimeTable : Fragment() {
     private var auth: FirebaseAuth? = null
     private var user: FirebaseUser? = null
     private var authListener: FirebaseAuth.AuthStateListener? = null
-
-    private lateinit var status: String
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -114,6 +113,9 @@ class RecyclerTimeTable : Fragment() {
 
     private fun authComplete() {
         authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+
+            checkIfEmptyStatus()
+
             user = firebaseAuth.currentUser
             if (user != null) {
                 database = FirebaseDatabase.getInstance()
@@ -147,6 +149,31 @@ class RecyclerTimeTable : Fragment() {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun checkIfEmptyStatus(){
+        user = auth!!.currentUser
+        database = FirebaseDatabase.getInstance()
+
+        ref = database!!.getReference("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("users")
+                .child(user!!.uid)
+                .child("groupOrTeacherName")
+
+        ref!!.addValueEventListener(
+                object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        val groupOrTeacherName = dataSnapshot.getValue(String::class.java)
+                        if((groupOrTeacherName =="") || (groupOrTeacherName == null)){
+                         val intent = Intent(context, SelectTimeTableForApp::class.java)
+                            startActivity(intent)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                    }
+                })
     }
 
     private fun updateList(groupOrTeacherName: String) {
