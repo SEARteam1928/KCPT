@@ -53,42 +53,42 @@ for e in file_ini:
 
 exec(str_exec)
 
-AT1609 = open("/home/student/exelFiles/groups/AT1609.txt", "w")
-AT1709 = open("/home/student/exelFiles/groups/AT1709.txt", "w")
-AT1711 = open("/home/student/exelFiles/groups/AT1711.txt", "w")
-AT1811 = open("/home/student/exelFiles/groups/AT1811.txt", "w")
-ATPiP1509 = open("/home/student/exelFiles/groups/ATPiP1509.txt", "w")
-ATPiP1609 = open("/home/student/exelFiles/groups/ATPiP1609.txt", "w")
-ATPiP1611 = open("/home/student/exelFiles/groups/ATPiP1611.txt", "w")
-DO15091 = open("/home/student/exelFiles/groups/DO15091.txt", "w")
-DO15092 = open("/home/student/exelFiles/groups/DO15092.txt", "w")
-DO1611 = open("/home/student/exelFiles/groups/DO1611.txt", "w")
-DO17111 = open("/home/student/exelFiles/groups/DO17111.txt", "w")
-DO17112 = open("/home/student/exelFiles/groups/DO17112.txt", "w")
-DO18111 = open("/home/student/exelFiles/groups/DO18111.txt", "w")
-DO18112 = open("/home/student/exelFiles/groups/DO18112.txt", "w")
-KP16111 = open("/home/student/exelFiles/groups/KP16111.txt", "w")
-KP16112 = open("/home/student/exelFiles/groups/KP16112.txt", "w")
-KP1709 = open("/home/student/exelFiles/groups/KP1709.txt", "w")
-KP17111 = open("/home/student/exelFiles/groups/KP17111.txt", "w")
-KP17112 = open("/home/student/exelFiles/groups/KP17112.txt", "w")
-KP17113 = open("/home/student/exelFiles/groups/KP17113.txt", "w")
-KP18111 = open("/home/student/exelFiles/groups/KP18111.txt", "w")
-KP18112 = open("/home/student/exelFiles/groups/KP18112.txt", "w")
-KS1611 = open("/home/student/exelFiles/groups/KS1611.txt", "w")
-OSATPiP1711 = open("/home/student/exelFiles/groups/OSATPiP1711.txt", "w")
-OSATPiP18111 = open("/home/student/exelFiles/groups/OSATPiP18111.txt", "w")
-OSATPiP18112 = open("/home/student/exelFiles/groups/OSATPiP18112.txt", "w")
-PDOTT1509 = open("/home/student/exelFiles/groups/PDOTT1509.txt", "w")
-PDOTT1609 = open("/home/student/exelFiles/groups/PDOTT1609.txt", "w")
-PDOTT1709 = open("/home/student/exelFiles/groups/PDOTT1709.txt", "w")
-PDOTT18111 = open("/home/student/exelFiles/groups/PDOTT18111.txt", "w")
-PDOTT18112 = open("/home/student/exelFiles/groups/PDOTT18112.txt", "w")
-SSA1711 = open("/home/student/exelFiles/groups/SSA1711.txt", "w")
-SSA18111 = open("/home/student/exelFiles/groups/SSA18111.txt", "w")
-SSA18112 = open("/home/student/exelFiles/groups/SSA18112.txt", "w")
-SHO15091 = open("/home/student/exelFiles/groups/SHO15091.txt", "w")
-SHO15092 = open("/home/student/exelFiles/groups/SHO15092.txt", "w")
+AT1609 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1609.txt", "w")
+AT1709 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1709.txt", "w")
+AT1711 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1711.txt", "w")
+AT1811 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1811.txt", "w")
+ATPiP1509 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\ATPiP1509.txt", "w")
+ATPiP1609 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\ATPiP1609.txt", "w")
+ATPiP1611 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\ATPiP1611.txt", "w")
+DO15091 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO15091.txt", "w")
+DO15092 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO15092.txt", "w")
+DO1611 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO1611.txt", "w")
+DO17111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO17111.txt", "w")
+DO17112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO17112.txt", "w")
+DO18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO18111.txt", "w")
+DO18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO18112.txt", "w")
+KP16111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP16111.txt", "w")
+KP16112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP16112.txt", "w")
+KP1709 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP1709.txt", "w")
+KP17111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP17111.txt", "w")
+KP17112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP17112.txt", "w")
+KP17113 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP17113.txt", "w")
+KP18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP18111.txt", "w")
+KP18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP18112.txt", "w")
+KS1611 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KS1611.txt", "w")
+OSATPiP1711 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\OSATPiP1711.txt", "w")
+OSATPiP18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\OSATPiP18111.txt", "w")
+OSATPiP18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\OSATPiP18112.txt", "w")
+PDOTT1509 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT1509.txt", "w")
+PDOTT1609 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT1609.txt", "w")
+PDOTT1709 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT1709.txt", "w")
+PDOTT18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT18111.txt", "w")
+PDOTT18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT18112.txt", "w")
+SSA1711 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SSA1711.txt", "w")
+SSA18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SSA18111.txt", "w")
+SSA18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SSA18112.txt", "w")
+SHO15091 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SHO15091.txt", "w")
+SHO15092 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SHO15092.txt", "w")
 
 work_book = xlrd.open_workbook(file_path)
 
@@ -128,7 +128,7 @@ for sheet in range(work_book.nsheets):
 
 	cur_group = 0
 	for collumn in range(1, len(dic_cells['groups'])*2, 2):
-		for index in range(300):
+		for index in range(500):
 			try:
 				cell = work_sheet.cell(index, collumn).value
 				cell_type = work_sheet.cell_type(index, collumn)
@@ -195,11 +195,9 @@ for sheet in range(work_book.nsheets):
 					
 					if hash_room not in dic_rooms:
 						dic_rooms[hash_room] = (len(dic_rooms) + 1, room)
-               
-
+					
 					list_timetable.append(
-						(
-                        "All" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0],
+						("All" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0],
 						dic_groups[hash(dic_cells['groups'][cur_group])][0],
 						dic_groups[hash(dic_cells['groups'][cur_group])][1],
 						dic_cells[index][0],
@@ -226,133 +224,30 @@ for sheet in range(work_book.nsheets):
 						day_of_week = "st"
 
 					timetableInFileStr =("allGroup" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0])+'\n'+day_of_week + '\n'+str(dic_cells[index][1]) + '\n'+dic_lessons[hash(result_lesson[0][1])][1]+ '\n'+dic_teachers[hash(result_teacher[0])][1]+ '\n'+dic_rooms[hash(result_room)][1]+ '\n'
-                    
-					
-					if(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 16-09"):
-						AT1609.write(timetableInFileStr)
 
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 17-09"):
-						AT1709.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 17-11"):
-						AT1711.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 18-11"):
-						AT1811.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 15-09"):
-						ATPiP1509.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 16-09"):
-						ATPiP1609.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 16-11"):
-						ATPiP1611.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 15-09-1"):
-						DO15091.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 15-09-2"):
-						DO15092.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 16-11"):
-						DO1611.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 17-11-1"):
-						DO17111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 17-11-2"):
-						DO17112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 18-11-1"):
-						DO18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 18-11-2"):
-						DO18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 16-11-1"):
-						KP16111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 16-11-2"):
-						KP16112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-09"):
-						KP1709.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-1"):
-						KP17111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-2"):
-						KP17112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-3"):
-						KP17113.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 18-11-1"):
-						KP18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 18-11-2"):
-						KP18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КС 16-11"):
-						KS1611.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 17-11"):
-						OSATPiP1711.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 18-11-1"):
-						OSATPiP18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 18-11-2"):
-						OSATPiP18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 15-09"):
-						PDOTT1509.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 16-09"):
-						PDOTT1609.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 17-09"):
-						PDOTT1709.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 18-11-1"):
-						PDOTT18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ18-11-2"):
-						PDOTT18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 17-11"):
-						SSA1711.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 18-11-1"):
-						SSA18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 18-11-2"):
-						SSA18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ШО 15-09-1"):
-						SHO15091.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ШО 15-09-2"):
-						SHO15092.write(timetableInFileStr)
 		cur_group += 1
+
+print(dic_groups[hash(dic_cells['groups'][cur_group])][0])
 """
 for e in dic_groups:
 	t = dic_groups[e][1], dic_groups[e][5]
-	print(t)
+	print(e)
+
 for e in dic_lessons:
 	print(dic_lessons[e][1])
-	
+
 
 for e in dic_rooms:
 	print(dic_rooms[e][1])
 
 for e in dic_teachers:
 	print(dic_teachers[e][1])
-	
+
+"""
 for e in list_timetable:
 	print(e)
 """
+
 
 AT1609.close()
 AT1709.close()
@@ -390,3 +285,4 @@ SSA18111.close()
 SSA18112.close()
 SHO15091.close()
 SHO15092.close()
+"""	

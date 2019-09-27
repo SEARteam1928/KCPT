@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -23,6 +24,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     private var v: View? = null
     private var studentProfileBt: Button? = null
     private var teacherProfileBt: Button? = null
+    private var anybodyNameTv: TextView? = null
     var arr: ArrayList<String>? = null
 
     private var database: FirebaseDatabase? = null
@@ -34,6 +36,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_profile, container, false)
+        anybodyNameTv = v!!.findViewById(R.id.anybodyNameTv)
         studentProfileBt = v!!.findViewById(R.id.studentProfileBt)
         studentProfileBt!!.setOnClickListener(this)
         teacherProfileBt = v!!.findViewById(R.id.teacherProfileBt)
@@ -49,6 +52,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             val user = firebaseAuth.currentUser
             if (user != null) {
+                updateAnybodyName()
             } else {
             }
         }
@@ -67,6 +71,26 @@ class ProfileFrag : Fragment(), View.OnClickListener {
             else -> {
             }
         }
+    }
+
+    private fun updateAnybodyName(){
+        database = FirebaseDatabase.getInstance()
+        user = auth!!.currentUser
+        ref = database!!.getReference("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("users")
+                .child(user!!.uid)
+                .child("groupOrTeacherName")
+
+        ref!!.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+            }
+
+            override fun onDataChange(datasnapshot: DataSnapshot) {
+                anybodyNameTv!!.text = datasnapshot.getValue(String::class.java)
+            }
+
+        })
     }
 
     private fun searchDialog(data: ArrayList<SearchModel>, status: String) {

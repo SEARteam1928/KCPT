@@ -24,7 +24,7 @@ import com.team.sear.kcpt.objects.Style
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
-
+@SuppressLint("SimpleDateFormat")
 class RecyclerTimeTable : Fragment() {
     @SuppressLint("StaticFieldLeak")
     private lateinit var v: View
@@ -88,7 +88,6 @@ class RecyclerTimeTable : Fragment() {
                 "<head>\n" +
                 "</head>\n" +
                 "<body>\n" +
-
 /*
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
@@ -145,13 +144,32 @@ class RecyclerTimeTable : Fragment() {
                             override fun onCancelled(error: DatabaseError) {
                             }
                         })
+                sendMySignedIn()
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun checkIfEmptyStatus(){
+    private fun sendMySignedIn() {
+        try {
+            database = FirebaseDatabase.getInstance()
+            user = auth!!.currentUser
+            val df = SimpleDateFormat("yyyy.MM.dd G 'at' HH:mm:ss z ")
+            val date = df.format(Calendar.getInstance().time)
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("signedIn")
+            ref!!.setValue(date + "SIGNEDIN")
+        } catch (e: Exception) {
+            Toast.makeText(context, "Undefinded error!", Toast.LENGTH_SHORT).show()
+            e.printStackTrace()
+        }
+    }
+
+    private fun checkIfEmptyStatus() {
         user = auth!!.currentUser
         database = FirebaseDatabase.getInstance()
 
@@ -165,8 +183,8 @@ class RecyclerTimeTable : Fragment() {
                 object : ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         val groupOrTeacherName = dataSnapshot.getValue(String::class.java)
-                        if((groupOrTeacherName =="") || (groupOrTeacherName == null)){
-                         val intent = Intent(context, SelectTimeTableForApp::class.java)
+                        if ((groupOrTeacherName == "") || (groupOrTeacherName == null)) {
+                            val intent = Intent(context, SelectTimeTableForApp::class.java)
                             startActivity(intent)
                         }
                     }
