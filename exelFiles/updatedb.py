@@ -11,13 +11,13 @@ def hash(string):
 
 mask_section = "\[([a-zA-Z]*)\]"
 mask_section_compile = re.compile(mask_section)
-mask_option = "([a-z]*)\s*=\s*([0-9a-zA-Z\.]*)"
+mask_option = "([a-z]*)\s*=\s*([a-zA-Z\.]*)"
 mask_option_compile = re.compile(mask_option)
 mask_groups = "(Группы)[\s\-]*|([А-Я][а-яА-Я\s]*[А-Я]\s?[0-9][0-9\-]*[0-9])"
 mask_groups_compile = re.compile(mask_groups)
 mask_day = "(День)[\s\-]*|([А-Я][а-яА-Я]*),\w*"
 mask_day_compile = re.compile(mask_day)
-mask_teacher = "[вВ]акансия\w*|[А-Я][а-я]+\s+[А-Я].\s*[А-Я]\.?"
+mask_teacher = "[вВ]акансия\w*|[А-Я][а-я]+\s+[А-Я]\.\s*[А-Я]\.?"
 mask_teacher_compile = re.compile(mask_teacher)
 mask_lesson = "([0-9]?)\.?([а-яА-Яa-zA-Z0-9\s\.\-\,]+)"
 mask_lesson_compile = re.compile(mask_lesson)
@@ -125,10 +125,10 @@ for sheet in range(work_book.nsheets):
 			count = result_group_ext[0][2]
 			number = result_group_ext[0][3]
 			dic_groups[hash_group] = (len(dic_groups) + 1, group, abbreviation, level, count, number)
-
+			
 	cur_group = 0
 	for collumn in range(1, len(dic_cells['groups'])*2, 2):
-		for index in range(500):
+		for index in range(300):
 			try:
 				cell = work_sheet.cell(index, collumn).value
 				cell_type = work_sheet.cell_type(index, collumn)
@@ -143,59 +143,42 @@ for sheet in range(work_book.nsheets):
 						dic_teachers[hash_teacher] = (len(dic_teachers) + 1, teacher)
 					cur_day = dic_cells[index][1]
 					result_lesson = []
-					
 					d = 1
 					
 					while True:
-						
 						if dic_cells[index - d][1] != cur_day:
 							break
-						
 						cell_lesson = work_sheet.cell(index - d, collumn).value
 						cell_type = work_sheet.cell_type(index - d, collumn)
-						
 						if cell_type == 1:
 							result_lesson = mask_lesson_compile.findall(cell_lesson)
-							
 							if result_lesson != []:
 								hash_lesson = hash(result_lesson[0][1])
 								lesson = result_lesson[0][1]
-								
 								if hash_lesson not in dic_lessons:
 									dic_lessons[hash_lesson] = (len(dic_lessons) + 1, lesson)
 								break
-						
 						d += 1
-					
 					result_room = ""
-					
 					d = 0
 					
 					while True:
-						
 						if dic_cells[index - d][1] != cur_day:
 							break
-						
 						cell_room = work_sheet.cell(index - d, collumn + 1).value
 						cell_type = work_sheet.cell_type(index - d, collumn + 1)
-						
 						if cell_type == 1:
 							result_room = cell_room
 						elif cell_type == 2:
 							result_room = str(int(cell_room))
-						
 						if result_room != "":
 							break
-						
 						d += 1
-						
 					result_room = "-" if result_room == "" else result_room
 					hash_room = hash(result_room)
 					room = result_room
-					
 					if hash_room not in dic_rooms:
 						dic_rooms[hash_room] = (len(dic_rooms) + 1, room)
-					
 					list_timetable.append(
 						("All" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0],
 						dic_groups[hash(dic_cells['groups'][cur_group])][0],
@@ -225,9 +208,117 @@ for sheet in range(work_book.nsheets):
 
 					timetableInFileStr =("allGroup" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0])+'\n'+day_of_week + '\n'+str(dic_cells[index][1]) + '\n'+dic_lessons[hash(result_lesson[0][1])][1]+ '\n'+dic_teachers[hash(result_teacher[0])][1]+ '\n'+dic_rooms[hash(result_room)][1]+ '\n'
 
+
+					if(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 16-09"):
+						AT1609.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 17-09"):
+						AT1709.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 17-11"):
+						AT1711.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 18-11"):
+						AT1811.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 15-09"):
+						ATPiP1509.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 16-09"):
+						ATPiP1609.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 16-11"):
+						ATPiP1611.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 15-09-1"):
+						DO15091.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 15-09-2"):
+						DO15092.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 16-11"):
+						DO1611.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 17-11-1"):
+						DO17111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 17-11-2"):
+						DO17112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 18-11-1"):
+						DO18111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 18-11-2"):
+						DO18112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 16-11-1"):
+						KP16111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 16-11-2"):
+						KP16112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-09"):
+						KP1709.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-1"):
+						KP17111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-2"):
+						KP17112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-3"):
+						KP17113.write(timetableInFileStr)
+
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 18-11-1"):
+						KP18111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 18-11-2"):
+						KP18112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КС 16-11"):
+						KS1611.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 17-11"):
+						OSATPiP1711.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 18-11-1"):
+						OSATPiP18111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 18-11-2"):
+						OSATPiP18112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 15-09"):
+						PDOTT1509.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 16-09"):
+						PDOTT1609.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 17-09"):
+						PDOTT1709.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 18-11-1"):
+						PDOTT18111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ18-11-2"):
+						PDOTT18112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 17-11"):
+						SSA1711.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 18-11-1"):
+						SSA18111.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 18-11-2"):
+						SSA18112.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ШО 15-09-1"):
+						SHO15091.write(timetableInFileStr)
+
+					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ШО 15-09-2"):
+						SHO15092.write(timetableInFileStr)
 		cur_group += 1
 
-print(dic_groups[hash(dic_cells['groups'][cur_group])][0])
 """
 for e in dic_groups:
 	t = dic_groups[e][1], dic_groups[e][5]
@@ -246,7 +337,6 @@ for e in dic_teachers:
 """
 for e in list_timetable:
 	print(e)
-"""
 
 
 AT1609.close()
@@ -285,4 +375,3 @@ SSA18111.close()
 SSA18112.close()
 SHO15091.close()
 SHO15092.close()
-"""	
