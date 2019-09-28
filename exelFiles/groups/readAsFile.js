@@ -10,43 +10,54 @@ var config = {
   };
   firebase.initializeApp(config);
 
-
 var AT1609 = "AT1609";
-var AT1709 ="AT1709";
+var AT1709 = "AT1709";
 var AT1711 = "AT1711";
-var AT1811 ="AT1811";
-var ATPiP1509 ="ATPiP1509";
+var AT1811 = "AT1811";
+var AT1911 = "AT1911";
+
 var ATPiP1609 ="ATPiP1609";
-var ATPiP1611 ="ATPiP1611";
-var DO15091="DO15091";
-var DO15092="DO15092";
-var DO1611 ="DO1611";
+
 var DO17111="DO17111";
 var DO17112="DO17112";
 var DO18111="DO18111";
 var DO18112="DO18112";
-var KP16111="KP16111";
-var KP16112="KP16112";
+var DO19111="DO19111";
+var DO19112="DO19112";
+
 var KP1709 ="KP1709";
 var KP17111="KP17111";
 var KP17112="KP17112";
 var KP17113="KP17113";
 var KP18111="KP18111";
 var KP18112="KP18112";
-var KS1611 ="KS1611";
+var KP19111="KP19111";
+var KP19112="KP19112";
+var KP19113="KP19113";
+
+var ISiP19111 ="ISiP19111";
+var ISiP19112 ="ISiP19112";
+
 var OSATPiP1711 ="OSATPiP1711";
 var OSATPiP18111="OSATPiP18111";
 var OSATPiP18112="OSATPiP18112";
-var PDOTT1509="PDOTT1509";
+var OSATPiP19111="OSATPiP19111";
+var OSATPiP19112="OSATPiP19112";
+
+
 var PDOTT1609="PDOTT1609";
 var PDOTT1709="PDOTT1709";
 var PDOTT18111="PDOTT18111";
 var PDOTT18112="PDOTT18112";
+var PDOTT1911="PDOTT1911";
+
 var SSA1711="SSA1711";
 var SSA18111="SSA18111";
 var SSA18112="SSA18112";
-var SHO15091="SHO15091";
-var SHO15092="SHO15092";
+var SSA19111="SSA19111";
+var SSA19112="SSA19112";
+var SSA19113="SSA19113";
+
 var lineReader;
 var dayOfWeek;
 var lessonNum;
@@ -329,114 +340,10 @@ function teacherLessonStrFun(){
 }
 
 function selectGroupName(){
-
-						if(NameFile === AT1609){
-						return "АТ 16-09"}
-
-						if(NameFile === AT1709){
-						return  "АТ 17-09"}
-
-						if(NameFile === AT1711){
-						return "АТ 17-11"}
-
-						if(NameFile === AT1811){
-						return "АТ 18-11"}
-
-						if(NameFile === ATPiP1509){
-						return  "АТПиП 15-09"}
-
-						if(NameFile === ATPiP1609){
-						return   "АТПиП 16-09"}
-
-						if(NameFile === ATPiP1611){
-						return  "АТПиП 16-11"}
-
-						if(NameFile === DO15091){
-						return  "ДО 15-09-1"}
-
-						if(NameFile === DO15092){
-						return  "ДО 15-09-2"}
-
-						if(NameFile === DO1611){
-						return   "ДО 16-11"}
-
-						if(NameFile === DO17111){
-						return  "ДО 17-11-1"}
-
-						if(NameFile === DO17112){
-						return  "ДО 17-11-2"}
-
-						if(NameFile === DO18111){
-						return  "ДО 18-11-1"}
-
-						if(NameFile === DO18112){
-						return  "ДО 18-11-2"}
-
-						if(NameFile === KP16111){
-						return  "КП 16-11-1"}
-
-						if(NameFile === KP16112){
-						return "КП 16-11-2"}
-
-						if(NameFile === KP1709){
-						return   "КП 17-09"}
-
-						if(NameFile === KP17111){
-						return  "КП 17-11-1"}
-
-						if(NameFile === KP17112){
-						return  "КП 17-11-2"}
-
-						if(NameFile === KP17113){
-						return  "КП 17-11-3"}
-
-						if(NameFile === KP18111){
-						return "КП 18-11-1"}
-
-						if(NameFile === KP18112){
-						return  "КП 18-11-2"}
-
-						if(NameFile === KS1611){
-						return   "КС 16-11"}
-
-						if(NameFile === OSATPiP1711){
-						return   "ОСАТПиП 17-11"}
-
-						if(NameFile === OSATPiP18111){
-						return  "ОСАТПиП 18-11-1"}
-
-						if(NameFile === OSATPiP18112){
-						return  "ОСАТПиП 18-11-2"}
-
-						if(NameFile === PDOTT1509){
-						return   "ПДО ТТ 15-09"}
-
-						if(NameFile === PDOTT1609){
-						return   "ПДО ТТ 16-09"}
-
-						if(NameFile === PDOTT1709){
-						return   "ПДО ТТ 17-09"}
-
-						if(NameFile === PDOTT18111){
-						return "ПДО ТТ 18-11-1"}
-
-						if(NameFile === PDOTT18112){
-						return  "ПДО ТТ 18-11-2"}
-
-						if(NameFile === SSA1711){
-						return   "ССА 17-11"}
-
 						if(NameFile === SSA18111){
 						return  "ССА 18-11-1"}
-
 						if(NameFile === SSA18112){
 						return  "ССА 18-11-2"}
-
-						if(NameFile === SHO15091){
-						return  "ШО 15-09-1"}
-
-						if(NameFile === SHO15092){
-						return  "ШО 15-09-2"}
 }
 
 function deleteDataOnFirebase(){
@@ -456,36 +363,46 @@ main(AT1609);
 main(AT1709);
 main(AT1711);
 main(AT1811);
-main(ATPiP1509);
+main(AT1911);
+
 main(ATPiP1609);
-main(ATPiP1611);
-main(DO15091);
-main(DO15092);
-main(DO1611);
+
 main(DO17111);
 main(DO17112);
 main(DO18111);
 main(DO18112);
-main(KP16111);
-main(KP16112);
+main(DO19111);
+main(DO19112);
+
 main(KP1709);
 main(KP17111);
 main(KP17112);
 main(KP17113);
 main(KP18111);
 main(KP18112);
-main(KS1611);
+main(KP19111);
+main(KP19112);
+main(KP19113);
+
+main(ISiP19111);
+main(ISiP19112);
+
 main(OSATPiP1711);
 main(OSATPiP18111);
 main(OSATPiP18112);
-main(PDOTT1509);
+main(OSATPiP19111);
+main(OSATPiP19112);
+
 main(PDOTT1609);
 main(PDOTT1709);
 main(PDOTT18111);
 main(PDOTT18112);
+main(PDOTT1911);
+
 main(SSA1711);
 main(SSA18111);
 main(SSA18112);
-main(SHO15091);
-main(SHO15092);
+main(SSA19111);
+main(SSA19112);
+main(SSA19113);
 }

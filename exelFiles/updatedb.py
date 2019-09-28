@@ -53,42 +53,60 @@ for e in file_ini:
 
 exec(str_exec)
 
-AT1609 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1609.txt", "w")
-AT1709 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1709.txt", "w")
-AT1711 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1711.txt", "w")
-AT1811 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\AT1811.txt", "w")
-ATPiP1509 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\ATPiP1509.txt", "w")
-ATPiP1609 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\ATPiP1609.txt", "w")
-ATPiP1611 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\ATPiP1611.txt", "w")
-DO15091 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO15091.txt", "w")
-DO15092 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO15092.txt", "w")
-DO1611 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO1611.txt", "w")
-DO17111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO17111.txt", "w")
-DO17112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO17112.txt", "w")
-DO18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO18111.txt", "w")
-DO18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\DO18112.txt", "w")
-KP16111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP16111.txt", "w")
-KP16112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP16112.txt", "w")
-KP1709 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP1709.txt", "w")
-KP17111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP17111.txt", "w")
-KP17112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP17112.txt", "w")
-KP17113 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP17113.txt", "w")
-KP18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP18111.txt", "w")
-KP18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KP18112.txt", "w")
-KS1611 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\KS1611.txt", "w")
-OSATPiP1711 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\OSATPiP1711.txt", "w")
-OSATPiP18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\OSATPiP18111.txt", "w")
-OSATPiP18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\OSATPiP18112.txt", "w")
-PDOTT1509 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT1509.txt", "w")
-PDOTT1609 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT1609.txt", "w")
-PDOTT1709 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT1709.txt", "w")
-PDOTT18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT18111.txt", "w")
-PDOTT18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\PDOTT18112.txt", "w")
-SSA1711 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SSA1711.txt", "w")
-SSA18111 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SSA18111.txt", "w")
-SSA18112 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SSA18112.txt", "w")
-SHO15091 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SHO15091.txt", "w")
-SHO15092 = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\SHO15092.txt", "w")
+def openFiles(groupNameStr):
+	groupName = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\\" + groupNameStr + ".txt", "w")
+	return groupName
+
+AT1609 = openFiles("AT1609")
+AT1709=openFiles("AT1709")
+AT1711=openFiles("AT1711")
+AT1811=openFiles("AT1811")
+AT1911=openFiles("AT1911")
+
+ATPiP1609=openFiles("ATPiP1609")
+
+DO17111=openFiles("DO17111")
+DO17112=openFiles("DO17112")
+DO18111=openFiles("DO18111")
+DO18112=openFiles("DO18112")
+DO19111=openFiles("DO19111")
+DO19112=openFiles("DO19112")
+
+ISiP19111=openFiles("ISiP19111")
+ISiP19112=openFiles("ISiP19112")
+
+KP1709=openFiles("KP1709")
+KP17111=openFiles("KP17111")
+KP17112=openFiles("KP17112")
+KP17113=openFiles("KP17113")
+KP18111=openFiles("KP18111")
+KP18112=openFiles("KP18112")
+KP19111=openFiles("KP19111")
+KP19112=openFiles("KP19112")
+KP19113=openFiles("KP19113")
+
+OSATPiP1711= openFiles("OSATPiP1711")
+OSATPiP18111=openFiles("OSATPiP18111")
+OSATPiP18112=openFiles("OSATPiP18112")
+OSATPiP19111=openFiles("OSATPiP19111")
+OSATPiP19112=openFiles("OSATPiP19112")
+
+PDOTT1609=openFiles("PDOTT1609")
+PDOTT1709=openFiles("PDOTT1709")
+PDOTT18111=openFiles("PDOTT18111")
+PDOTT18112=openFiles("PDOTT18112")
+PDOTT1911=openFiles("PDOTT1911")
+
+SSA1711=openFiles("SSA1711")
+SSA18111=openFiles("SSA18111")
+SSA18112=openFiles("SSA18112")
+SSA19111=openFiles("SSA19111")
+SSA19112=openFiles("SSA19112")
+SSA19113=openFiles("SSA19113")
+
+def wr(name, str):
+	name.write(str)
+
 
 work_book = xlrd.open_workbook(file_path)
 
@@ -207,118 +225,98 @@ for sheet in range(work_book.nsheets):
 						day_of_week = "st"
 
 					timetableInFileStr =("allGroup" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0])+'\n'+day_of_week + '\n'+str(dic_cells[index][1]) + '\n'+dic_lessons[hash(result_lesson[0][1])][1]+ '\n'+dic_teachers[hash(result_teacher[0])][1]+ '\n'+dic_rooms[hash(result_room)][1]+ '\n'
-
-
-					if(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 16-09"):
-						AT1609.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 17-09"):
-						AT1709.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 17-11"):
-						AT1711.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТ 18-11"):
-						AT1811.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 15-09"):
-						ATPiP1509.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 16-09"):
-						ATPiP1609.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "АТПиП 16-11"):
-						ATPiP1611.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 15-09-1"):
-						DO15091.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 15-09-2"):
-						DO15092.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 16-11"):
-						DO1611.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 17-11-1"):
-						DO17111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 17-11-2"):
-						DO17112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 18-11-1"):
-						DO18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ДО 18-11-2"):
-						DO18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 16-11-1"):
-						KP16111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 16-11-2"):
-						KP16112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-09"):
-						KP1709.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-1"):
-						KP17111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-2"):
-						KP17112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 17-11-3"):
-						KP17113.write(timetableInFileStr)
-
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 18-11-1"):
-						KP18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КП 18-11-2"):
-						KP18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "КС 16-11"):
-						KS1611.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 17-11"):
-						OSATPiP1711.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 18-11-1"):
-						OSATPiP18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ОСАТПиП 18-11-2"):
-						OSATPiP18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 15-09"):
-						PDOTT1509.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 16-09"):
-						PDOTT1609.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 17-09"):
-						PDOTT1709.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ 18-11-1"):
-						PDOTT18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ПДО ТТ18-11-2"):
-						PDOTT18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 17-11"):
-						SSA1711.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 18-11-1"):
-						SSA18111.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ССА 18-11-2"):
-						SSA18112.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ШО 15-09-1"):
-						SHO15091.write(timetableInFileStr)
-
-					elif(dic_groups[hash(dic_cells['groups'][cur_group])][1] == "ШО 15-09-2"):
-						SHO15092.write(timetableInFileStr)
+					
+					a = dic_groups[hash(dic_cells['groups'][cur_group])][1]
+					b = timetableInFileStr
+					
+					if(a == "АТ 17-09"):
+						wr(AT1709,b)
+					elif(a == "АТ 17-11"):
+						wr(AT1711,b)
+					elif(a == "АТ 18-11"):
+						wr(AT1811,b)
+					elif(a== "АТ 19-11"):
+						wr(AT1911,b)
+					elif(a== "АТ 16-09"):
+						wr(AT1609,b)
+						
+					elif(a == "АТПиП 16-09"):
+						wr(ATPiP1609,b)
+						
+					elif(a== "ДО 17-11-1"):
+						wr(DO17111,b)
+					elif(a== "ДО 17-11-2"):
+						wr(DO17112,b)
+					elif(a == "ДО 18-11-1"):
+						wr(DO18111,b)
+					elif(a== "ДО 18-11-2"):
+						wr(DO18112,b)
+					elif(a== "ДО 19-11-2"):
+						wr(DO19111,b)
+					elif(a== "ДО 19-11-2"):
+						wr(DO19112,b)
+						
+					elif(a == "ИСиП 19-11-1"):
+						wr(ISiP19111,b)
+					elif(a == "ИСиП 19-11-2"):
+						wr(ISiP19112,b)
+					
+					elif(a == "КП 17-09"):
+						wr(KP1709,b)
+					elif(a== "КП 17-11-1"):
+						wr(KP17111,b)
+					elif(a == "КП 17-11-2"):
+						wr(KP17112,b)
+					elif(a== "КП 17-11-3"):
+						wr(KP17113,b)
+					elif(a== "КП 18-11-1"):
+						wr(KP18111,b)
+					elif(a== "КП 18-11-2"):
+						wr(KP18112,b)
+					elif(a== "КП 19-11-1"):
+						wr(KP19111,b)
+					elif(a== "КП 19-11-2"):
+						wr(KP19112,b)
+					elif(a== "КП 19-11-3"):
+						wr(KP19113,b)
+						
+					elif(a== "ОСАТПиП 17-11"):
+						wr(OSATPiP1711,b)
+					elif(a == "ОСАТПиП 18-11-1"):
+						wr(OSATPiP18111,b)
+					elif(a == "ОСАТПиП 18-11-2"):
+						wr(OSATPiP18112,b)
+					elif(a == "ОСАТПиП 19-11-1"):
+						wr(OSATPiP19111,b)
+					elif(a == "ОСАТПиП 19-11-2"):
+						wr(OSATPiP19112,b)
+						
+					elif(a == "ПДО ТТ 16-09"):
+						wr(PDOTT1609,b)
+					elif(a == "ПДО ТТ 17-09"):
+						wr(PDOTT1709,b)
+					elif(a == "ПДО ТТ 18-11-1"):
+						wr(PDOTT18111,b)
+					elif(a == "ПДО ТТ18-11-2"):
+						wr(PDOTT18112,b)
+					elif(a == "ПДО ТТ 19-11"):
+						wr(PDOTT1911,b)
+						
+					elif(a == "ССА 17-11"):
+						wr(SSA1711,b)
+					elif(a== "ССА 18-11-1"):
+						wr(SSA18111,b)
+					elif(a == "ССА 18-11-2"):
+						wr(SSA18112,b)
+					elif(a == "ССА 19-11-1"):
+						wr(SSA19111,b)
+					elif(a== "ССА 19-11-2"):
+						wr(SSA19112,b)
+					elif(a == "ССА 19-11-3"):
+						wr(SSA19113,b)
+						
 		cur_group += 1
-
+		
 """
 for e in dic_groups:
 	t = dic_groups[e][1], dic_groups[e][5]
@@ -343,35 +341,45 @@ AT1609.close()
 AT1709.close()
 AT1711.close()
 AT1811.close()
-ATPiP1509.close()
+AT1911.close()
+
 ATPiP1609.close()
-ATPiP1611.close()
-DO15091.close()
-DO15092.close()
-DO1611.close()
+
 DO17111.close()
 DO17112.close()
 DO18111.close()
 DO18112.close()
-KP16111.close()
-KP16112.close()
+DO19111.close()
+DO19112.close()
+
+ISiP19111.close()
+ISiP19112.close()
+
 KP1709.close()
 KP17111.close()
 KP17112.close()
 KP17113.close()
 KP18111.close()
 KP18112.close()
-KS1611.close()
+KP19111.close()
+KP19112.close()
+KP19113.close()
+
 OSATPiP1711.close()
 OSATPiP18111.close()
 OSATPiP18112.close()
-PDOTT1509.close()
+OSATPiP19111.close()
+OSATPiP19112.close()
+
 PDOTT1609.close()
 PDOTT1709.close()
 PDOTT18111.close()
 PDOTT18112.close()
+PDOTT1911.close()
+
 SSA1711.close()
 SSA18111.close()
 SSA18112.close()
-SHO15091.close()
-SHO15092.close()
+SSA19111.close()
+SSA19112.close()
+SSA19113.close()

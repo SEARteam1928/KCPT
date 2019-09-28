@@ -1,0 +1,15 @@
+{
+  "name": "sear",
+  "version": "1.0.0",
+  "description": "sear",
+  "main": "readAsFile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fb-database": "^1.0.1",
+    "firebase": "^7.0.0"
+  }
+}
