@@ -71,7 +71,43 @@ var teacherLessonStr;
 var NameFile;
 
 
+var Lesson = function(
+dayofweekStr, 
+groupNameStr,
+groupOrSubroupStr,
+lessonStr,
+lessonNumStr,
+lessonTimeStr,
+roomNumStr,
+teacherNameStr){
+
+this.dayofweekStr =dayofweekStr;
+this.groupNameStr=groupNameStr;
+this.groupOrSubroupStr=groupOrSubroupStr;
+this.lessonStr=lessonStr;
+this.lessonNumStr=lessonNumStr;
+this.lessonTimeStr=lessonTimeStr;
+this.roomNumStr=roomNumStr;
+this.teacherNameStr=teacherNameStr;
+}
+
+var lesson;
+
 startMainFunctions();
+
+function sendLesson(Lesson, anybodyName, day,num){
+var database = firebase.database();
+var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child(day).child("lesson0"+num).set({
+            dayofweek: Lesson.dayofweekStr,
+            groupName: Lesson.groupNameStr,
+            groupOrSubGroup: Lesson.groupOrSubroupStr,
+            lesson: Lesson.lessonStr,
+            lessonNum: Lesson.lessonNumStr,
+            lessonTime: Lesson.lessonTimeStr,
+            roomNum: Lesson.roomNumStr,
+            teacherName: Lesson.teacherNameStr
+        });
+}
 
 function readFile(fileName){
 lineReader = require('readline').createInterface({
@@ -89,10 +125,8 @@ lineReader.on('line', function (line) {
 	if(i==7){
 		i=1;
 		NameFile = fileName;
-		lessonStr = lessonStrFun();
-		teacherLessonStr = teacherLessonStrFun();
-				 sendGroupsDataOnFirebase(fileName, dayOfWeek,lessonNum,lessonStr,subGroup);
-				 sendTeacherDataOnFirebase(teacher,dayOfWeek,lessonNum,teacherLessonStr);
+		lesson = new Lesson(dayOfWeek,selectGroupName(),subGroup,lessonName,lessonNum,lessonTimeSet(lessonNum),roomNum,teacherName);
+		sendLesson(lesson, selectGroupName(), dayOfWeek,lessonNum);
 	}
 if(i==1){
 	lineName ="subGroup";
@@ -130,6 +164,238 @@ var exampleNodeDBSet = database.ref("timetableNew").child("groups").child(fileNa
         });
 }
 
+function lessonTimeSet(lessonN){
+if(lessonN === "01"){
+return "8:15\n9:00";
+}
+if(lessonN === "02"){
+return "9:00\n9:45";
+}
+if(lessonN === "03"){
+return "10:00\n10:45";
+}
+if(lessonN === "04"){
+return "10:45\n11:30";
+}
+if(lessonN === "05"){
+return "12:00\n12:45";
+}
+if(lessonN === "06"){
+return "12:45\n13:30";
+}
+if(lessonN === "07"){
+return "14:00\n14:45";
+}
+if(lessonN === "08"){
+return "14:45\n15:30";
+}
+if(lessonN === "09"){
+return "15:45\n16:30";
+}
+if(lessonN === "10"){
+return "16:30\n17:15";
+}
+if(lessonN === "11"){
+return "17:25\n18:10";
+}
+if(lessonN === "12"){
+return "18:10\n18:55";
+}
+}
+
+
+function sendTeacherDataOnFirebase(teacher, dayOfWeek, lessonNum, lessonStr) {
+        var database = firebase.database();
+        var sendteacher = database.ref("timetableNew").child("teachers").child(teacher).child(dayOfWeek).child(dayOfWeek+lessonNum).set({
+            lesson: lessonStr
+        });
+
+    }
+
+function lessonStrFun() {
+
+		lessonStr = lessonName+"\n"+ teacherName+" "+roomNum;
+
+    return lessonStr;
+}
+
+function teacherLessonStrFun(){
+
+        groupName = selectGroupName();
+
+        teacherLessonStr = lessonName+"\n"+ groupName+" | "+roomNum;
+
+
+            return teacherLessonStr;
+}
+
+
+
+function deleteDataOnFirebase(child){
+var database = firebase.database();
+var deleteDataOnFirebaseVar =  database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child(child).set({
+            deleteData: "deleted"
+});
+}
+
+function sendGroupNameInFirebase(fileName){
+		NameFile = fileName;
+var database = firebase.database();
+var deleteDataOnFirebaseVar =  database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Группы").child(fileName).set(selectGroupName());
+}
+
+function main (fileName){
+    deleteDataOnFirebase("Расписание");
+	sendGroupNameInFirebase(fileName);
+    readFile(fileName);
+    parseDataOnFile(fileName);
+}
+
+function startMainFunctions(){
+deleteDataOnFirebase("Группы");
+deleteDataOnFirebase("Преподаватели");
+main(AT1609);
+main(AT1709);
+main(AT1711);
+main(AT1811);
+main(AT1911);
+
+main(ATPiP1609);
+
+main(DO17111);
+main(DO17112);
+main(DO18111);
+main(DO18112);
+main(DO19111);
+main(DO19112);
+
+main(KP1709);
+main(KP17111);
+main(KP17112);
+main(KP17113);
+main(KP18111);
+main(KP18112);
+main(KP19111);
+main(KP19112);
+main(KP19113);
+
+main(ISiP19111);
+main(ISiP19112);
+
+main(OSATPiP1711);
+main(OSATPiP18111);
+main(OSATPiP18112);
+main(OSATPiP19111);
+main(OSATPiP19112);
+
+main(PDOTT1609);
+main(PDOTT1709);
+main(PDOTT18111);
+main(PDOTT18112);
+main(PDOTT1911);
+
+main(SSA1711);
+main(SSA18111);
+main(SSA18112);
+main(SSA19111);
+main(SSA19112);
+main(SSA19113);
+}
+
+function reserveFun(){
+
+		teacherLessonStr = teacherLessonStrFun();
+				 sendTeacherDataOnFirebase(teacher,dayOfWeek,lessonNum,teacherLessonStr);
+}
+
+function selectGroupName(){
+						if(NameFile === AT1709){
+						return  "АТ 17-09"}
+						if(NameFile === AT1711){
+						return  "АТ 17-11"}
+						if(NameFile === AT1811){
+						return  "АТ 18-11"}
+						if(NameFile === AT1911){
+						return  "АТ 19-11"}
+						if(NameFile === AT1609){
+						return  "АТ 16-09"}
+
+						if(NameFile === ATPiP1609){
+						return  "АТПиП 16-09"}
+
+						if(NameFile === DO17111){
+						return  "ДО 17-11-1"}
+						if(NameFile === DO17112){
+						return  "ДО 17-11-2"}
+						if(NameFile === DO18111){
+						return  "ДО 18-11-1"}
+						if(NameFile === DO18112){
+						return  "ДО 18-11-2"}
+						if(NameFile === DO19111){
+						return  "ДО 19-11-1"}
+						if(NameFile === DO19112){
+						return  "ДО 19-11-2"}
+
+						if(NameFile === ISiP19111){
+						return  "ИСиП 19-11-1"}
+						if(NameFile === ISiP19112){
+						return  "ИСиП 19-11-2"}
+			
+						if(NameFile === KP1709){
+						return  "КП 17-09"}
+						if(NameFile === KP17111){
+						return  "КП 17-11-1"}
+						if(NameFile === KP17112){
+						return  "КП 17-11-2"}
+						if(NameFile === KP17113){
+						return  "КП 17-11-3"}
+						if(NameFile === KP18111){
+						return  "КП 18-11-1"}
+						if(NameFile === KP18112){
+						return  "КП 18-11-2"}
+						if(NameFile === KP19111){
+						return  "КП 19-11-1"}
+						if(NameFile === KP19112){
+						return  "КП 19-11-2"}
+						if(NameFile === KP19113){
+						return  "КП 19-11-3"}
+						
+						if(NameFile === OSATPiP1711){
+						return  "ОСАТПиП 17-11"}
+						if(NameFile === OSATPiP18111){
+						return  "ОСАТПиП 18-11-1"}
+						if(NameFile === OSATPiP18112){
+						return  "ОСАТПиП 18-11-2"}
+						if(NameFile === OSATPiP19111){
+						return  "ОСАТПиП 19-11-1"}
+						if(NameFile === OSATPiP19112){
+						return  "ОСАТПиП 19-11-2"}
+
+						if(NameFile === PDOTT1609){
+						return  "ПДО ТТ 16-09"}
+						if(NameFile === PDOTT1709){
+						return  "ПДО ТТ 17-09"}
+						if(NameFile === PDOTT18111){
+						return  "ПДО ТТ 18-11-1"}
+						if(NameFile === PDOTT18112){
+						return  "ПДО ТТ 18-11-2"}
+						if(NameFile === PDOTT1911){
+						return  "ПДО ТТ 19-11"}
+
+
+						if(NameFile === SSA1711){
+						return  "ССА 17-11"}
+						if(NameFile === SSA18111){
+						return  "ССА 18-11-1"}
+						if(NameFile === SSA18112){
+						return  "ССА 18-11-2"}
+						if(NameFile === SSA19111){
+						return  "ССА 19-11-1"}
+						if(NameFile === SSA19112){
+						return  "ССА 19-11-2"}
+						if(NameFile === SSA19113){
+						return  "ССА 19-11-3"}
+}
 
 function selectTeacher(teacherName) {
        if(teacherName === "Арефьев Е. А."||teacherName === "Арефьев Е. А. "){
@@ -313,96 +579,3 @@ function selectTeacher(teacherName) {
                            return "nothing";
                        }
     }
-
-function sendTeacherDataOnFirebase(teacher, dayOfWeek, lessonNum, lessonStr) {
-        var database = firebase.database();
-        var sendteacher = database.ref("timetableNew").child("teachers").child(teacher).child(dayOfWeek).child(dayOfWeek+lessonNum).set({
-            lesson: lessonStr
-        });
-
-    }
-
-function lessonStrFun() {
-
-		lessonStr = lessonName+"\n"+ teacherName+" "+roomNum;
-
-    return lessonStr;
-}
-
-function teacherLessonStrFun(){
-
-        groupName = selectGroupName();
-
-        teacherLessonStr = lessonName+"\n"+ groupName+" | "+roomNum;
-
-
-            return teacherLessonStr;
-}
-
-function selectGroupName(){
-						if(NameFile === SSA18111){
-						return  "ССА 18-11-1"}
-						if(NameFile === SSA18112){
-						return  "ССА 18-11-2"}
-}
-
-function deleteDataOnFirebase(){
-var database = firebase.database();
-var deleteDataOnFirebaseVar = database.ref("timetableNew").set({
-            deleteData: "deleted"
-});}
-
-function main (fileName){
-    deleteDataOnFirebase();
-    readFile(fileName);
-    parseDataOnFile(fileName);
-}
-
-function startMainFunctions(){
-main(AT1609);
-main(AT1709);
-main(AT1711);
-main(AT1811);
-main(AT1911);
-
-main(ATPiP1609);
-
-main(DO17111);
-main(DO17112);
-main(DO18111);
-main(DO18112);
-main(DO19111);
-main(DO19112);
-
-main(KP1709);
-main(KP17111);
-main(KP17112);
-main(KP17113);
-main(KP18111);
-main(KP18112);
-main(KP19111);
-main(KP19112);
-main(KP19113);
-
-main(ISiP19111);
-main(ISiP19112);
-
-main(OSATPiP1711);
-main(OSATPiP18111);
-main(OSATPiP18112);
-main(OSATPiP19111);
-main(OSATPiP19112);
-
-main(PDOTT1609);
-main(PDOTT1709);
-main(PDOTT18111);
-main(PDOTT18112);
-main(PDOTT1911);
-
-main(SSA1711);
-main(SSA18111);
-main(SSA18112);
-main(SSA19111);
-main(SSA19112);
-main(SSA19113);
-}

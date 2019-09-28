@@ -54,7 +54,7 @@ for e in file_ini:
 exec(str_exec)
 
 def openFiles(groupNameStr):
-	groupName = open(r"C:\Users\User\Desktop\KCPT\exelFiles\groups\\" + groupNameStr + ".txt", "w")
+	groupName = open("/root/Документы/KCPT/exelFiles/groups/" + groupNameStr + ".txt", "w")
 	return groupName
 
 AT1609 = openFiles("AT1609")
@@ -106,6 +106,13 @@ SSA19113=openFiles("SSA19113")
 
 def wr(name, str):
 	name.write(str)
+
+def lNum(num):
+	n = num
+	if num=="10" or num=="11" or num=="12" :
+		return n
+	else:
+		return "0" + n
 
 
 work_book = xlrd.open_workbook(file_path)
@@ -212,19 +219,19 @@ for sheet in range(work_book.nsheets):
 						))
 
 					if dic_cells[index][0] == 1:
-						day_of_week="mn"
+						day_of_week="Понедельник"
 					elif dic_cells[index][0] == 2:
-						day_of_week = "ty"
+						day_of_week = "Вторник"
 					elif dic_cells[index][0] == 3:
-						day_of_week = "wd"
+						day_of_week = "Среда"
 					elif dic_cells[index][0] == 4:
-						day_of_week = "th"
+						day_of_week = "Четверг"
 					elif dic_cells[index][0] == 5:
-						day_of_week = "fr"
+						day_of_week = "Пятница"
 					elif dic_cells[index][0] == 6:
-						day_of_week = "st"
+						day_of_week = "Суббота"
 
-					timetableInFileStr =("allGroup" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0])+'\n'+day_of_week + '\n'+str(dic_cells[index][1]) + '\n'+dic_lessons[hash(result_lesson[0][1])][1]+ '\n'+dic_teachers[hash(result_teacher[0])][1]+ '\n'+dic_rooms[hash(result_room)][1]+ '\n'
+					timetableInFileStr =("allGroup" if result_lesson[0][0] == "" else "subGroup"+result_lesson[0][0])+'\n'+day_of_week + '\n'+lNum(str(dic_cells[index][1])) + '\n'+dic_lessons[hash(result_lesson[0][1])][1]+ '\n'+dic_teachers[hash(result_teacher[0])][1]+ '\n'+dic_rooms[hash(result_room)][1]+ '\n'
 					
 					a = dic_groups[hash(dic_cells['groups'][cur_group])][1]
 					b = timetableInFileStr
@@ -251,7 +258,7 @@ for sheet in range(work_book.nsheets):
 						wr(DO18111,b)
 					elif(a== "ДО 18-11-2"):
 						wr(DO18112,b)
-					elif(a== "ДО 19-11-2"):
+					elif(a== "ДО 19-11-1"):
 						wr(DO19111,b)
 					elif(a== "ДО 19-11-2"):
 						wr(DO19112,b)
