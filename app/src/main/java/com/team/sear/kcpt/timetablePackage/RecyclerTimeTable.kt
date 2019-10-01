@@ -70,128 +70,18 @@ class RecyclerTimeTable : Fragment() {
         auth = FirebaseAuth.getInstance()
         authComplete()
         try{
-        if (!ChangesFrag.DetectConnection.checkInternetConnection(this.context)) {
-            webChanges.loadData("Отсутствует подключение!", "text/html; charset=UTF-8", null)
-            Toast.makeText(context, "Отсутствует подключение!", Toast.LENGTH_SHORT).show()
-        } else {        putChangesInWebView()
-            UserChangesParser().execute()
-        }}
+            if (!ChangesFrag.DetectConnection.checkInternetConnection(this.context)) {
+                webChanges.loadData("Отсутствует подключение!", "text/html; charset=UTF-8", null)
+                Toast.makeText(context, "Отсутствует подключение!", Toast.LENGTH_SHORT).show()
+            } else {
+                putChangesInWebView()
+                UserChangesParser().execute()
+            }
+        }
         catch(e: Exception){
 
         }
         return v
-    }
-
-    private fun getGroupName() {
-        database = FirebaseDatabase.getInstance()
-        user = auth!!.currentUser
-        try {
-            ref = database!!.getReference("Учреждения")
-                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                    .child("users")
-                    .child(user!!.uid)
-                    .child("groupOrTeacherName")
-            ref!!.addValueEventListener(
-                    object : ValueEventListener {
-                        override fun onDataChange(dataSnapshot: DataSnapshot) {
-                            groupName = dataSnapshot.getValue(String::class.java)!!
-                            GetGroupName().execute()
-                        }
-
-                        override fun onCancelled(error: DatabaseError) {
-                            groupName = ""
-                            GetGroupName().execute()
-                        }
-                    })
-        } catch (e: Exception) {
-            groupName = ""
-            GetGroupName().execute()
-        }
-
-    }
-
-
-    @SuppressLint("StaticFieldLeak")
-    internal inner class GetGroupName : AsyncTask<String, Void, String>() {
-        @SuppressLint("SetTextI18n")
-        override fun doInBackground(vararg result: String?): String? {
-            return try {
-                changesParser.selectGroup(groupName)
-                changesHTML = changesParser.parseChanges()!!
-                changesHTML
-            } catch (e: Exception) {
-                e.printStackTrace()
-                println(e.message)
-                null
-            }
-        }
-
-        override fun onPostExecute(result: String?) {
-            try {
-                webChanges.loadData(changesHTML, "text/html; charset=UTF-8", null)
-            } catch (e: Exception) {
-            }
-        }
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    internal inner class UserChangesParser : AsyncTask<Void, Void, Void>() {
-        @SuppressLint("SetTextI18n")
-        override fun doInBackground(vararg result: Void?): Void? {
-            try {
-/*
-                getGroupName()
-*/
-                webChanges!!.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
-
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-            return null
-        }
-    }
-    private fun putChangesInWebView() {
-/*        val style = Style()
-        val styleStr = style.style*/
-        webChanges = v.findViewById(R.id.userChangesWebView)
-        webChanges.settings.javaScriptEnabled
-        webChanges.settings.builtInZoomControls
-        webChanges.settings.supportZoom()
-        webChanges.settings.displayZoomControls
-        webChanges.settings.loadWithOverviewMode
-        webChanges.settings.defaultFixedFontSize = 15
-/*
-        webChanges.settings.setAppCacheMaxSize(20 * 1024 * 1024)
-*/
-        webChanges.settings.setAppCachePath(context!!.cacheDir.absolutePath)
-        webChanges.settings.allowFileAccess
-        webChanges.settings.setAppCacheEnabled(true)
-        webChanges.settings.cacheMode = WebSettings.LOAD_DEFAULT
-/*        val html = "<!Doctype html>\n" +
-                "<html>\n" +
-                "<head>\n" +
-                "</head>\n" +
-                "<body>\n" +
-*//*
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-*//*
-
-                "<p>ЗДЕСЬ БУДУТ \nИЗМЕНЕНИЯ</p>" +
-                "</body>\n" +
-                "</html>"
-        webChanges.loadData(html, "text/html; charset=UTF-8", null)*/
     }
 
     private fun authComplete() {
@@ -477,6 +367,119 @@ class RecyclerTimeTable : Fragment() {
             noDataTv!!.visibility = View.INVISIBLE
         }
     }
+
+    private fun getGroupName() {
+        database = FirebaseDatabase.getInstance()
+        user = auth!!.currentUser
+        try {
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("groupOrTeacherName")
+            ref!!.addValueEventListener(
+                    object : ValueEventListener {
+                        override fun onDataChange(dataSnapshot: DataSnapshot) {
+                            groupName = dataSnapshot.getValue(String::class.java)!!
+                            GetGroupName().execute()
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {
+                            groupName = ""
+                            GetGroupName().execute()
+                        }
+                    })
+        } catch (e: Exception) {
+            groupName = ""
+            GetGroupName().execute()
+        }
+
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    internal inner class GetGroupName : AsyncTask<String, Void, String>() {
+        @SuppressLint("SetTextI18n")
+        override fun doInBackground(vararg result: String?): String? {
+            return try {
+                changesParser.selectGroup(groupName)
+                changesHTML = changesParser.parseChanges()!!
+                changesHTML
+            } catch (e: Exception) {
+                e.printStackTrace()
+                println(e.message)
+                null
+            }
+        }
+
+        override fun onPostExecute(result: String?) {
+            try {
+                webChanges.loadData(changesHTML, "text/html; charset=UTF-8", null)
+            } catch (e: Exception) {
+            }
+        }
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    internal inner class UserChangesParser : AsyncTask<Void, Void, Void>() {
+        @SuppressLint("SetTextI18n")
+        override fun doInBackground(vararg result: Void?): Void? {
+            try {
+/*
+                getGroupName()
+*//*
+                webChanges.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
+*/
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            return null
+        }
+    }
+
+    private fun putChangesInWebView() {
+/*        val style = Style()
+        val styleStr = style.style*/
+        webChanges = v.findViewById(R.id.userChangesWebView)
+        webChanges.settings.javaScriptEnabled
+        webChanges.settings.builtInZoomControls
+        webChanges.settings.supportZoom()
+        webChanges.settings.displayZoomControls
+        webChanges.settings.loadWithOverviewMode
+        webChanges.settings.defaultFixedFontSize = 15
+/*
+        webChanges.settings.setAppCacheMaxSize(20 * 1024 * 1024)
+*/
+        webChanges.settings.setAppCachePath(context!!.cacheDir.absolutePath)
+        webChanges.settings.allowFileAccess
+        webChanges.settings.setAppCacheEnabled(true)
+        webChanges.settings.cacheMode = WebSettings.LOAD_DEFAULT
+/*        val html = "<!Doctype html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "</head>\n" +
+                "<body>\n" +
+*//*
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+                "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
+*//*
+
+                "<p>ЗДЕСЬ БУДУТ \nИЗМЕНЕНИЯ</p>" +
+                "</body>\n" +
+                "</html>"
+        webChanges.loadData(html, "text/html; charset=UTF-8", null)*/
+    }
+
 }
 /*
 ref = database!!.getReference("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("users").child(user!!.uid).child("status")
