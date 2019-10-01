@@ -7,4 +7,6 @@
     <color name="textNotInButtonColor">#0091EA</color>
     <color name="textColor">#95ffff</color>
     <color name="btColor">#b51100ff</color>
+    <color name="subgroup2Color">#00B8D4</color>
+    <color name="subgroup1Color">#00C853</color>
 </resources>

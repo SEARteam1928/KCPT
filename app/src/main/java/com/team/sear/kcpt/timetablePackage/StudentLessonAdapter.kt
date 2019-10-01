@@ -1,11 +1,13 @@
 package com.team.sear.kcpt.timetablePackage
 
+import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.team.sear.kcpt.R
+import com.team.sear.kcpt.R.color.*
 
 class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerView.Adapter<StudentLessonAdapter.ViewHolder>() {
 
@@ -18,12 +20,24 @@ class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
         return ViewHolder(itemView)
     }
 
+    @SuppressLint( "SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, p: Int) {
-            holder.lessonNum!!.text = lessons[p]!!.lessonNum
+
             holder.lesson!!.text = lessons[p]!!.lesson
             holder.roomNum!!.text = lessons[p]!!.roomNum
             holder.teacherName!!.text = lessons[p]!!.teacherName
             holder.lessonTime!!.text = lessons[p]!!.lessonTime
+        when {
+            lessons[p]!!.groupOrSubGroup == "subGroup1" -> {
+                holder.lessonNum!!.setBackgroundResource(R.drawable.colorsubgroup1)
+                holder.lessonNum!!.text = lessons[p]!!.lessonNum +"\n1)"
+            }
+            lessons[p]!!.groupOrSubGroup == "subGroup2" -> {
+                holder.lessonNum!!.setBackgroundResource(R.drawable.colorsubgroup2)
+                holder.lessonNum!!.text = lessons[p]!!.lessonNum +"\n2)"
+            }
+            lessons[p]!!.groupOrSubGroup == "allGroup" -> holder.lessonNum!!.text = lessons[p]!!.lessonNum
+        }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

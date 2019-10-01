@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#304FFE"
+                android:text="te"
                 android:fontFamily="sans-serif-medium"
                 android:padding="5dp"
                 android:textColor="#FFF"
@@ -53,48 +54,58 @@
                 android:layout_height="0dp"
                 android:layout_marginBottom="4dp"
                 android:layout_weight="0.8"
+                android:text="text"
                 android:fontFamily="sans-serif-medium"
                 android:paddingBottom="4dp"
                 android:textColor="#000"
                 android:textSize="15sp"
                 tools:ignore="NestedWeights" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/baseline_room_24"
-                    tools:ignore="ContentDescription" />
-
-
-
-                <TextView
-                    android:id="@+id/roomNumTV"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="2dp"
-                />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/baseline_person_24"
-                    tools:ignore="ContentDescription" />
-                <TextView
-                    android:id="@+id/anybodyNameTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-              />
-            </LinearLayout>
-        </LinearLayout>
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/baseline_room_24"
+                            tools:ignore="ContentDescription" />
+                        <TextView
+                            android:id="@+id/roomNumTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="777"
+                            android:textColor="#E9151515"
+                            android:padding="2dp"
+                            />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/baseline_person_24"
+                        tools:ignore="ContentDescription" />
+                    <TextView
+                        android:id="@+id/anybodyNameTV"
+                        android:text="text"
+                        android:textColor="#E9151515"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
         <TextView
             android:id="@+id/lessonTimeTV"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingStart="4dp"
+            android:text="tt"
+            android:fontFamily="sans-serif-condensed-medium"
             android:paddingTop="4dp"
             android:paddingEnd="4dp"
              />

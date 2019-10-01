@@ -2,6 +2,7 @@ package com.team.sear.kcpt.timetablePackage
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.AsyncTask
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.team.sear.kcpt.R
+import com.team.sear.kcpt.objects.ChangesParser
+import com.team.sear.kcpt.timetablefragments.ChangesFrag
 import com.team.sear.kcpt.timetablefragments.SelectTimeTableForApp
 /*
 import com.team.sear.kcpt.objects.Style
@@ -39,6 +42,9 @@ class RecyclerTimeTable : Fragment() {
     private lateinit var webChanges: WebView
 
     private var noDataTv: TextView? = null
+    private lateinit var changesParser: ChangesParser
+    private lateinit var changesHTML: String
+    private lateinit var groupName: String
 
     private var database: FirebaseDatabase? = null
     private var ref: DatabaseReference? = null
@@ -52,6 +58,7 @@ class RecyclerTimeTable : Fragment() {
         noDataTv = v.findViewById(R.id.text_no_data)
 
         lessons = ArrayList()
+        changesParser = ChangesParser()
 
         lessonRecycler = v.findViewById(R.id.lessonRecycler)
         lessonRecycler.setHasFixedSize(true)
@@ -59,13 +66,90 @@ class RecyclerTimeTable : Fragment() {
         llm.orientation = LinearLayoutManager.VERTICAL
         lessonRecycler.layoutManager = llm
 
-        putChangesInWebView()
+
         auth = FirebaseAuth.getInstance()
         authComplete()
+        try{
+        if (!ChangesFrag.DetectConnection.checkInternetConnection(this.context)) {
+            webChanges.loadData("Отсутствует подключение!", "text/html; charset=UTF-8", null)
+            Toast.makeText(context, "Отсутствует подключение!", Toast.LENGTH_SHORT).show()
+        } else {        putChangesInWebView()
+            UserChangesParser().execute()
+        }}
+        catch(e: Exception){
 
+        }
         return v
     }
 
+    private fun getGroupName() {
+        database = FirebaseDatabase.getInstance()
+        user = auth!!.currentUser
+        try {
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("groupOrTeacherName")
+            ref!!.addValueEventListener(
+                    object : ValueEventListener {
+                        override fun onDataChange(dataSnapshot: DataSnapshot) {
+                            groupName = dataSnapshot.getValue(String::class.java)!!
+                            GetGroupName().execute()
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {
+                            groupName = ""
+                            GetGroupName().execute()
+                        }
+                    })
+        } catch (e: Exception) {
+            groupName = ""
+            GetGroupName().execute()
+        }
+
+    }
+
+
+    @SuppressLint("StaticFieldLeak")
+    internal inner class GetGroupName : AsyncTask<String, Void, String>() {
+        @SuppressLint("SetTextI18n")
+        override fun doInBackground(vararg result: String?): String? {
+            return try {
+                changesParser.selectGroup(groupName)
+                changesHTML = changesParser.parseChanges()!!
+                changesHTML
+            } catch (e: Exception) {
+                e.printStackTrace()
+                println(e.message)
+                null
+            }
+        }
+
+        override fun onPostExecute(result: String?) {
+            try {
+                webChanges.loadData(changesHTML, "text/html; charset=UTF-8", null)
+            } catch (e: Exception) {
+            }
+        }
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    internal inner class UserChangesParser : AsyncTask<Void, Void, Void>() {
+        @SuppressLint("SetTextI18n")
+        override fun doInBackground(vararg result: Void?): Void? {
+            try {
+/*
+                getGroupName()
+*/
+                webChanges!!.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            return null
+        }
+    }
     private fun putChangesInWebView() {
 /*        val style = Style()
         val styleStr = style.style*/
@@ -83,12 +167,12 @@ class RecyclerTimeTable : Fragment() {
         webChanges.settings.allowFileAccess
         webChanges.settings.setAppCacheEnabled(true)
         webChanges.settings.cacheMode = WebSettings.LOAD_DEFAULT
-        val html = "<!Doctype html>\n" +
+/*        val html = "<!Doctype html>\n" +
                 "<html>\n" +
                 "<head>\n" +
                 "</head>\n" +
                 "<body>\n" +
-/*
+*//*
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
@@ -102,12 +186,12 @@ class RecyclerTimeTable : Fragment() {
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
                 "<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +"<br>\n" +
-*/
+*//*
 
                 "<p>ЗДЕСЬ БУДУТ \nИЗМЕНЕНИЯ</p>" +
                 "</body>\n" +
                 "</html>"
-        webChanges.loadData(html, "text/html; charset=UTF-8", null)
+        webChanges.loadData(html, "text/html; charset=UTF-8", null)*/
     }
 
     private fun authComplete() {
@@ -128,22 +212,41 @@ class RecyclerTimeTable : Fragment() {
                         object : ValueEventListener {
                             override fun onDataChange(dataSnapshot: DataSnapshot) {
                                 val groupOrTeacherName = dataSnapshot.getValue(String::class.java)
-                                ref = database!!.reference.child("Учреждения")
+/*                                database = FirebaseDatabase.getInstance()
+                                user = auth!!.currentUser
+                                ref = database!!.getReference("Учреждения")
                                         .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                        .child("Расписание")
-                                        .child(groupOrTeacherName!!)
-                                        .child("Понедельник")
+                                        .child("users")
+                                        .child(user!!.uid)
+                                        .child("today")*/
+                /*                ref!!.addValueEventListener(
+                                        object : ValueEventListener {
+                                            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                                val day = dataSnapshot.getValue(String::class.java)*/
+                                                database = FirebaseDatabase.getInstance()
+                                                user = auth!!.currentUser
+                                                ref = database!!.reference.child("Учреждения")
+                                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                                        .child("Расписание")
+                                                        .child(groupOrTeacherName!!)
+                                                        .child(getToday())
 
-                                user = firebaseAuth.currentUser
-                                setAdapter(lessons)
-                                /*lessons.clear()*/
-                                updateList(groupOrTeacherName)
-                                checkIfEmpty()
-                            }
+                                                user = firebaseAuth.currentUser
+                                                setAdapter(lessons)
+                                                /*lessons.clear()*/
+                                                updateList(groupOrTeacherName)
+                                                checkIfEmpty()
+                                            }
 
-                            override fun onCancelled(error: DatabaseError) {
+                                            override fun onCancelled(error: DatabaseError) {
+                                            }
+                                        })
+/*
+                            }*/
+
+                      /*      override fun onCancelled(error: DatabaseError) {
                             }
-                        })
+                        })*/
                 sendMySignedIn()
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
@@ -168,6 +271,29 @@ class RecyclerTimeTable : Fragment() {
             e.printStackTrace()
         }
     }
+        @SuppressLint("SimpleDateFormat")
+        private fun getToday(): String {
+            val dform = SimpleDateFormat("EEE")
+            return when (dform.format(Calendar.getInstance().time)) {
+                "вс" -> "Понедельник"
+                "Sun" -> "Понедельник"
+                "пн" -> "Понедельник"
+                "Mon" -> "Понедельник"
+                "вт" -> "Вторник"
+                "Tues" -> "Вторник"
+                "ср" -> "Среда"
+                "Wed" -> "Среда"
+                "чт" -> "Четверг"
+                "Thurs" -> "Четверг"
+                "пт" -> "Пятница"
+                "Fri" -> "Пятница"
+                "сб" -> "Суббота"
+                "Sat" -> "Суббота"
+                else -> {
+                    ""
+                }
+            }
+        }
 
     private fun checkIfEmptyStatus() {
         user = auth!!.currentUser
@@ -195,38 +321,58 @@ class RecyclerTimeTable : Fragment() {
     }
 
     private fun updateList(groupOrTeacherName: String) {
-        ref = database!!.reference.child("Учреждения")
+        database = FirebaseDatabase.getInstance()
+        user = auth!!.currentUser
+     /*   ref = database!!.getReference("Учреждения")
                 .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                .child("Расписание")
-                .child(groupOrTeacherName)
-                .child("Понедельник")
+                .child("users")
+                .child(user!!.uid)
+                .child("today")
+        ref!!.addValueEventListener(
+                object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        val day = dataSnapshot.getValue(String::class.java)*/
+                        database = FirebaseDatabase.getInstance()
+                        user = auth!!.currentUser
+                        ref = database!!.reference.child("Учреждения")
+                                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                .child("Расписание")
+                                .child(groupOrTeacherName)
+                                .child(getToday())
 
-        ref!!.addChildEventListener(object : ChildEventListener {
-            override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
-                val lesson = datasnapshot.getValue(Lesson::class.java)
-                lessons.add(lesson)
-                setNotifyDataSet()
-                checkIfEmpty()
-            }
+                        ref!!.addChildEventListener(object : ChildEventListener {
+                            override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
+                                val lesson = datasnapshot.getValue(Lesson::class.java)
+                                lessons.add(lesson)
+                                setNotifyDataSet()
+                                checkIfEmpty()
+                            }
 
-            override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
-                val lesson: Lesson? = datasnapshot.getValue(Lesson::class.java)
-                val index: Int = getItemIndex(lessons)
+                            override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
+                                val lesson: Lesson? = datasnapshot.getValue(Lesson::class.java)
+                                val index: Int = getItemIndex(lessons)
 
-                lessons[index] = lesson
-                setNotifyItemChanged(index)
-            }
+                                lessons[index] = lesson
+                                setNotifyItemChanged(index)
+                            }
 
-            override fun onChildRemoved(datasnapshot: DataSnapshot) {
-            }
+                            override fun onChildRemoved(datasnapshot: DataSnapshot) {
+                            }
 
-            override fun onChildMoved(datasnapshot: DataSnapshot, p1: String?) {
-            }
+                            override fun onChildMoved(datasnapshot: DataSnapshot, p1: String?) {
+                            }
 
-            override fun onCancelled(databaseError: DatabaseError) {
-            }
-        })
-    }
+                            override fun onCancelled(databaseError: DatabaseError) {
+                            }
+                        })
+                    }
+
+           /*         override fun onCancelled(error: DatabaseError) {
+                    }
+                })
+*/
+
+/*    }*/
 
     private fun getItemIndex(lessons: ArrayList<Lesson?>): Int {
         return lessons.size
@@ -308,29 +454,7 @@ class RecyclerTimeTable : Fragment() {
                 })
     }
 
-    @SuppressLint("SimpleDateFormat")
-    private fun getToday(): String {
-        val dform = SimpleDateFormat("EEE")
-        return when (dform.format(Calendar.getInstance().time)) {
-            "вс" -> "Понедельник"
-            "Sun" -> "Понедельник"
-            "пн" -> "Понедельник"
-            "Mon" -> "Понедельник"
-            "вт" -> "Вторник"
-            "Tues" -> "Вторник"
-            "ср" -> "Среда"
-            "Wed" -> "Среда"
-            "чт" -> "Четверг"
-            "Thurs" -> "Четверг"
-            "пт" -> "Пятница"
-            "Fri" -> "Пятница"
-            "сб" -> "Суббота"
-            "Sat" -> "Суббота"
-            else -> {
-                ""
-            }
-        }
-    }
+
 
     override fun onStart() {
         super.onStart()

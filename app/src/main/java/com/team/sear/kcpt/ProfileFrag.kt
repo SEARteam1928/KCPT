@@ -24,6 +24,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     private var v: View? = null
     private var studentProfileBt: Button? = null
     private var teacherProfileBt: Button? = null
+    private var setDateBt: Button? = null
     private var anybodyNameTv: TextView? = null
     var arr: ArrayList<String>? = null
 
@@ -41,6 +42,8 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         studentProfileBt!!.setOnClickListener(this)
         teacherProfileBt = v!!.findViewById(R.id.teacherProfileBt)
         teacherProfileBt!!.setOnClickListener(this)
+        setDateBt = v!!.findViewById(R.id.setDateBt)
+        setDateBt!!.setOnClickListener(this)
         arr = ArrayList()
         auth = FirebaseAuth.getInstance()
         authComplete()
@@ -68,9 +71,23 @@ class ProfileFrag : Fragment(), View.OnClickListener {
                 arr!!.clear()
                 setFeedbackView("Преподаватели")
             }
+            R.id.setDateBt ->{
+                searchDialog(initDate())
+            }
             else -> {
             }
         }
+    }
+
+    private fun sendDay(item: String){
+        database = FirebaseDatabase.getInstance()
+        user = auth!!.currentUser
+        ref = database!!.getReference("Учреждения")
+                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                .child("users")
+                .child(user!!.uid)
+                .child("today")
+        ref!!.setValue(item)
     }
 
     private fun updateAnybodyName(){
@@ -115,6 +132,16 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         }).show()
     }
 
+    private fun searchDialog(data: ArrayList<SearchModel>) {
+        SimpleSearchDialogCompat(context, "Поиск", "Что вы хотите найти?", null,
+                data, SearchResultListener { baseSearchDialogCompat, item, _ ->
+            sendDay(item!!.title)
+            intentOnRecycler()
+            activity!!.finish()
+            baseSearchDialogCompat.dismiss()
+        }).show()
+    }
+
     private fun intentOnRecycler(){
         val intent = Intent(context, MainActivity::class.java)
         startActivity(intent)
@@ -150,6 +177,16 @@ class ProfileFrag : Fragment(), View.OnClickListener {
 
     private fun getItemIndex(arr: ArrayList<String>): Int {
         return arr.size
+    }
+    private fun initDate(): ArrayList<SearchModel> {
+        return ArrayList<SearchModel>().also {
+            it.add(SearchModel("Понедельник"))
+            it.add(SearchModel("Вторник"))
+            it.add(SearchModel("Среда"))
+            it.add(SearchModel("Четверг"))
+            it.add(SearchModel("Пятница"))
+            it.add(SearchModel("Суббота"))
+        }
     }
 
     private fun initData(array: ArrayList<String>): ArrayList<SearchModel> {

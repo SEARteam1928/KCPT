@@ -1,15 +1,26 @@
 package com.team.sear.kcpt.timetablefragments
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.view.MenuItem
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.*
 import com.team.sear.kcpt.*
+import com.team.sear.kcpt.R
 import com.team.sear.kcpt.timetablePackage.RecyclerTimeTable
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
-
+    private var database: FirebaseDatabase? = null
+    private var ref: DatabaseReference? = null
+    private var auth: FirebaseAuth? = null
+    private var user: FirebaseUser? = null
+    private var authListener: FirebaseAuth.AuthStateListener? = null
 
     private lateinit var recyclerTimeTable: RecyclerTimeTable
     private lateinit var moreFrag: MoreFrag
@@ -18,7 +29,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-
+        auth = FirebaseAuth.getInstance()
+        authComplete()
         try {
             recyclerTimeTable = RecyclerTimeTable()
             moreFrag = MoreFrag()
@@ -39,7 +51,15 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBottom.setOnNavigationItemSelectedListener(this)
     }
-
+    private fun authComplete() {
+        authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+            user = firebaseAuth.currentUser
+            if (user != null) {
+                sendToday()
+            } else {
+            }
+        }
+    }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         val ftrans = supportFragmentManager.beginTransaction()
@@ -52,6 +72,58 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
         ftrans.commit()
         return true
+    }
+    private fun sendToday() {
+        try {
+            database = FirebaseDatabase.getInstance()
+            user = auth!!.currentUser
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("today")
+            ref!!.setValue(getToday())
+        } catch (e: Exception) {
+            Toast.makeText(this, "Undefinded error!", Toast.LENGTH_SHORT).show()
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getToday(): String {
+        val dform = SimpleDateFormat("EEE")
+        return when (dform.format(Calendar.getInstance().time)) {
+            "вс" -> "Понедельник"
+            "Sun" -> "Понедельник"
+            "пн" -> "Понедельник"
+            "Mon" -> "Понедельник"
+            "вт" -> "Вторник"
+            "Tues" -> "Вторник"
+            "ср" -> "Среда"
+            "Wed" -> "Среда"
+            "чт" -> "Четверг"
+            "Thurs" -> "Четверг"
+            "пт" -> "Пятница"
+            "Fri" -> "Пятница"
+            "сб" -> "Суббота"
+            "Sat" -> "Суббота"
+            else -> {
+                ""
+            }
+        }
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        auth!!.addAuthStateListener(authListener!!)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (authListener != null) {
+            auth!!.removeAuthStateListener(authListener!!)
+        }
     }
 
 }
