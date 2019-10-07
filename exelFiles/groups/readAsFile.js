@@ -109,6 +109,41 @@ var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ Т
         });
 }
 
+function sendLessonOnAllWeek(Lesson, anybodyName, day,num){
+var database = firebase.database();
+var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child("AllWeek").child(numOfDay(day)+"lesson0"+num).set({
+            dayofweek: Lesson.dayofweekStr,
+            groupName: Lesson.groupNameStr,
+            groupOrSubGroup: Lesson.groupOrSubroupStr,
+            lesson: Lesson.lessonStr,
+            lessonNum: Lesson.lessonNumStr,
+            lessonTime: Lesson.lessonTimeStr,
+            roomNum: Lesson.roomNumStr,
+            teacherName: Lesson.teacherNameStr
+        });
+}
+
+function numOfDay(day){
+if(day === "Понедельник"){
+return "day01";
+}
+if(day === "Вторник"){
+return "day02";
+}
+if(day === "Среда"){
+return "day03";
+}
+if(day === "Четверг"){
+return "day04";
+}
+if(day === "Пятница"){
+return "day05";
+}
+if(day === "Суббота"){
+return "day06";
+}
+}
+
 function readFile(fileName){
 lineReader = require('readline').createInterface({
   input: require('fs').createReadStream(fileName+'.txt')
@@ -127,6 +162,7 @@ lineReader.on('line', function (line) {
 		NameFile = fileName;
 		lesson = new Lesson(dayOfWeek,selectGroupName(),subGroup,lessonName,lessonNum,lessonTimeSet(lessonNum),roomNum,teacherName);
 		sendLesson(lesson, selectGroupName(), dayOfWeek,lessonNum);
+		sendLessonOnAllWeek(lesson, selectGroupName(), dayOfWeek,lessonNum);
 	}
 if(i==1){
 	lineName ="subGroup";
