@@ -20,23 +20,22 @@ class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
         return ViewHolder(itemView)
     }
 
-    @SuppressLint( "SetTextI18n")
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, p: Int) {
 
-            holder.lesson!!.text = lessons[p]!!.lesson
-            holder.roomNum!!.text = lessons[p]!!.roomNum
-            holder.teacherName!!.text = lessons[p]!!.teacherName
-            holder.lessonTime!!.text = lessons[p]!!.lessonTime
+        holder.roomNum!!.text = lessons[p]!!.roomNum
+        holder.lessonNum!!.text = lessons[p]!!.lessonNum
+        holder.teacherName!!.text = lessons[p]!!.teacherName
+        holder.lessonTime!!.text = lessons[p]!!.lessonTime
         when {
             lessons[p]!!.groupOrSubGroup == "subGroup1" -> {
-                holder.lessonNum!!.setBackgroundResource(R.drawable.colorsubgroup1)
-                holder.lessonNum!!.text = lessons[p]!!.lessonNum +"\n1)"
+                holder.lesson!!.text = "1 Подгруппа\n\n" + lessons[p]!!.lesson
             }
             lessons[p]!!.groupOrSubGroup == "subGroup2" -> {
-                holder.lessonNum!!.setBackgroundResource(R.drawable.colorsubgroup2)
-                holder.lessonNum!!.text = lessons[p]!!.lessonNum +"\n2)"
+                holder.lesson!!.text = "2 Подгруппа\n\n" + lessons[p]!!.lesson
             }
-            lessons[p]!!.groupOrSubGroup == "allGroup" -> holder.lessonNum!!.text = lessons[p]!!.lessonNum
+            lessons[p]!!.groupOrSubGroup == "allGroup" -> holder.lesson!!.text = lessons[p]!!.lesson
+
         }
     }
 

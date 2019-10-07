@@ -97,7 +97,9 @@ class FeedbackFrag : Fragment() {
 
                 database = FirebaseDatabase.getInstance()
                 user = auth!!.currentUser
-                ref = database!!.getReference("users").child(user!!.uid).child("signedIn")
+                ref = database!!.getReference("Учреждения")
+                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                        .child("users").child(user!!.uid).child("signedIn")
                 ref!!.setValue("SIGNEDOUT")
 
                 auth!!.signOut()
@@ -106,7 +108,9 @@ class FeedbackFrag : Fragment() {
                 activity!!.finish()
             } else {
                 user = auth!!.currentUser
-                ref = database!!.getReference("users").child(user!!.uid).child("feedback")
+                ref = database!!.getReference("Учреждения")
+                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                        .child("users").child(user!!.uid).child("feedback")
                 ref!!.setValue(feedbackStr)
                 feedbackEd!!.setText("")
                 Toast.makeText(activity, "Отзыв сохранён или изменён!", Toast.LENGTH_SHORT).show()
@@ -132,7 +136,9 @@ class FeedbackFrag : Fragment() {
         try {
             database = FirebaseDatabase.getInstance()
             user = auth!!.currentUser
-            ref = database!!.getReference("users").child(user!!.uid).child("feedback")
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users").child(user!!.uid).child("feedback")
             ref!!.addValueEventListener(
                     object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {

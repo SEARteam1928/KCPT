@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -27,6 +28,7 @@ import com.team.sear.kcpt.objects.Style
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
+
 @SuppressLint("SimpleDateFormat")
 class RecyclerTimeTable : Fragment() {
     @SuppressLint("StaticFieldLeak")
@@ -35,9 +37,7 @@ class RecyclerTimeTable : Fragment() {
     @SuppressLint("StaticFieldLeak")
     private lateinit var lessonRecycler: RecyclerView
     private lateinit var lessons: ArrayList<Lesson?>
-    private lateinit var studentAdapter: StudentLessonAdapter
-    private lateinit var teacherAdapter: TeacherLessonAdapter
-
+    private lateinit var ttDownloader: TimeTableInOneDayDownloader
     @SuppressLint("StaticFieldLeak")
     private lateinit var webChanges: WebView
 
@@ -56,7 +56,7 @@ class RecyclerTimeTable : Fragment() {
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.recycler_time_table, container, false)
         noDataTv = v.findViewById(R.id.text_no_data)
-
+        ttDownloader = TimeTableInOneDayDownloader()
         lessons = ArrayList()
         changesParser = ChangesParser()
 
@@ -69,7 +69,7 @@ class RecyclerTimeTable : Fragment() {
 
         auth = FirebaseAuth.getInstance()
         authComplete()
-        try{
+/*        try {
             if (!ChangesFrag.DetectConnection.checkInternetConnection(this.context)) {
                 webChanges.loadData("Отсутствует подключение!", "text/html; charset=UTF-8", null)
                 Toast.makeText(context, "Отсутствует подключение!", Toast.LENGTH_SHORT).show()
@@ -77,10 +77,9 @@ class RecyclerTimeTable : Fragment() {
                 putChangesInWebView()
                 UserChangesParser().execute()
             }
-        }
-        catch(e: Exception){
+        } catch (e: Exception) {
 
-        }
+        }*/
         return v
     }
 
@@ -90,53 +89,12 @@ class RecyclerTimeTable : Fragment() {
             checkIfEmptyStatus()
 
             user = firebaseAuth.currentUser
+
+
             if (user != null) {
-                database = FirebaseDatabase.getInstance()
-                ref = database!!.getReference("Учреждения")
-                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                        .child("users")
-                        .child(user!!.uid)
-                        .child("groupOrTeacherName")
-
-                ref!!.addValueEventListener(
-                        object : ValueEventListener {
-                            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                                val groupOrTeacherName = dataSnapshot.getValue(String::class.java)
-/*                                database = FirebaseDatabase.getInstance()
-                                user = auth!!.currentUser
-                                ref = database!!.getReference("Учреждения")
-                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                        .child("users")
-                                        .child(user!!.uid)
-                                        .child("today")*/
-                /*                ref!!.addValueEventListener(
-                                        object : ValueEventListener {
-                                            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                                                val day = dataSnapshot.getValue(String::class.java)*/
-                                                database = FirebaseDatabase.getInstance()
-                                                user = auth!!.currentUser
-                                                ref = database!!.reference.child("Учреждения")
-                                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                                        .child("Расписание")
-                                                        .child(groupOrTeacherName!!)
-                                                        .child(getToday())
-
-                                                user = firebaseAuth.currentUser
-                                                setAdapter(lessons)
-                                                /*lessons.clear()*/
-                                                updateList(groupOrTeacherName)
-                                                checkIfEmpty()
-                                            }
-
-                                            override fun onCancelled(error: DatabaseError) {
-                                            }
-                                        })
-/*
-                            }*/
-
-                      /*      override fun onCancelled(error: DatabaseError) {
-                            }
-                        })*/
+                user = firebaseAuth.currentUser
+                ttDownloader.enable(lessons, getToday(), lessonRecycler, noDataTv!!, auth!!,user!!)
+                Handler().postDelayed({ttDownloader.enable(lessons, getToday(), lessonRecycler, noDataTv!!, auth!!,user!!)},500)
                 sendMySignedIn()
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
@@ -161,29 +119,30 @@ class RecyclerTimeTable : Fragment() {
             e.printStackTrace()
         }
     }
-        @SuppressLint("SimpleDateFormat")
-        private fun getToday(): String {
-            val dform = SimpleDateFormat("EEE")
-            return when (dform.format(Calendar.getInstance().time)) {
-                "вс" -> "Понедельник"
-                "Sun" -> "Понедельник"
-                "пн" -> "Понедельник"
-                "Mon" -> "Понедельник"
-                "вт" -> "Вторник"
-                "Tues" -> "Вторник"
-                "ср" -> "Среда"
-                "Wed" -> "Среда"
-                "чт" -> "Четверг"
-                "Thurs" -> "Четверг"
-                "пт" -> "Пятница"
-                "Fri" -> "Пятница"
-                "сб" -> "Суббота"
-                "Sat" -> "Суббота"
-                else -> {
-                    ""
-                }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getToday(): String {
+        val dform = SimpleDateFormat("EEE")
+        return when (dform.format(Calendar.getInstance().time)) {
+            "вс" -> "Понедельник"
+            "Sun" -> "Понедельник"
+            "пн" -> "Понедельник"
+            "Mon" -> "Понедельник"
+            "вт" -> "Вторник"
+            "Tues" -> "Вторник"
+            "ср" -> "Среда"
+            "Wed" -> "Среда"
+            "чт" -> "Четверг"
+            "Thurs" -> "Четверг"
+            "пт" -> "Пятница"
+            "Fri" -> "Пятница"
+            "сб" -> "Суббота"
+            "Sat" -> "Суббота"
+            else -> {
+                ""
             }
         }
+    }
 
     private fun checkIfEmptyStatus() {
         user = auth!!.currentUser
@@ -210,142 +169,6 @@ class RecyclerTimeTable : Fragment() {
                 })
     }
 
-    private fun updateList(groupOrTeacherName: String) {
-        database = FirebaseDatabase.getInstance()
-        user = auth!!.currentUser
-     /*   ref = database!!.getReference("Учреждения")
-                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                .child("users")
-                .child(user!!.uid)
-                .child("today")
-        ref!!.addValueEventListener(
-                object : ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        val day = dataSnapshot.getValue(String::class.java)*/
-                        database = FirebaseDatabase.getInstance()
-                        user = auth!!.currentUser
-                        ref = database!!.reference.child("Учреждения")
-                                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                .child("Расписание")
-                                .child(groupOrTeacherName)
-                                .child(getToday())
-
-                        ref!!.addChildEventListener(object : ChildEventListener {
-                            override fun onChildAdded(datasnapshot: DataSnapshot, p1: String?) {
-                                val lesson = datasnapshot.getValue(Lesson::class.java)
-                                lessons.add(lesson)
-                                setNotifyDataSet()
-                                checkIfEmpty()
-                            }
-
-                            override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
-                                val lesson: Lesson? = datasnapshot.getValue(Lesson::class.java)
-                                val index: Int = getItemIndex(lessons)
-
-                                lessons[index] = lesson
-                                setNotifyItemChanged(index)
-                            }
-
-                            override fun onChildRemoved(datasnapshot: DataSnapshot) {
-                            }
-
-                            override fun onChildMoved(datasnapshot: DataSnapshot, p1: String?) {
-                            }
-
-                            override fun onCancelled(databaseError: DatabaseError) {
-                            }
-                        })
-                    }
-
-           /*         override fun onCancelled(error: DatabaseError) {
-                    }
-                })
-*/
-
-/*    }*/
-
-    private fun getItemIndex(lessons: ArrayList<Lesson?>): Int {
-        return lessons.size
-    }
-
-    private fun setAdapter(lessons: ArrayList<Lesson?>) {
-        ref = database!!.getReference("Учреждения")
-                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                .child("users")
-                .child(user!!.uid)
-                .child("status")
-
-        ref!!.addValueEventListener(
-                object : ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        val status = dataSnapshot.getValue(String::class.java)
-                        if (status == "Группы") {
-                            lessonRecycler.adapter = StudentLessonAdapter(lessons)
-                        }
-                        if (status == "Преподаватели") {
-                            lessonRecycler.adapter = TeacherLessonAdapter(lessons)
-                        }
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                    }
-                })
-    }
-
-    private fun setNotifyDataSet() {
-        ref = database!!.getReference("Учреждения")
-                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                .child("users")
-                .child(user!!.uid)
-                .child("status")
-
-        ref!!.addValueEventListener(
-                object : ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        val status = dataSnapshot.getValue(String::class.java)
-                        if (status == "Группы") {
-                            studentAdapter = StudentLessonAdapter(lessons)
-                            studentAdapter.notifyDataSetChanged()
-                        }
-                        if (status == "Преподаватели") {
-                            teacherAdapter = TeacherLessonAdapter(lessons)
-                            teacherAdapter.notifyDataSetChanged()
-                        }
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                    }
-                })
-    }
-
-    private fun setNotifyItemChanged(pos: Int) {
-        ref = database!!.getReference("Учреждения")
-                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                .child("users")
-                .child(user!!.uid)
-                .child("status")
-
-        ref!!.addValueEventListener(
-                object : ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        val status = dataSnapshot.getValue(String::class.java)
-                        if (status == "Группы") {
-                            studentAdapter = StudentLessonAdapter(lessons)
-                            studentAdapter.notifyItemChanged(pos)
-                        }
-                        if (status == "Преподаватели") {
-                            teacherAdapter = TeacherLessonAdapter(lessons)
-                            teacherAdapter.notifyItemChanged(pos)
-                        }
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                    }
-                })
-    }
-
-
-
     override fun onStart() {
         super.onStart()
         auth!!.addAuthStateListener(authListener!!)
@@ -355,16 +178,6 @@ class RecyclerTimeTable : Fragment() {
         super.onStop()
         if (authListener != null) {
             auth!!.removeAuthStateListener(authListener!!)
-        }
-    }
-
-    private fun checkIfEmpty() {
-        if (lessons.size == 0) {
-            lessonRecycler.visibility = View.INVISIBLE
-            noDataTv!!.visibility = View.VISIBLE
-        } else {
-            lessonRecycler.visibility = View.VISIBLE
-            noDataTv!!.visibility = View.INVISIBLE
         }
     }
 
@@ -421,14 +234,14 @@ class RecyclerTimeTable : Fragment() {
 
     @SuppressLint("StaticFieldLeak")
     internal inner class UserChangesParser : AsyncTask<Void, Void, Void>() {
-        @SuppressLint("SetTextI18n")
+        @SuppressLint("SetTextI18n", "WrongThread")
         override fun doInBackground(vararg result: Void?): Void? {
             try {
 /*
                 getGroupName()
-*//*
-                webChanges.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
 */
+                webChanges!!.loadUrl("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
+
             } catch (e: Exception) {
                 e.printStackTrace()
             }

@@ -86,7 +86,9 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
         this.database = FirebaseDatabase.getInstance()
         user = mAuth!!.currentUser
         try {
-            myRef = database.getReference("users").child(user!!.uid).child("oneMinuteGameScore")
+            myRef = database.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users").child(user!!.uid).child("oneMinuteGameScore")
             myRef!!.addValueEventListener(
                     object : ValueEventListener {
                         @SuppressLint("SetTextI18n")
@@ -107,7 +109,9 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
                         }
                     })
         } catch (e: Exception) {
-            myRef = database.getReference("users").child(user!!.uid).child("oneMinuteGameScore")
+            myRef = database.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users").child(user!!.uid).child("oneMinuteGameScore")
             myRef!!.setValue("0")
         }
     }
@@ -117,7 +121,7 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
     private fun startTime() {
         Handler().postDelayed({
             if (time_int <= 0) {
-                bt[a]!!.visibility = View.INVISIBLE
+              /*  bt[a]!!.visibility = View.INVISIBLE
                 database = FirebaseDatabase.getInstance()
                 user = mAuth!!.currentUser
                 try {
@@ -125,14 +129,20 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
                     Handler().postDelayed({
                         try {
                             if (count_str.toInt() > maxScoreUser.toInt()) {
-                                myRef = this.database.getReference("users").child(user!!.uid).child("oneMinuteGameScore")
+                                myRef = this.database.getReference("Учреждения")
+                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                        .child("users").child(user!!.uid).child("oneMinuteGameScore")
                                 myRef!!.setValue(count_str)
                             }
                         } catch (e: Exception) {
-                            myRef = database.getReference("users").child(user!!.uid).child("oneMinuteGameScore")
+                            myRef = database.getReference("Учреждения")
+                                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                    .child("users").child(user!!.uid).child("oneMinuteGameScore")
                             myRef!!.setValue("0")
                             if (count_str.toInt() > maxScoreUser.toInt()) {
-                                myRef = this.database.getReference("users").child(user!!.uid).child("oneMinuteGameScore")
+                                myRef = this.database.getReference("Учреждения")
+                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                        .child("users").child(user!!.uid).child("oneMinuteGameScore")
                                 myRef!!.setValue(count_str)
                             }
                         }
@@ -140,7 +150,7 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
                         time_tv.text = "Pекорд: $maxScoreUser"
                     }, 300)
                 } catch (e: Exception) {
-                }
+                }*/
             } else {
                 time_int--
                 time_str = time_int.toString()

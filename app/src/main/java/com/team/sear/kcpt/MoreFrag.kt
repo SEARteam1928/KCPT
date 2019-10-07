@@ -1,16 +1,14 @@
 package com.team.sear.kcpt
 
-import android.content.Intent
 import androidx.databinding.DataBindingUtil
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.team.sear.kcpt.databinding.FragmentMoreBinding
-import com.team.sear.kcpt.moreactivities.TimetableActivity
-import com.team.sear.kcpt.moreactivities.WeatherActivity
+import com.team.sear.kcpt.timetablefragments.*
 
 class MoreFrag : Fragment(), View.OnClickListener {
 
@@ -33,49 +31,52 @@ class MoreFrag : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v!!.id) {
-            R.id.timetableITV -> onTimetableITVClick()
-            R.id.changesITV -> onChangesITVClick()
-            R.id.zvonkiITV -> onZvonkiITVClick()
-            R.id.weatherITV -> onWeatherITVClick()
-            R.id.newsITV -> onNewsITVClick()
-            R.id.developersITV -> onDevelopersITVClick()
-            R.id.feedbackITV -> onFeedbackITVClick()
+            R.id.timetableITV -> transact(NewTimeTableFrag())
+            R.id.changesITV -> transact(ChangesFrag())
+            R.id.zvonkiITV -> transact(ZvonkiFrag())
+            R.id.weatherITV -> transact(WeatherFrag())
+            R.id.newsITV -> transact(NewsFrag())
+            R.id.developersITV -> transact(DevelopersFrag())
+            R.id.feedbackITV -> transact(FeedbackFrag())
             else -> {
             }
         }
     }
 
+    private fun transact(fragment: Fragment) {
+        val ftrans = activity!!.supportFragmentManager.beginTransaction()
+        ftrans.replace(R.id.bottom_nav_container, fragment)
+        ftrans.commit()
+    }
+
     private fun onTimetableITVClick() {
-        startIntent(TimetableActivity())
+        transact(NewTimeTableFrag())
     }
 
     private fun onChangesITVClick() {
-
+        transact(ChangesFrag())
     }
 
     private fun onZvonkiITVClick() {
-
+        transact(ZvonkiFrag())
     }
 
     private fun onWeatherITVClick() {
-        startIntent(WeatherActivity())
+        transact(WeatherFrag())
     }
 
     private fun onNewsITVClick() {
-
+        transact(NewsFrag())
     }
 
     private fun onDevelopersITVClick() {
-
+        transact(DevelopersFrag())
     }
 
     private fun onFeedbackITVClick() {
-        startIntent(OneMinuteGame())
-    }
-
-    private fun startIntent(activity: AppCompatActivity){
-        val intent = Intent(context,activity::class.java)
-        startActivity(intent)
+/*
+        transact(FeedbackFrag())
+*/
     }
 }
 

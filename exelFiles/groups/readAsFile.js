@@ -8,7 +8,7 @@ var config = {
     storageBucket: "kcpt-1928.appspot.com",
     messagingSenderId: "846506539351"
   };
-firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
 var AT1609 = "AT1609";
 var AT1709 = "AT1709";
@@ -95,9 +95,9 @@ var lesson;
 
 startMainFunctions();
 
-function sendLesson(Lesson, anybodyName, day,num, subGroup){
+function sendLesson(Lesson, anybodyName, day,num){
 var database = firebase.database();
-var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child(day).child("lesson0"+num+subGroup).set({
+var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child(day).child("lesson0"+num).set({
             dayofweek: Lesson.dayofweekStr,
             groupName: Lesson.groupNameStr,
             groupOrSubGroup: Lesson.groupOrSubroupStr,
@@ -126,7 +126,7 @@ lineReader.on('line', function (line) {
 		i=1;
 		NameFile = fileName;
 		lesson = new Lesson(dayOfWeek,selectGroupName(),subGroup,lessonName,lessonNum,lessonTimeSet(lessonNum),roomNum,teacherName);
-		sendLesson(lesson, selectGroupName(), dayOfWeek,lessonNum, subGroup);
+		sendLesson(lesson, selectGroupName(), dayOfWeek,lessonNum);
 	}
 if(i==1){
 	lineName ="subGroup";
@@ -157,6 +157,12 @@ if(i==6){
 
 }
 
+function sendGroupsDataOnFirebase(fileName,dayOfWeek,lessonNum,lessonStr, subGroup){
+var database = firebase.database();
+var exampleNodeDBSet = database.ref("timetableNew").child("groups").child(fileName).child(dayOfWeek).child(dayOfWeek+lessonNum).child(subGroup).set({
+            lesson: lessonStr
+        });
+}
 
 function lessonTimeSet(lessonN){
 if(lessonN === "01"){
@@ -196,6 +202,33 @@ if(lessonN === "12"){
 return "18:10\n18:55";
 }
 }
+
+
+function sendTeacherDataOnFirebase(teacher, dayOfWeek, lessonNum, lessonStr) {
+        var database = firebase.database();
+        var sendteacher = database.ref("timetableNew").child("teachers").child(teacher).child(dayOfWeek).child(dayOfWeek+lessonNum).set({
+            lesson: lessonStr
+        });
+
+    }
+
+function lessonStrFun() {
+
+		lessonStr = lessonName+"\n"+ teacherName+" "+roomNum;
+
+    return lessonStr;
+}
+
+function teacherLessonStrFun(){
+
+        groupName = selectGroupName();
+
+        teacherLessonStr = lessonName+"\n"+ groupName+" | "+roomNum;
+
+
+            return teacherLessonStr;
+}
+
 
 
 function deleteDataOnFirebase(child){

@@ -3,6 +3,127 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A000000"
+        tools:context=".oldclasses.TimeTableFragment"
+        tools:ignore="HardcodedText">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:padding="5sp"
+                    android:text="Понедельник"
+                    tools:ignore="HardcodedText" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/lessonRecyclerMn"
+                            android:layout_width="match_parent"
+                            tools:ignore="NestedScrolling"
+                            android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:padding="5sp"
+                    android:text="Вторник"
+                    tools:ignore="HardcodedText" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lessonRecyclerTy"
+                    android:layout_width="match_parent"
+                    tools:ignore="NestedScrolling"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="5sp"
+                android:text="Среда"
+                tools:ignore="HardcodedText" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lessonRecyclerWd"
+                    android:layout_width="match_parent"
+                    tools:ignore="NestedScrolling"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="5sp"
+                android:text="Четверг"
+                tools:ignore="HardcodedText" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lessonRecyclerTh"
+                    android:layout_width="match_parent"
+                    tools:ignore="NestedScrolling"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="5sp"
+                android:text="Пятница"
+                tools:ignore="HardcodedText" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lessonRecyclerFr"
+                    android:layout_width="match_parent"
+                    tools:ignore="NestedScrolling"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="5sp"
+                android:text="Суббота"
+                tools:ignore="HardcodedText" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lessonRecyclerSt"
+                    android:layout_width="match_parent"
+                    tools:ignore="NestedScrolling"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
     <data>
 
         <variable
@@ -69,275 +190,4 @@
             name="tomorrowBtStr"
             type="String" />
     </data>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#1A000000"
-        tools:context=".oldclasses.TimeTableFragment"
-        tools:ignore="HardcodedText">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:ignore="UselessParent">
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginRight="3dp"
-                android:layout_weight="1"
-                tools:ignore="UselessParent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <!--
-                                        <TextView
-                                            android:id="@+id/tv"
-                                            style="@style/ButtonShowHideTheme"
-                                            android:text="@{dayName2}"
-                                            android:textAlignment="center" />-->
-
-                    <LinearLayout
-                        android:id="@+id/ln1tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num1tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime1" />
-
-                        <TextView
-                            android:id="@+id/tv1"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson1}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln2tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num2tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime2" />
-
-                        <TextView
-                            android:id="@+id/tv2"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson2}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln3tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num3tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime3" />
-
-                        <TextView
-                            android:id="@+id/tv3"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson3}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln4tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num4tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime4" />
-
-                        <TextView
-                            android:id="@+id/tv4"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson4}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln5tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num5tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime5" />
-
-                        <TextView
-                            android:id="@+id/tv5"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson5}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln6tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num6tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime6" />
-
-                        <TextView
-                            android:id="@+id/tv6"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson6}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln7tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num7tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime7" />
-
-                        <TextView
-                            android:id="@+id/tv7"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson7}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln8tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num8tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime8" />
-
-                        <TextView
-                            android:id="@+id/tv8"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson8}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln9tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num9tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime9" />
-
-                        <TextView
-                            android:id="@+id/tv9"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson9}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln10tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num10tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime10" />
-
-                        <TextView
-                            android:id="@+id/tv10"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson10}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln11tv"
-                        style="@style/lnLessonStyle">
-
-                        <TextView
-                            android:id="@+id/num11tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime11" />
-
-                        <TextView
-                            android:id="@+id/tv11"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson11}" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ln12tv"
-                        style="@style/lnLessonStyle"
-                        android:layout_marginBottom="2dp">
-
-                        <TextView
-                            android:id="@+id/num12tv"
-                            style="@style/NumTv"
-                            android:text="@string/lessonTime12" />
-
-                        <TextView
-                            android:id="@+id/tv12"
-                            style="@style/timetabletvstyle"
-                            android:text="@{lesson12}" />
-
-                    </LinearLayout>
-
-
-                    <WebView
-                        android:id="@+id/userWebChangesOnMainScreen"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:ignore="WebViewLayout" />
-
-                </LinearLayout>
-            </ScrollView>
-
-            <LinearLayout
-                android:id="@+id/todayTomorrowLn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/todayBt"
-                    style="@style/ButtonShowHideTheme"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/tt_background_tv"
-                    android:text="@{todayBtStr}"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    tools:ignore="NestedWeights" />
-
-                <TextView
-                    android:id="@+id/tomorrowBt"
-                    style="@style/ButtonShowHideTheme"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/tt_background_tv"
-                    android:text="@{tomorrowBtStr}"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
 </layout>
