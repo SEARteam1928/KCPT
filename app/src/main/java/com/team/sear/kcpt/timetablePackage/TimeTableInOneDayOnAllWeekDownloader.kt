@@ -2,6 +2,8 @@ package com.team.sear.kcpt.timetablePackage
 
 import android.annotation.SuppressLint
 import android.os.Handler
+import android.view.View
+import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -9,19 +11,17 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 
 class TimeTableInOneDayOnAllWeekDownloader {
-    @SuppressLint("StaticFieldLeak")
-    private lateinit var studentAdapter: StudentLessonAdapter
+    private lateinit var studentAdapter: StudentLessonAllWeekAdapter
     private lateinit var teacherAdapter: TeacherLessonAdapter
 
     private var database: FirebaseDatabase? = null
     private var ref: DatabaseReference? = null
 
-    fun enable(lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, auth: FirebaseAuth, user: FirebaseUser){
-        enableDownloader(lessons, day, lessonRecycler, auth,user)
-        Handler().postDelayed({enableDownloader(lessons, day, lessonRecycler, auth,user)},500)
+    fun enable(lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, noDataTv: TextView, auth: FirebaseAuth, user: FirebaseUser){
+        enableDownloader(lessons, day, lessonRecycler, noDataTv, auth,user)
     }
 
-    private fun enableDownloader(lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, auth: FirebaseAuth, user: FirebaseUser) {
+    private fun enableDownloader(lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, noDataTv: TextView, auth: FirebaseAuth, user: FirebaseUser) {
         database = FirebaseDatabase.getInstance()
         ref = database!!.getReference("Учреждения")
                 .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
@@ -39,9 +39,10 @@ class TimeTableInOneDayOnAllWeekDownloader {
                                 .child("Расписание")
                                 .child(groupOrTeacherName!!)
                                 .child(day)
+                        /*lessons.clear()*/
                         setAdapter(lessons,lessonRecycler,user)
-                        updateList(groupOrTeacherName,lessons, day, lessonRecycler, user)
-                        lessons.clear()
+                        updateList(groupOrTeacherName,lessons, day, lessonRecycler, noDataTv, user)
+                        checkIfEmpty(lessonRecycler, noDataTv, lessons)
                     }
 
                     override fun onCancelled(error: DatabaseError) {
@@ -65,7 +66,7 @@ class TimeTableInOneDayOnAllWeekDownloader {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         val status = dataSnapshot.getValue(String::class.java)
                         if (status == "Группы") {
-                            studentAdapter = StudentLessonAdapter(lessons)
+                            studentAdapter = StudentLessonAllWeekAdapter(lessons)
                             studentAdapter.notifyItemChanged(pos)
                         }
                         if (status == "Преподаватели") {
@@ -91,7 +92,7 @@ class TimeTableInOneDayOnAllWeekDownloader {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         val status = dataSnapshot.getValue(String::class.java)
                         if (status == "Группы") {
-                            lessonRecycler.adapter = StudentLessonAdapter(lessons)
+                            lessonRecycler.adapter = StudentLessonAllWeekAdapter(lessons)
                         }
                         if (status == "Преподаватели") {
                             lessonRecycler.adapter = TeacherLessonAdapter(lessons)
@@ -103,9 +104,7 @@ class TimeTableInOneDayOnAllWeekDownloader {
                 })
     }
 
-    private fun updateList(groupOrTeacherName: String, lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, user: FirebaseUser) {
-        database = FirebaseDatabase.getInstance()
-
+    private fun updateList(groupOrTeacherName: String, lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, noDataTv: TextView, user: FirebaseUser) {
         database = FirebaseDatabase.getInstance()
         ref = database!!.reference.child("Учреждения")
                 .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
@@ -118,6 +117,7 @@ class TimeTableInOneDayOnAllWeekDownloader {
                 val lesson = datasnapshot.getValue(Lesson::class.java)
                 lessons.add(lesson)
                 setNotifyDataSet(lessons,user)
+                checkIfEmpty(lessonRecycler, noDataTv, lessons)
             }
 
             override fun onChildChanged(datasnapshot: DataSnapshot, p1: String?) {
@@ -151,7 +151,7 @@ class TimeTableInOneDayOnAllWeekDownloader {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         val status = dataSnapshot.getValue(String::class.java)
                         if (status == "Группы") {
-                            studentAdapter = StudentLessonAdapter(lessons)
+                            studentAdapter = StudentLessonAllWeekAdapter(lessons)
                             studentAdapter.notifyDataSetChanged()
                         }
                         if (status == "Преподаватели") {
@@ -163,5 +163,15 @@ class TimeTableInOneDayOnAllWeekDownloader {
                     override fun onCancelled(error: DatabaseError) {
                     }
                 })
+    }
+
+    private fun checkIfEmpty(lessonRecycler: RecyclerView, noDataTv: TextView, lessons: ArrayList<Lesson?>) {
+        if (lessons.isEmpty()) {
+            lessonRecycler.visibility = View.INVISIBLE
+            noDataTv.visibility = View.VISIBLE
+        } else {
+            lessonRecycler.visibility = View.VISIBLE
+            noDataTv.visibility = View.INVISIBLE
+        }
     }
 }

@@ -97,7 +97,7 @@ startMainFunctions();
 
 function sendLesson(Lesson, anybodyName, day,num){
 var database = firebase.database();
-var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child(day).child("lesson0"+num).set({
+var sendLessonVar = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child(day).child("lesson0"+num).set({
             dayofweek: Lesson.dayofweekStr,
             groupName: Lesson.groupNameStr,
             groupOrSubGroup: Lesson.groupOrSubroupStr,
@@ -111,7 +111,7 @@ var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ Т
 
 function sendLessonOnAllWeek(Lesson, anybodyName, day,num){
 var database = firebase.database();
-var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child("AllWeek").child(numOfDay(day)+"lesson0"+num).set({
+var sendLessonVar = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child("AllWeek").child(numOfDay(day)+"lesson0"+num).set({
             dayofweek: Lesson.dayofweekStr,
             groupName: Lesson.groupNameStr,
             groupOrSubGroup: Lesson.groupOrSubroupStr,
@@ -120,6 +120,19 @@ var exampleNodeDBSet = database.ref("Учреждения").child("ГАПОУ Т
             lessonTime: Lesson.lessonTimeStr,
             roomNum: Lesson.roomNumStr,
             teacherName: Lesson.teacherNameStr
+        });
+}
+
+function sendDayOfWeekName(Lesson, anybodyName, day,num){
+var sendLessonVar = database.ref("Учреждения").child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"").child("Расписание").child(anybodyName).child("AllWeek").child(numOfDay(day)+"lesson000").set({
+            dayofweek: "",
+            groupName: "",
+            groupOrSubGroup: "allGroup",
+            lesson: Lesson.dayofweekStr,
+            lessonNum: "777",
+            lessonTime: "",
+            roomNum: "",
+            teacherName: ""
         });
 }
 

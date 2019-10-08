@@ -73,6 +73,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:id="@+id/roomImg"
                             android:src="@mipmap/baseline_room_white_24"
                             tools:ignore="ContentDescription" />
                         <TextView
@@ -86,6 +87,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:id="@+id/anybodyImg"
                         android:src="@mipmap/baseline_person_white_24"
                         tools:ignore="ContentDescription" />
                     <TextView
