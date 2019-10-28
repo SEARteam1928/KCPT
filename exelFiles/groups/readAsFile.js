@@ -115,7 +115,7 @@ var sendLessonVar = database.ref("Учреждения").child("ГАПОУ ТО 
             dayofweek: Lesson.dayofweekStr,
             groupName: Lesson.groupNameStr,
             groupOrSubGroup: Lesson.groupOrSubroupStr,
-            lesson: Lesson.lessonStr,
+            lesson: Lesson.dayofweekStr+"\n\n"+Lesson.lessonStr,
             lessonNum: Lesson.lessonNumStr,
             lessonTime: Lesson.lessonTimeStr,
             roomNum: Lesson.roomNumStr,
