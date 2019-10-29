@@ -1,11 +1,13 @@
 package com.team.sear.kcpt.timetablefragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.view.MenuItem
 import android.widget.Toast
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
@@ -23,8 +25,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private var authListener: FirebaseAuth.AuthStateListener? = null
 
     private lateinit var recyclerTimeTable: RecyclerTimeTable
+    private lateinit var changesFrag: ChangesFrag
     private lateinit var moreFrag: MoreFrag
     private lateinit var profileFrag: ProfileFrag
+
+    private lateinit var mainFab: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +38,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         authComplete()
         try {
             recyclerTimeTable = RecyclerTimeTable()
+            changesFrag = ChangesFrag()
             moreFrag = MoreFrag()
             profileFrag = ProfileFrag()
+
+            mainFab = findViewById(R.id.mainFab)
 
         } catch (e: Exception) {
             Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
@@ -50,6 +58,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBottom.setOnNavigationItemSelectedListener(this)
+
+        mainFab.setOnClickListener {
+            val intent = Intent(this@MainActivity, MainActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Обновляем",Toast.LENGTH_SHORT).show()
+            finish()
+        }
     }
     private fun authComplete() {
         authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
@@ -65,6 +80,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val ftrans = supportFragmentManager.beginTransaction()
         when (id) {
             R.id.bottom_today_item -> ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
+            R.id.bottom_changes_item -> ftrans.replace(R.id.bottom_nav_container, changesFrag)
             R.id.bottom_main_item -> ftrans.replace(R.id.bottom_nav_container, moreFrag)
             R.id.bottom_profile_item -> ftrans.replace(R.id.bottom_nav_container, profileFrag)
             else -> {

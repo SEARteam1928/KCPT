@@ -28,15 +28,18 @@ class ZvonkiFrag : Fragment() {
         v = inflater.inflate(R.layout.zvonki_fragment, container, false)
         mnFrTvFrag = v.findViewById(R.id.mn_fr_tv_frag)
         stTvFrag = v.findViewById(R.id.st_tv_frag)
-        getZvonkiTimetable("mn_fr_zvonki", mnFrTvFrag)
-        getZvonkiTimetable("st_zvonki", stTvFrag)
+        getZvonkiTimetable("пн_пт", mnFrTvFrag)
+        getZvonkiTimetable("сб", stTvFrag)
         return v
     }
 
     private fun getZvonkiTimetable(day: String, tv: TextView) {
         try {
             database = FirebaseDatabase.getInstance()
-            ref = database.getReference("timetable").child("zvonki").child(day)
+            ref =  database.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("Звонки")
+                    .child(day)
             ref.addValueEventListener(
                     object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
