@@ -29,7 +29,6 @@ import ir.mirrajabi.searchdialog.core.SearchResultListener
 
 class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var ttFrag: TimeTableFragment
 
     private lateinit var selectTimeTable: SelectTimeTable
     /*    private lateinit var fab: FloatingActionButton
@@ -50,7 +49,6 @@ class Navigate : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
 
         navigateIntent = Intent(this, Navigate::class.java)
         try {
-            ttFrag = TimeTableFragment()
             val ftrans = supportFragmentManager.beginTransaction()
             ftrans.commit()
         } catch (e: Exception) {

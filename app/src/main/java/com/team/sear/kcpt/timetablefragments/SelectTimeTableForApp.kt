@@ -69,14 +69,6 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
         intentNavigate()
     }
 
-    private fun initData(): ArrayList<SearchModel> {
-        return ArrayList<SearchModel>().also {
-            it.add(SearchModel("Арефьев Е. А."))
-
-        }
-    }
-
-
     private fun intentNavigate() {
         val navigateIntent = Intent(this, Navigate::class.java)
         startActivity(navigateIntent)
