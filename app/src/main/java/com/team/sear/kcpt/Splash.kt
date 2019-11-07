@@ -32,35 +32,39 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.splash)
 
-        navigateIntent = Intent(this, MainActivity::class.java)
-        registrationIntent = Intent(this, RegistrationNew::class.java)
-
         try {
-            FirebaseDatabase.getInstance().setPersistenceEnabled(true)
-        } catch (e: Exception) {
-        }
-        binding!!.splashBackgroundFirst.visibility = View.GONE
-        binding!!.splashBackgroundSecond.visibility = View.GONE
-        binding!!.splashTcpLogo.visibility = View.GONE
-        binding!!.splashKcptText.visibility = View.GONE
-        binding!!.splashStartWorking.visibility = View.GONE
-        binding!!.splashStartWorking.text = "Загрузка..."
-        slide = AnimationUtils.loadAnimation(this, R.anim.slide)
-        alpha = AnimationUtils.loadAnimation(this, R.anim.splash_alpha)
-        slideSecond = AnimationUtils.loadAnimation(this, R.anim.slide_second)
-        authAlpha = AnimationUtils.loadAnimation(this, R.anim.aplha_0_1)
-        mAuth = FirebaseAuth.getInstance()
-        mAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+            navigateIntent = Intent(this, MainActivity::class.java)
+            registrationIntent = Intent(this, RegistrationNew::class.java)
+
             try {
-                val user = firebaseAuth.currentUser
-                if (user != null) {
-                    startAnimInAuth()
-                } else {
-                    startAnimInNotAuth()
-                }
+                FirebaseDatabase.getInstance().setPersistenceEnabled(true)
             } catch (e: Exception) {
-                Toast.makeText(this@Splash, "Undefinded error!", Toast.LENGTH_SHORT).show()
             }
+            binding!!.splashBackgroundFirst.visibility = View.GONE
+            binding!!.splashBackgroundSecond.visibility = View.GONE
+            binding!!.splashTcpLogo.visibility = View.GONE
+            binding!!.splashKcptText.visibility = View.GONE
+            binding!!.splashStartWorking.visibility = View.GONE
+            binding!!.splashStartWorking.text = "Загрузка..."
+            slide = AnimationUtils.loadAnimation(this, R.anim.slide)
+            alpha = AnimationUtils.loadAnimation(this, R.anim.splash_alpha)
+            slideSecond = AnimationUtils.loadAnimation(this, R.anim.slide_second)
+            authAlpha = AnimationUtils.loadAnimation(this, R.anim.aplha_0_1)
+            mAuth = FirebaseAuth.getInstance()
+            mAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+                try {
+                    val user = firebaseAuth.currentUser
+                    if (user != null) {
+                        startAnimInAuth()
+                    } else {
+                        startAnimInNotAuth()
+                    }
+                } catch (e: Exception) {
+                    Toast.makeText(this@Splash, "Undefinded error!", Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: Exception) {
+            Toast.makeText(this@Splash, e.message, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -107,7 +111,11 @@ class Splash : AppCompatActivity() {
 
     public override fun onStart() {
         super.onStart()
-        mAuth.addAuthStateListener(mAuthListener!!)
+        try {
+            mAuth.addAuthStateListener(mAuthListener!!)
+        } catch (e: Exception){
+            e.printStackTrace()
+        }
     }
 
     public override fun onStop() {

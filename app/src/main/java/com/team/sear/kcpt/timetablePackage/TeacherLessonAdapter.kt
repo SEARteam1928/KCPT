@@ -19,11 +19,14 @@ class TeacherLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ViewHolder, p: Int) {
+        try{
             holder.lessonNum!!.text = lessons[p]!!.lessonNum
             holder.lesson!!.text = lessons[p]!!.lesson
             holder.roomNum!!.text = lessons[p]!!.roomNum
             holder.groupName!!.text = lessons[p]!!.groupName
             holder.lessonTime!!.text = lessons[p]!!.lessonTime
+        } catch (e: Exception) {
+        }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -17,7 +17,7 @@ class MoreFrag : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         bind = DataBindingUtil.inflate(inflater, R.layout.fragment_more, container, false)
-
+try{
         bind!!.changesITV.setOnClickListener(this)
         bind!!.timetableITV.setOnClickListener(this)
         bind!!.changesITV.setOnClickListener(this)
@@ -26,6 +26,8 @@ class MoreFrag : Fragment(), View.OnClickListener {
         bind!!.newsITV.setOnClickListener(this)
         bind!!.developersITV.setOnClickListener(this)
         bind!!.feedbackITV.setOnClickListener(this)
+} catch (e: Exception) {
+}
         return bind!!.root
     }
 

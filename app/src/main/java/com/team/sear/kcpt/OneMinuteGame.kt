@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
@@ -37,27 +38,30 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_minute_game)
+        try {
+            fVbyId()
+            setAllInvis()
+            setCl()
 
-        fVbyId()
-        setAllInvis()
-        setCl()
+            time_int = 60
+            time_str = time_int.toString()
+            time_tv.text = time_str
+            startTime()
+            vis()
 
-        time_int = 60
-        time_str = time_int.toString()
-        time_tv.text = time_str
-        startTime()
-        vis()
+            count = 0
+            count_str = count.toString()
+            tv.text = count_str
+            mAuth = FirebaseAuth.getInstance()
+            authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+                val user = firebaseAuth.currentUser
+                if (user != null) {
+                } else {
+                }
 
-        count = 0
-        count_str = count.toString()
-        tv.text = count_str
-        mAuth = FirebaseAuth.getInstance()
-        authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
-            val user = firebaseAuth.currentUser
-            if (user != null) {
-            } else {
             }
-
+        } catch (e: Exception) {
+            Toast.makeText(this@OneMinuteGame, "Игра еще не работает", Toast.LENGTH_SHORT).show()
         }
 /*
         getMaxScore()
@@ -121,36 +125,36 @@ class OneMinuteGame : AppCompatActivity(), View.OnClickListener {
     private fun startTime() {
         Handler().postDelayed({
             if (time_int <= 0) {
-              /*  bt[a]!!.visibility = View.INVISIBLE
-                database = FirebaseDatabase.getInstance()
-                user = mAuth!!.currentUser
-                try {
-                    getMaxScore()
-                    Handler().postDelayed({
-                        try {
-                            if (count_str.toInt() > maxScoreUser.toInt()) {
-                                myRef = this.database.getReference("Учреждения")
-                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                        .child("users").child(user!!.uid).child("oneMinuteGameScore")
-                                myRef!!.setValue(count_str)
-                            }
-                        } catch (e: Exception) {
-                            myRef = database.getReference("Учреждения")
-                                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                    .child("users").child(user!!.uid).child("oneMinuteGameScore")
-                            myRef!!.setValue("0")
-                            if (count_str.toInt() > maxScoreUser.toInt()) {
-                                myRef = this.database.getReference("Учреждения")
-                                        .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                                        .child("users").child(user!!.uid).child("oneMinuteGameScore")
-                                myRef!!.setValue(count_str)
-                            }
-                        }
-                        getMaxScore()
-                        time_tv.text = "Pекорд: $maxScoreUser"
-                    }, 300)
-                } catch (e: Exception) {
-                }*/
+                /*  bt[a]!!.visibility = View.INVISIBLE
+                  database = FirebaseDatabase.getInstance()
+                  user = mAuth!!.currentUser
+                  try {
+                      getMaxScore()
+                      Handler().postDelayed({
+                          try {
+                              if (count_str.toInt() > maxScoreUser.toInt()) {
+                                  myRef = this.database.getReference("Учреждения")
+                                          .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                          .child("users").child(user!!.uid).child("oneMinuteGameScore")
+                                  myRef!!.setValue(count_str)
+                              }
+                          } catch (e: Exception) {
+                              myRef = database.getReference("Учреждения")
+                                      .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                      .child("users").child(user!!.uid).child("oneMinuteGameScore")
+                              myRef!!.setValue("0")
+                              if (count_str.toInt() > maxScoreUser.toInt()) {
+                                  myRef = this.database.getReference("Учреждения")
+                                          .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                                          .child("users").child(user!!.uid).child("oneMinuteGameScore")
+                                  myRef!!.setValue(count_str)
+                              }
+                          }
+                          getMaxScore()
+                          time_tv.text = "Pекорд: $maxScoreUser"
+                      }, 300)
+                  } catch (e: Exception) {
+                  }*/
             } else {
                 time_int--
                 time_str = time_int.toString()

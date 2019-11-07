@@ -26,10 +26,13 @@ class ZvonkiFrag : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         v = inflater.inflate(R.layout.zvonki_fragment, container, false)
+        try{
         mnFrTvFrag = v.findViewById(R.id.mn_fr_tv_frag)
         stTvFrag = v.findViewById(R.id.st_tv_frag)
         getZvonkiTimetable("пн_пт", mnFrTvFrag)
         getZvonkiTimetable("сб", stTvFrag)
+        } catch (e: Exception) {
+        }
         return v
     }
 

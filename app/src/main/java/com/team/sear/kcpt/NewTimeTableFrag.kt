@@ -36,6 +36,7 @@ class NewTimeTableFrag : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         b = DataBindingUtil.inflate(inflater, R.layout.fragment_new_time_table, container, false)
+        try{
         lessons = ArrayList()
 
         auth = FirebaseAuth.getInstance()
@@ -49,7 +50,8 @@ class NewTimeTableFrag : Fragment() {
 
 
         authComplete()
-
+        } catch (e: Exception) {
+        }
         return b.root
     }
 

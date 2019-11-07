@@ -4,10 +4,10 @@
     tools:ignore="MissingDefaultResource">
     <item android:id="@+id/bottom_today_item"
         android:title="На сегодня"
-        android:icon="@mipmap/baseline_home_white_48"/>
+        android:icon="@drawable/baseline_event_note_24"/>
     <item android:id="@+id/bottom_changes_item"
         android:title="Изменения"
-        android:icon="@drawable/baseline_event_note_24" />
+        android:icon="@drawable/changes_icon" />
     <item android:id="@+id/bottom_main_item"
         android:title="Главная"
         android:checked="true"

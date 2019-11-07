@@ -1,0 +1,2114 @@
+[
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_my_material_text_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\my_material_text_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_weather_drawable.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\weather_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_developers.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\activity_developers.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_developers_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\developers_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_perm_identity_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_perm_identity_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\anim\\slide.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_sear_logo.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\sear_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_regbt.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\regbt.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_colorsubgroup1.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\colorsubgroup1.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_textviewbg.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\textviewbg.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_time_table_text_view_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\time_table_text_view_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_newbutton.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\newbutton.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_weather_drawable.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\weather_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_navigate.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\app_bar_navigate.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_widgets_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_widgets_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_changes_icon.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\changes_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bottom_nav_main.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\bottom_nav_main.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_registration.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\registration.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_reg_back2.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\reg_back2.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_activity.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\button.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_fileds.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\fileds.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_recycler_time_table.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\recycler_time_table.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_developers_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\developers_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_nav_main.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\bottom_nav_main.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_changes_fragment.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\changes_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_developers_fragment.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\developers_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\color_bottom_nav_colors.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\color\\bottom_nav_colors.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_navigate.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\nav_header_navigate.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_privacy_polytics.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\activity_privacy_polytics.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_student_icon.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\student_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_background_first.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\splash_background_first.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tt_background_tv.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\tt_background_tv.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tcp_logo.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\tcp_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tcp_logo.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\tcp_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_web_hi_res_512.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\web_hi_res_512.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\anim_aplha_1_0.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\anim\\aplha_1_0.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_news.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_news.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textviewbg.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\textviewbg.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_web_hi_res_512_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\web_hi_res_512_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_news_item_view.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\news_item_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_teacher_icon.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\teacher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_navigate.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\navigate.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\menu_activity_navigate_drawer.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\menu\\activity_navigate_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_room_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_room_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_activity_one_minute_game.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout-v16\\activity_one_minute_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_perm_identity_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_perm_identity_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_changes_frag.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\user_changes_frag.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_splash_background_second.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\splash_background_second.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_menu_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_time_table_for_app.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\select_time_table_for_app.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_background_second.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\splash_background_second.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_teacher_icon.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\teacher_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_num_lesson_drawable.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\num_lesson_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_web_hi_res_512.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\web_hi_res_512.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shape_background.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\shape_background.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_news_item_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\news_item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_student_icon.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\student_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_newbutton.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\newbutton.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_regbt.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\regbt.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_my_material_text_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\my_material_text_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tt_background_tv.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\tt_background_tv.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_navigate.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\content_navigate.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reg_back2.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\reg_back2.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fileds.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\fileds.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_button.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\button.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_background.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\shape_background.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_time_table_text_view_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\time_table_text_view_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registration_new.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\activity_registration_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_person_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_changes_icon.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\changes_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\menu_navigate.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\menu\\navigate.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_home_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_twotone_lens_white_48dp.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\twotone_lens_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_news_item_background.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\news_item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_event_note_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_web_hi_res_512_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\web_hi_res_512_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_widgets_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_widgets_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\anim_slide_second.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\anim\\slide_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bottom_nav_profile.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\bottom_nav_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_new_time_table.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_new_time_table.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_home_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_widgets_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_widgets_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_event_note_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_event_note_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bottom_nav_profile.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\bottom_nav_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorsubgroup1.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\colorsubgroup1.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sear_logo.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\sear_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout-v16_feedback_fragment.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout-v16\\feedback_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_zvonki_fragment.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\zvonki_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\anim_splash_alpha.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\anim\\splash_alpha.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_menu_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_room_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_room_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_home_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_home_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_home_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_room_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_room_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_timetable.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\item_timetable.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_weather.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_num_lesson_drawable.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\num_lesson_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_menu_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_menu_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_room_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_room_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_event_note_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_event_note_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_more.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_colorsubgroup2.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\colorsubgroup2.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_room_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_room_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_perm_identity_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_menu_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_menu_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_person_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_person_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_perm_identity_black_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_perm_identity_black_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_menu_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_menu_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_ic_launcher.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_widgets_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_widgets_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_splash_background_first.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\splash_background_first.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_room_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_room_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_twotone_lens_white_48dp.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\twotone_lens_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_baseline_event_note_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\baseline_event_note_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_room_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_room_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v24_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_baseline_event_note_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_event_note_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_event_note_24.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\baseline_event_note_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_black_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_black_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_person_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_person_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_home_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_home_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_baseline_person_white_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi\\baseline_person_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v24_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_widgets_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_perm_identity_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_perm_identity_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_person_black_48.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_person_black_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_perm_identity_white_18.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_perm_identity_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colorsubgroup2.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\colorsubgroup2.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v24_baseline_home_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi-v24\\baseline_home_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v24_baseline_perm_identity_black_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_perm_identity_black_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_person_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_person_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_baseline_widgets_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_widgets_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v24_baseline_menu_white_36.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi-v24\\baseline_menu_white_36.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\anim_aplha_0_1.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\anim\\aplha_0_1.xml"
+    }
+]

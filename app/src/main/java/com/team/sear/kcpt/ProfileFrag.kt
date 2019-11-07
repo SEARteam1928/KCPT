@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -22,8 +23,8 @@ import ir.mirrajabi.searchdialog.core.SearchResultListener
 
 class ProfileFrag : Fragment(), View.OnClickListener {
     private var v: View? = null
-    private var studentProfileBt: Button? = null
-    private var teacherProfileBt: Button? = null
+    private var studentProfileBt: ImageView? = null
+    private var teacherProfileBt: ImageView? = null
     private var setDateBt: Button? = null
     private var anybodyNameTv: TextView? = null
     var arr: ArrayList<String>? = null
@@ -37,6 +38,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_profile, container, false)
+        try{
         anybodyNameTv = v!!.findViewById(R.id.anybodyNameTv)
         studentProfileBt = v!!.findViewById(R.id.studentProfileBt)
         studentProfileBt!!.setOnClickListener(this)
@@ -47,7 +49,8 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         arr = ArrayList()
         auth = FirebaseAuth.getInstance()
         authComplete()
-
+        } catch (e: Exception) {
+        }
         return v
     }
 

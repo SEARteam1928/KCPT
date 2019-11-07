@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         tools:context=".MoreFrag"
         tools:targetApi="m"
-        android:background="@drawable/reg_back2"
         tools:ignore="UseCompoundDrawables, HardcodedText, ContentDescription">
 
         <ScrollView
@@ -30,10 +29,10 @@
                     android:drawableStart="@drawable/baseline_event_note_24"
                     android:drawablePadding="20dp"
                     android:padding="20dp"
-                    android:layout_marginBottom="2dp"
+                    android:layout_margin="5dp"
                     android:textColor="#FFF"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
+                    android:background="@drawable/my_material_text_background"
                     android:id="@+id/timetableITV"
                     android:text="Расписание"
                     android:textSize="20sp"
@@ -47,9 +46,9 @@
                     android:id="@+id/changesITV"
                     android:padding="20dp"
                     android:textColor="#FFF"
-                    android:layout_marginBottom="2dp"
+                    android:layout_margin="5dp"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
+                    android:background="@drawable/my_material_text_background"
                     android:text="Изменения"
                     android:textSize="20sp" />
 
@@ -60,9 +59,9 @@
                     android:drawablePadding="20dp"
                     android:padding="20dp"
                     android:textColor="#FFF"
-                    android:layout_marginBottom="2dp"
+                    android:layout_margin="5dp"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
+                    android:background="@drawable/my_material_text_background"
                     android:id="@+id/zvonkiITV"
                     android:text="Звонки"
                     android:textSize="20sp" />
@@ -74,9 +73,9 @@
                     android:drawablePadding="20dp"
                     android:id="@+id/weatherITV"
                     android:textColor="#FFF"
-                    android:layout_marginBottom="2dp"
+                    android:layout_margin="5dp"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
+                    android:background="@drawable/my_material_text_background"
                     android:padding="20dp"
                     android:text="Погода"
                     android:textSize="20sp" />
@@ -89,9 +88,9 @@
                     android:padding="20dp"
                     android:visibility="gone"
                     android:textColor="#FFF"
-                    android:layout_marginBottom="2dp"
+                    android:layout_margin="5dp"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
+                    android:background="@drawable/my_material_text_background"
                     android:id="@+id/newsITV"
                     android:text="Новости"
                     android:textSize="20sp" />
@@ -104,8 +103,8 @@
                     android:padding="20dp"
                     android:textColor="#FFF"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
-                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/my_material_text_background"
+                    android:layout_margin="5dp"
                     android:id="@+id/developersITV"
                     android:text="О разработчиках"
                     android:textSize="20sp" />
@@ -118,8 +117,8 @@
                     android:id="@+id/feedbackITV"
                     android:textColor="#FFF"
                     android:drawableTint="#FFF"
-                    android:background="#BF000000"
-                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/my_material_text_background"
+                    android:layout_margin="5dp"
                     android:padding="20dp"
                     android:text="Оставить отзыв"
                     android:textSize="20sp" />

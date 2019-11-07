@@ -38,11 +38,14 @@ class SelectTimeTableForApp : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try{
         setContentView(R.layout.select_time_table_for_app)
         selectTimeTable = SelectTimeTable()
         navigateIntent = Intent(this, Navigate::class.java)
         auth = FirebaseAuth.getInstance()
         arr = ArrayList()
+        } catch (e: Exception) {
+        }
         authComplete()
     }
 

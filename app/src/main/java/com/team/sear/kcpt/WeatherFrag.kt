@@ -20,7 +20,7 @@ class WeatherFrag : Fragment() {
     private lateinit var v: View
     private var result: String? = null
     var weatherStr: String? = null
-    var binding : FragmentWeatherBinding? = null
+    var binding: FragmentWeatherBinding? = null
 
     private lateinit var mt: WeatherTask
 
@@ -33,13 +33,16 @@ class WeatherFrag : Fragment() {
 /*
         v = inflater.inflate(R.layout.fragment_weather, container, false)
 */
+        try {
+            binding = DataBindingUtil.inflate(inflater, R.layout.fragment_weather, container, false)
 
-        binding  = DataBindingUtil.inflate(inflater,R.layout.fragment_weather,container,false)
+            binding!!.weatherText = "Загружаем данные о погоде…"
 
-        binding!!.weatherText = "Загружаем данные о погоде…"
-
-        mt = WeatherTask()
-        mt.execute()
+            mt = WeatherTask()
+            mt.execute()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         return binding!!.root
     }
 

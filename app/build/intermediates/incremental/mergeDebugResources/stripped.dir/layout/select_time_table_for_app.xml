@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reg_back2"
+    tools:context=".timetablefragments.SelectTimeTableForApp">
+
+
+    <ImageView
+        android:id="@+id/searchBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="2px"
+        android:background="@drawable/button"
+        android:padding="20px"
+        android:src="@android:drawable/ic_menu_search" />
+
+    <ScrollView
+        android:id="@+id/groupSVselect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="150sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/studentStatusBt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2px"
+                android:background="@drawable/button"
+                android:fontFamily="monospace"
+                android:padding="20px"
+                android:text="Студент"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:id="@+id/teacherStatusBt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2px"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="2px"
+                android:layout_marginBottom="2px"
+                android:background="@drawable/button"
+                android:fontFamily="monospace"
+                android:padding="20px"
+                android:text="Преподаватель"
+                android:textColor="@color/textColor" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

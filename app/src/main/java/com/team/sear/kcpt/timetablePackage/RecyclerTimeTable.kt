@@ -55,6 +55,7 @@ class RecyclerTimeTable : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.recycler_time_table, container, false)
+        try{
         noDataTv = v.findViewById(R.id.text_no_data)
         ttDownloader = TimeTableInOneDayDownloader()
         lessons = ArrayList()
@@ -80,6 +81,9 @@ class RecyclerTimeTable : Fragment() {
         } catch (e: Exception) {
 
         }*/
+        } catch (e: Exception) {
+            Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
+        }
         return v
     }
 

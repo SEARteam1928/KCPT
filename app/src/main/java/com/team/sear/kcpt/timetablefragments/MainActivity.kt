@@ -34,36 +34,40 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        auth = FirebaseAuth.getInstance()
-        authComplete()
         try {
-            recyclerTimeTable = RecyclerTimeTable()
-            changesFrag = ChangesFrag()
-            moreFrag = MoreFrag()
-            profileFrag = ProfileFrag()
+            auth = FirebaseAuth.getInstance()
+            authComplete()
+            try {
+                recyclerTimeTable = RecyclerTimeTable()
+                changesFrag = ChangesFrag()
+                moreFrag = MoreFrag()
+                profileFrag = ProfileFrag()
 
-            mainFab = findViewById(R.id.mainFab)
+                mainFab = findViewById(R.id.mainFab)
 
+            } catch (e: Exception) {
+                Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
+            }
+
+            try {
+                val ftrans = supportFragmentManager.beginTransaction()
+                ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
+                ftrans.commit()
+            } catch (e: Exception) {
+                Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
+            }
+
+            val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
+            navBottom.setOnNavigationItemSelectedListener(this)
+
+            mainFab.setOnClickListener {
+                val intent = Intent(this@MainActivity, MainActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(this, "Обновляем", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         } catch (e: Exception) {
-            Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
-        }
-
-        try {
-            val ftrans = supportFragmentManager.beginTransaction()
-            ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
-            ftrans.commit()
-        } catch (e: Exception) {
-            Toast.makeText(this@MainActivity, "Неизвестная ошибка!", Toast.LENGTH_SHORT).show()
-        }
-
-        val navBottom = findViewById<BottomNavigationView>(R.id.bottom_nav)
-        navBottom.setOnNavigationItemSelectedListener(this)
-
-        mainFab.setOnClickListener {
-            val intent = Intent(this@MainActivity, MainActivity::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "Обновляем",Toast.LENGTH_SHORT).show()
-            finish()
+            Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_SHORT).show()
         }
     }
     private fun authComplete() {

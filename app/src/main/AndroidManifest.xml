@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.team.sear.kcpt"
-    android:versionCode="17"
-    android:versionName="2.7"
+    android:versionCode="18"
+    android:versionName="2.7.1"
     tools:ignore="GradleOverrides,LockedOrientationActivity">
 
     <application
@@ -14,9 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DevelopersActivity"></activity>
-        <activity android:name=".moreactivities.WeatherActivity" />
-        <activity android:name=".moreactivities.TimetableActivity" />
+        <activity android:name=".DevelopersActivity" />
         <activity android:name=".timetablefragments.MainActivity" />
         <activity android:name=".RegistrationNew" />
         <activity android:name=".PrivacyPolytics" />

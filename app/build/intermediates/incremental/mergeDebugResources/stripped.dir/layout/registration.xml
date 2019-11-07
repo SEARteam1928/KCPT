@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reg_back2"
+    tools:context=".oldclasses.Registration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/loginEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/fileds"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Логин"
+            android:inputType="textMultiLine"
+            android:padding="15px"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="110dp" />
+
+        <EditText
+            android:id="@+id/passwordEd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fileds"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:padding="15px"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor" />
+
+        <CheckBox
+            android:id="@+id/checkSeePrivacyPolytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Соглашаюсь с политикой конфиденциальности" />
+
+        <TextView
+            android:id="@+id/seePrivacyPolytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подробнее о политике..." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/regBt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/regbt"
+                android:fontFamily="monospace"
+                android:padding="20px"
+                android:text="Регистрация"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="405dp" />
+
+            <Button
+                android:id="@+id/signIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:fontFamily="monospace"
+                android:padding="20px"
+                android:text="Вход"
+                android:textColor="#FFF"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="405dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/regTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_marginTop="10sp"
+            android:text="Введите логин \nанглийскими буквами\nс цифрами\nбез пробелов\nи придумайте \nсложный пароль" />
+    </LinearLayout>
+
+
+</RelativeLayout>

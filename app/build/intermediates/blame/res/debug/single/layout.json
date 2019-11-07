@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_weather.xml",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_more.xml",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_new_time_table.xml",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\fragment_new_time_table.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\splash.xml",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\layout\\splash.xml"
+    }
+]

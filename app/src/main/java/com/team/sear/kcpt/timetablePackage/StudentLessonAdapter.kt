@@ -22,7 +22,7 @@ class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, p: Int) {
-
+try{
         holder.roomNum!!.text = lessons[p]!!.roomNum
         holder.lessonNum!!.text = lessons[p]!!.lessonNum
         holder.teacherName!!.text = lessons[p]!!.teacherName
@@ -37,6 +37,8 @@ class StudentLessonAdapter(private val lessons: ArrayList<Lesson?>) : RecyclerVi
             lessons[p]!!.groupOrSubGroup == "allGroup" -> holder.lesson!!.text = lessons[p]!!.lesson
 
         }
+} catch (e: Exception) {
+}
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    android:layout_height="match_parent"
+    tools:context=".timetablefragments.ChangesFrag">
+
+  <WebView
+      android:id="@+id/webChanges"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+</RelativeLayout>
+
+
+
+
+<!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".timetablefragments.ChangesFrag">
+
+    <TextView
+        android:id="@+id/changesLoadTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Загружаем изменения..."
+        android:textSize="20sp" />
+
+    <view
+        android:id="@+id/changesImage_frag"
+        class="uk.co.senab.photoview.PhotoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp" />
+</FrameLayout>-->

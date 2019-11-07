@@ -21,7 +21,8 @@ class TimeTableInOneDayDownloader {
     private var ref: DatabaseReference? = null
 
     fun enable(lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, noDataTv: TextView, auth: FirebaseAuth, user: FirebaseUser){
-        enableDownloader(lessons, day, lessonRecycler, noDataTv, auth,user)
+      try{  enableDownloader(lessons, day, lessonRecycler, noDataTv, auth,user)        } catch (e: Exception) {
+      }
     }
 
     private fun enableDownloader(lessons: ArrayList<Lesson?>, day: String, lessonRecycler: RecyclerView, noDataTv: TextView, auth: FirebaseAuth, user: FirebaseUser) {

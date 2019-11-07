@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reg_back2"
+    tools:context=".timetablefragments.FeedbackFrag">
+
+    <TextView
+        android:id="@+id/feedbackTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25sp"
+        android:background="@drawable/weather_drawable"
+        android:fontFamily="monospace"
+        android:padding="40px"
+        android:text="Загрузка..."
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="250sp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/feedbackEd"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/fileds"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Написать отзыв"
+            android:inputType="textMultiLine"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor" />
+
+        <Button
+            android:id="@+id/sendFeedback"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/regbt"
+            android:fontFamily="monospace"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Отправить"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+
+</RelativeLayout>

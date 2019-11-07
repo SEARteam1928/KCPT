@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="16dp"
+    android:background="@drawable/news_item_background"
+    android:paddingEnd="16dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginBottom="2dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_marginEnd="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginStart="4dp">
+
+    <view
+        android:id="@+id/newsImageView"
+        class="uk.co.senab.photoview.PhotoView"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#FFF"
+        android:text="Заголовок"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/newsDate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="17sp"
+        android:textColor="#FFF"
+        android:text="Дата"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/newsDescription"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="14sp"
+        android:text="Описание"
+        android:textColor="#FFF"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/newsMoreLink"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:background="@drawable/weather_drawable"
+        android:padding="15sp"
+        android:text="Узнать больше..."
+        android:textColor="#FFF"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"/>
+
+    <Button
+        android:id="@+id/newsBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/weather_drawable"
+        android:padding="15sp"
+        android:text="Свернуть"
+        android:textColor="#FFF"/>
+    <WebView
+        android:id="@+id/webNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="WebViewLayout" />
+</LinearLayout>
