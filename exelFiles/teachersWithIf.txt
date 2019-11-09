@@ -1,0 +1,141 @@
+if (teacherName === "Садыков И.Р.") {
+return "СадыковИР";
+}
+if (teacherName === "вакансия") {
+return "вакансия";
+}
+if (teacherName === "Машкина В. А.") {
+return "МашкинаВА";
+}
+if (teacherName === "Тимофеев П. Н.") {
+return "ТимофеевПН";
+}
+if (teacherName === "Ложкина Е. Р.") {
+return "ЛожкинаЕР";
+}
+if (teacherName === "Ужанова Т. Л.") {
+return "УжановаТЛ";
+}
+if (teacherName === "Гейер А. Р.") {
+return "ГейерАР";
+}
+if (teacherName === "Арефьев Е. А.") {
+return "АрефьевЕА";
+}
+if (teacherName === "Никитина И.В.") {
+return "НикитинаИВ";
+}
+if (teacherName === "Айметдинов Б. И.") {
+return "АйметдиновБИ";
+}
+if (teacherName === "Михеева Л. В.") {
+return "МихееваЛВ";
+}
+if (teacherName === "Романенко С. В.") {
+return "РоманенкоСВ";
+}
+if (teacherName === "Кузнецов А. С.") {
+return "КузнецовАС";
+}
+if (teacherName === "Романенко С.М.") {
+return "РоманенкоСМ";
+}
+if (teacherName === "Пушкарев А. Н.") {
+return "ПушкаревАН";
+}
+if (teacherName === "Литус А. А.") {
+return "ЛитусАА";
+}
+if (teacherName === "Новоселов Д.А.") {
+return "НовоселовДА";
+}
+if (teacherName === "Бородина С. В.") {
+return "БородинаСВ";
+}
+if (teacherName === "Дьякова Е.А.") {
+return "ДьяковаЕА";
+}
+if (teacherName === "Гуляев И.П.") {
+return "ГуляевИП";
+}
+if (teacherName === "Калугина С. В.") {
+return "КалугинаСВ";
+}
+if (teacherName === "Шестопалова Е. А.") {
+return "ШестопаловаЕА";
+}
+if (teacherName === "Мокеева А. Г.") {
+return "МокееваАГ";
+}
+if (teacherName === "Мосол С. В.") {
+return "МосолСВ";
+}
+if (teacherName === "Сизова К. Н.") {
+return "СизоваКН";
+}
+if (teacherName === "Просверенникова С. А.") {
+return "ПросверенниковаСА";
+}
+if (teacherName === "Куроедова Т. А.") {
+return "КуроедоваТА";
+}
+if (teacherName === "Посохова М. А.") {
+return "ПосоховаМА";
+}
+if (teacherName === "Сушкова А. А.") {
+return "СушковаАА";
+}
+if (teacherName === "Климович Н. П.") {
+return "КлимовичНП";
+}
+if (teacherName === "Шипунова О. В.") {
+return "ШипуноваОВ";
+}
+if (teacherName === "Горшунова С. В.") {
+return "ГоршуноваСВ";
+}
+if (teacherName === "Ситникова К.И.") {
+return "СитниковаКИ";
+}
+if (teacherName === "Андреева С. Р.") {
+return "АндрееваСР";
+}
+if (teacherName === "Терехов В.И.") {
+return "ТереховВИ";
+}
+if (teacherName === "Пермякова Л. П.") {
+return "ПермяковаЛП";
+}
+if (teacherName === "Бекшенева Г.Х.") {
+return "БекшеневаГХ";
+}
+if (teacherName === "Рагозина Т. М.") {
+return "РагозинаТМ";
+}
+if (teacherName === "Тулина Н. Б.") {
+return "ТулинаНБ";
+}
+if (teacherName === "Вергунова Т. З.") {
+return "ВергуноваТЗ";
+}
+if (teacherName === "Звонарева И. М.") {
+return "ЗвонареваИМ";
+}
+if (teacherName === "Игнатова С. М.") {
+return "ИгнатоваСМ";
+}
+if (teacherName === "Проскурякова А.А.") {
+return "ПроскуряковаАА";
+}
+if (teacherName === "Гурулев И. А.") {
+return "ГурулевИА";
+}
+if (teacherName === "Апхадзе Н. А.") {
+return "АпхадзеНА";
+}
+if (teacherName === "Рашевская С. Ф.") {
+return "РашевскаяСФ";
+}
+if (teacherName === "Полищук А. А.") {
+return "ПолищукАА";
+}

@@ -33,13 +33,12 @@ dic_rooms = {}
 list_timetable = []
 cur_day = 0
 cur_lesson = 0
-def openFiles(groupNameStr):
-	groupName = open(r"C:\Users\User\Desktop\KCPT\exelFiles\\" + groupNameStr + ".txt", "w")
-	return groupName
+
+
 def wr(name, str):
 	name.write(str)
 
-teachers = openFiles("teachers")
+teachers = open("/root/Документы/KCPT/exelFiles/teachers.txt", "w")
 try:
 	file_ini = open("options.ini")
 except:
@@ -153,6 +152,6 @@ for sheet in range(work_book.nsheets):
 
 for e in dic_teachers:
 	print(dic_teachers[e][1])
-	wr(teachers,dic_teachers[e][1]+"\n")
+	teachers.write(dic_teachers[e][1]+"\n")
 	
 teachers.close()

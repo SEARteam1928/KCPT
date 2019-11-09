@@ -266,7 +266,9 @@ function parseDataOnFile(fileName) {
             sendTeacherLesson(lesson, teacherName, dayOfWeek, lessonNum);
             sendTeacherLessonOnAllWeek(lesson, teacherName, dayOfWeek, lessonNum);
 
+/*
             console.log(lesson);
+*/
         }
         if (i === 1) {
             lineName = "subGroup";
@@ -429,7 +431,7 @@ function sendTeacherNameInFirebase(teacherName) {
         .ref("Учреждения")
         .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
         .child("Преподаватели")
-        .child(selectTeacher(teacherName))
+        .child(teacher)
         .set(teacherName);
 }
 
@@ -562,183 +564,145 @@ function selectGroupName() {
 }
 
 function selectTeacher(teacherName) {
-    if (teacherName === "Арефьев Е. А." || teacherName === "Арефьев Е. А. ") {
-        return "ArefyevEA";
+    console.log(teacherName)
+    if (teacherName === "Садыков И.Р.") {
+        return "СадыковИР";
     }
-    if (teacherName === "Лисина Е. В.") {
-        return "LisinaEV";
+    if (teacherName === "вакансия") {
+        return "вакансия";
     }
-    if (teacherName === "Бородина С. В.") {
-        return "BorodinaSV";
-    }
-    if (teacherName === "Лисин А. А.") {
-        return "LisinAA";
-    }
-    if (teacherName === "Калиновская С. А.") {
-        return "KalinovskayaSA";
-    }
-    if (teacherName === "Айзятова Г. Г.") {
-        return "AyzyatovaGG";
-    }
-    if (teacherName === "Голендухина Т. Р.") {
-        return "GolenduhinaTR";
-    }
-    if (teacherName === "Сандакова Д. Н.") {
-        return "SandakovaDN";
-    }
-    if (teacherName === "Чейметова Т. В.") {
-        return "CheymetovaTV";
-    }
-    if (teacherName === "Сахаритова Н. Н.") {
-        return "SaharitovaNN";
-    }
-    if (teacherName === "Вохменцева Т. Н.") {
-        return "VohmencevaTN";
-    }
-    if (teacherName === "Лагохин А. П.") {
-        return "LagohinAP";
-    }
-    if (teacherName === "Бекшенева Г. Х.") {
-        return "BekshenevaGH";
-    }
-    if (teacherName === "Русаков М. Ю.") {
-        return "RusakovMYU";
-    }
-    if (teacherName === "Урусов А. А.") {
-        return "UrusovAA";
-    }
-    if (teacherName === "Нугманов В. Н.") {
-        return "NugmanovVN";
-    }
-    if (teacherName === "Фисенко Е. М.") {
-        return "FisenkoEM";
-    }
-    if (teacherName === "Романенко С. В.") {
-        return "RomanenkoSV";
-    }
-    if (teacherName === "Апхадзе Н. А.") {
-        return "AphadzeNA";
-    }
-    if (teacherName === "Посохова М. А.") {
-        return "PosohovaMA";
-    }
-    if (teacherName === "Мосол С. В.") {
-        return "MosolCV";
-    }
-    if (teacherName === "Шестопалова Е. А.") {
-        return "ShestopalovaEA";
-    }
-    if (teacherName === "Климович Н. П.") {
-        return "KlimovichNP";
-    }
-    if (teacherName === "Сизова К. Н.") {
-        return "SizovaKN";
-    }
-    if (teacherName === "Вторушина Ю. А.") {
-        return "VtorushinaYUA";
-    }
-    if (teacherName === "Калугина С. В.") {
-        return "KaluginaSV";
-    }
-    if (teacherName === "Просверенникова С. А.") {
-        return "ProsverennikovaSA";
-    }
-    if (teacherName === "Михеева Л. В.") {
-        return "MiheevaLV";
-    }
-    if (teacherName === "Куроедова Т. А.") {
-        return "KuroedovaTA";
-    }
-    if (teacherName === "Горшунова С. В.") {
-        return "GorshunovaSV";
-    }
-    if (teacherName === "Шипунова О. В." || teacherName === "Шипунова О.М.") {
-        return "ShipunovaOV";
-    }
-    if (teacherName === "Ужанова Т. Л.") {
-        return "UzhanovaTL";
+    if (teacherName === "Машкина В. А.") {
+        return "МашкинаВА";
     }
     if (teacherName === "Тимофеев П. Н.") {
-        return "TimofeevPN";
+        return "ТимофеевПН";
     }
-    if (teacherName === "Пермякова Л. П.") {
-        return "PermyakovaLP";
+    if (teacherName === "Ложкина Е. Р.") {
+        return "ЛожкинаЕР";
     }
-    if (teacherName === "Рагозина Т. М.") {
-        return "RagozinaTM";
+    if (teacherName === "Ужанова Т. Л.") {
+        return "УжановаТЛ";
     }
-    if (teacherName === "Мухамеджанова З. Б.") {
-        return "MuhamedzhanovaZB";
+    if (teacherName === "Гейер А. Р.") {
+        return "ГейерАР";
     }
-    if (teacherName === "Тулина Н. Б.") {
-        return "TulinaNB";
+    if (teacherName === "Арефьев Е. А.") {
+        return "АрефьевЕА";
     }
-    if (teacherName === "Вергунова Т. З.") {
-        return "VergunovaTZ";
-    }
-    if (teacherName === "Павлова Н. Г.") {
-        return "PavlovaNG";
-    }
-    if (teacherName === "Сушкова А. А.") {
-        return "SushkovaAA";
-    }
-    if (teacherName === "Литвинова А. В.") {
-        return "LitvinovaAV";
-    }
-    if (teacherName === "Норина Н. Н.") {
-        return "NorinaNN";
-    }
-    if (teacherName === "Литус А. А.") {
-        return "LitusAA";
-    }
-    if (teacherName === "Алерская Н. В.") {
-        return "AlerskayaNV";
-    }
-    if (teacherName === "Звонарева И. М.") {
-        return "ZvonarevaIM";
-    }
-    if (teacherName === "Игнатова С. М." || teacherName === "Игнатова С.М.") {
-        return "IgnatovaSM";
-    }
-    if (teacherName === "Рашевская С. Ф.") {
-        return "RashevskayaSF";
-    }
-    if (teacherName === "Байкина И. Л.") {
-        return "BaykinaIL";
-    }
-    if (teacherName === "Гуляев И. П.") {
-        return "GulyaevIP";
-    }
-    if (teacherName === "Полищук А. А.") {
-        return "PolishyukAA";
-    }
-    if (teacherName === "Попов А.Н.") {
-        return "PopovAN";
-    }
-    if (teacherName === "Гейер А.Р.") {
-        return "GeyerAR";
+    if (teacherName === "Никитина И.В.") {
+        return "НикитинаИВ";
     }
     if (teacherName === "Айметдинов Б. И.") {
-        return "AymetdinovBI";
+        return "АйметдиновБИ";
     }
-    if (teacherName === "Гурулев И.А.") {
-        return "GurulyovIA";
+    if (teacherName === "Михеева Л. В.") {
+        return "МихееваЛВ";
     }
-    if (teacherName === "Петров А.М." || teacherName === "Петров А.Н.") {
-        return "PetrovAM";
+    if (teacherName === "Романенко С. В." || teacherName === "Романенко С.М.") {
+        return "РоманенкоСВ";
     }
-    if (teacherName === "Кузнецов А.С.") {
-        return "KuznetsovAS";
+    if (teacherName === "Кузнецов А. С.") {
+        return "КузнецовАС";
     }
-    if (teacherName === "Подковыркина В. Л.") {
-        return "PodkovirkinaVL";
+    if (teacherName === "Пушкарев А. Н.") {
+        return "ПушкаревАН";
     }
-    if (teacherName === "Смирнов А. Г.") {
-        return "SmirnovAG";
+    if (teacherName === "Литус А. А.") {
+        return "ЛитусАА";
     }
-    if (teacherName === "Швецов Е. В.") {
-        return "ShvetsovEV";
-    } else {
+    if (teacherName === "Новоселов Д.А.") {
+        return "НовоселовДА";
+    }
+    if (teacherName === "Бородина С. В.") {
+        return "БородинаСВ";
+    }
+    if (teacherName === "Дьякова Е.А.") {
+        return "ДьяковаЕА";
+    }
+    if (teacherName === "Гуляев И.П.") {
+        return "ГуляевИП";
+    }
+    if (teacherName === "Калугина С. В.") {
+        return "КалугинаСВ";
+    }
+    if (teacherName === "Шестопалова Е. А.") {
+        return "ШестопаловаЕА";
+    }
+    if (teacherName === "Мокеева А. Г.") {
+        return "МокееваАГ";
+    }
+    if (teacherName === "Мосол С. В.") {
+        return "МосолСВ";
+    }
+    if (teacherName === "Сизова К. Н.") {
+        return "СизоваКН";
+    }
+    if (teacherName === "Просверенникова С. А.") {
+        return "ПросверенниковаСА";
+    }
+    if (teacherName === "Куроедова Т. А.") {
+        return "КуроедоваТА";
+    }
+    if (teacherName === "Посохова М. А.") {
+        return "ПосоховаМА";
+    }
+    if (teacherName === "Сушкова А. А.") {
+        return "СушковаАА";
+    }
+    if (teacherName === "Климович Н. П.") {
+        return "КлимовичНП";
+    }
+    if (teacherName === "Шипунова О. В.") {
+        return "ШипуноваОВ";
+    }
+    if (teacherName === "Горшунова С. В.") {
+        return "ГоршуноваСВ";
+    }
+    if (teacherName === "Ситникова К.И.") {
+        return "СитниковаКИ";
+    }
+    if (teacherName === "Андреева С. Р.") {
+        return "АндрееваСР";
+    }
+    if (teacherName === "Терехов В.И.") {
+        return "ТереховВИ";
+    }
+    if (teacherName === "Пермякова Л. П.") {
+        return "ПермяковаЛП";
+    }
+    if (teacherName === "Бекшенева Г.Х.") {
+        return "БекшеневаГХ";
+    }
+    if (teacherName === "Рагозина Т. М.") {
+        return "РагозинаТМ";
+    }
+    if (teacherName === "Тулина Н. Б.") {
+        return "ТулинаНБ";
+    }
+    if (teacherName === "Вергунова Т. З.") {
+        return "ВергуноваТЗ";
+    }
+    if (teacherName === "Звонарева И. М.") {
+        return "ЗвонареваИМ";
+    }
+    if (teacherName === "Игнатова С. М.") {
+        return "ИгнатоваСМ";
+    }
+    if (teacherName === "Проскурякова А.А.") {
+        return "ПроскуряковаАА";
+    }
+    if (teacherName === "Гурулев И. А.") {
+        return "ГурулевИА";
+    }
+    if (teacherName === "Апхадзе Н. А.") {
+        return "АпхадзеНА";
+    }
+    if (teacherName === "Рашевская С. Ф.") {
+        return "РашевскаяСФ";
+    }
+    if (teacherName === "Полищук А. А.") {
+        return "ПолищукАА";
+    }else {
         return "nothing";
     }
 }
