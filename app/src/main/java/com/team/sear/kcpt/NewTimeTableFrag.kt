@@ -36,20 +36,20 @@ class NewTimeTableFrag : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         b = DataBindingUtil.inflate(inflater, R.layout.fragment_new_time_table, container, false)
-        try{
-        lessons = ArrayList()
+        try {
+            lessons = ArrayList()
 
-        auth = FirebaseAuth.getInstance()
-        ttDownloader = TimeTableInOneDayOnAllWeekDownloader()
+            auth = FirebaseAuth.getInstance()
+            ttDownloader = TimeTableInOneDayOnAllWeekDownloader()
 
-        val lessonRecyclerLlm = LinearLayoutManager(context)
+            val lessonRecyclerLlm = LinearLayoutManager(context)
 
-        lessonRecyclerLlm.orientation = LinearLayoutManager.VERTICAL
+            lessonRecyclerLlm.orientation = LinearLayoutManager.VERTICAL
 
-        b.lessonRecyclerAllWeek.layoutManager = lessonRecyclerLlm
+            b.lessonRecyclerAllWeek.layoutManager = lessonRecyclerLlm
 
 
-        authComplete()
+            authComplete()
         } catch (e: Exception) {
         }
         return b.root
@@ -61,8 +61,8 @@ class NewTimeTableFrag : Fragment() {
             if (user != null) {
                 user = firebaseAuth.currentUser
 
-                ttDownloader.enable(lessons, "AllWeek", b.lessonRecyclerAllWeek,  b.textnodataallweek, auth,user!!)
-                Handler().postDelayed({ttDownloader.enable(lessons, "AllWeek", b.lessonRecyclerAllWeek,  b.textnodataallweek, auth,user!!)},500)
+                ttDownloader.enable(lessons, "AllWeek", b.lessonRecyclerAllWeek, b.textnodataallweek, auth, user!!)
+                Handler().postDelayed({ ttDownloader.enable(lessons, "AllWeek", b.lessonRecyclerAllWeek, b.textnodataallweek, auth, user!!) }, 500)
             } else {
                 Toast.makeText(activity, "Вам нужно войти или зарегистрироваться", Toast.LENGTH_SHORT).show()
             }

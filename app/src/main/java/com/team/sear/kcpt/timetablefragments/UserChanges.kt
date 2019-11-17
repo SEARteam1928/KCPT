@@ -1,12 +1,16 @@
 package com.team.sear.kcpt.timetablefragments
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.widget.TextView
 import android.widget.Toast
@@ -18,11 +22,15 @@ import com.team.sear.kcpt.objects.ChangesParser
 
 class UserChanges : Fragment() {
 
+    @SuppressLint("StaticFieldLeak")
     private lateinit var v: View
-    private lateinit var webChanges: WebView
+    @SuppressLint("StaticFieldLeak")
+    private var webChanges: WebView? = null
+    @SuppressLint("StaticFieldLeak")
     private lateinit var userChangesTv: TextView
     private lateinit var changesParser: ChangesParser
     private lateinit var changesHTML: String
+    private lateinit var webSettings: WebSettings
     private var authListener: FirebaseAuth.AuthStateListener? = null
     private lateinit var database: FirebaseDatabase
     private var myRef: DatabaseReference? = null
@@ -38,6 +46,21 @@ class UserChanges : Fragment() {
             changesParser = ChangesParser()
             userChangesTv = v.findViewById(R.id.userChangesTv)
             webChanges = v.findViewById(R.id.userWebChanges)
+            webChanges!!.settings.javaScriptEnabled
+            webChanges!!.settings.builtInZoomControls
+            webChanges!!.settings.supportZoom()
+            webChanges!!.settings.displayZoomControls
+            webChanges!!.settings.loadWithOverviewMode
+            webChanges!!.settings.defaultFixedFontSize = 15
+            webChanges!!.settings.setAppCacheMaxSize(20 * 1024 * 1024)
+            webChanges!!.settings.setAppCachePath(context!!.cacheDir.absolutePath)
+            webChanges!!.settings.allowFileAccess
+            webChanges!!.settings.setAppCacheEnabled(true)
+            webChanges!!.settings.cacheMode = WebSettings.LOAD_DEFAULT
+
+            webSettings = webChanges!!.settings
+            webSettings.defaultTextEncodingName = "utf-8"
+
             mAuth = FirebaseAuth.getInstance()
             authListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
                 val user = firebaseAuth.currentUser
@@ -46,10 +69,10 @@ class UserChanges : Fragment() {
                 }
             }
 
-            if (!ChangesFrag.DetectConnection.checkInternetConnection(this.context)) {
+            if (!DetectConnection.checkInternetConnection(this.context)) {
                 Toast.makeText(context, "Отсутствует подключение!", Toast.LENGTH_SHORT).show()
-                userChangesTv.text = "Отсутствует подключение!"
-            } else {
+                webChanges!!.settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
+            }else {
                 UserChangesParser().execute()
             }
         } catch (e: Exception) {
@@ -58,11 +81,26 @@ class UserChanges : Fragment() {
         return v
     }
 
+    object DetectConnection {
+        fun checkInternetConnection(context: Context?): Boolean {
+
+            val conManager = context!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+            return (conManager.activeNetworkInfo != null
+                    && conManager.activeNetworkInfo!!.isAvailable
+                    && conManager.activeNetworkInfo!!.isConnected)
+        }
+    }
+
     private fun getGroupName() {
         database = FirebaseDatabase.getInstance()
         user = mAuth!!.currentUser
         try {
-            myRef = database.getReference("users").child(user!!.uid).child("group")
+            myRef = database.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("groupOrTeacherName")
             myRef!!.addValueEventListener(
                     object : ValueEventListener {
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -121,14 +159,14 @@ class UserChanges : Fragment() {
             "SHO15091" -> "ШО 15-09-1"
             "SHO15092" -> "ШО 15-09-2"
             else -> {
-                "noChangesOrNotStudent"
+                groupName
             }
         }
     }
 
     @SuppressLint("StaticFieldLeak")
     internal inner class GetGroupName : AsyncTask<String, Void, String>() {
-        @SuppressLint("SetTextI18n")
+        @SuppressLint("SetTextI18n", "WrongThread")
         override fun doInBackground(vararg result: String?): String? {
             return try {
                 changesParser.selectGroup(setGroupName())
@@ -145,7 +183,7 @@ class UserChanges : Fragment() {
 
         override fun onPostExecute(result: String?) {
             try {
-                webChanges.loadData(changesHTML, "text/html; charset=UTF-8", null)
+                webChanges!!.loadDataWithBaseURL(null,changesHTML,"text/html","utf-8",null)
                 userChangesTv.visibility = View.INVISIBLE
             } catch (e: Exception) {
                 userChangesTv.text = "Произошла неизвестная ошибка!"

@@ -8,7 +8,7 @@ class Style {
             "body\n" +
             "{\n" +
             "font-weight: bold;\n" +
-            "background-color: #0077c2;\n" +
+            "background-color: #1faddf;\n" +
             "color: white;\n" +
             "font-size: 16px;\n" +
             "font-family: calibri, sans-serif;\n" +
@@ -35,13 +35,13 @@ class Style {
             ".td1{\n" +
             "}\n" +
             ".td2{\n" +
-            "border-left: 1px solid #0077c2;\n" +
+            "border-left: 1px solid #1faddf;\n" +
             "}\n" +
             ".td3{\n" +
-            "border-left: 1px solid #0077c2;\n" +
+            "border-left: 1px solid #1faddf;\n" +
             "}\n" +
             ".td4{\n" +
-            "border-left: 1px solid #0077c2;\n" +
+            "border-left: 1px solid #1faddf;\n" +
             "}"
 
 }

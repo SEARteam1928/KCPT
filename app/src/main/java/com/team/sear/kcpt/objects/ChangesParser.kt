@@ -20,8 +20,7 @@ class ChangesParser {
 
     @Throws(IOException::class)
     internal fun selectGroup(groupNameStr: String) {
-        val page = getPage("https://docs.google.com/document/d/e/" +
-                "2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
+        val page = getPage("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
 
 
         for(i in page.select("table")[0].select("tr")){
@@ -120,11 +119,24 @@ class ChangesParser {
                 result = html
                 groupSelectInt = 0
             } else {
+                result = page.toString()
+/*
                 result = "<!Doctype html><html><head><style type=\"text/css\">\n$styleStr</style></head><body><p class=\"c23\">Изменений нет! но лучше проверьте, могут быть ошибки))</p><body></html>"
+*/
             }
         } catch (e: Exception) {
+            try {
+
+            }catch (e: Exception){
+                val page = getPage("https://docs.google.com/document/d/e/2PACX-1vS2ehAErYyAWY-cm247Pt4oT2YVAkEMwiYXhFu0pxGexUne1PTWNiWS0ktvlglRQqNpLtolGzJjIlvc/pub")
+                result = page.toString()
+
+            }
             e.printStackTrace()
+            result = "Возникла ошибка, проверьте соединение, перезагрузите приложение или обратитесь к разработчику"
+/*
             result = "<!Doctype html><html><head><style type=\"text/css\">\n</style></head><body><p class=\"c23\">Изменений нет! но лучше проверьте, могут быть ошибки))</p><body></html>"
+*/
         }
     }
 

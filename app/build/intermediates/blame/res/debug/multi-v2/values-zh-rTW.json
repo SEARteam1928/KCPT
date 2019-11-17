@@ -4,13 +4,13 @@
             "outputFile": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-2\\files-2.1\\c84d9c517ebd1da1765c78059fcfa626\\jetified-firebase-messaging-20.0.0\\res\\values-zh-rTW\\values.xml",
+                    "source": "C:\\Users\\User\\.gradle\\caches\\transforms-2\\files-2.1\\c1d56c798e70aaac460860c25d247fbb\\jetified-firebase-messaging-20.0.1\\res\\values-zh-rTW\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
-                        "startOffsets": "209",
+                        "startOffsets": "211",
                         "endColumns": "96",
-                        "endOffsets": "305"
+                        "endOffsets": "307"
                     },
                     "to": {
                         "startLines": "47",

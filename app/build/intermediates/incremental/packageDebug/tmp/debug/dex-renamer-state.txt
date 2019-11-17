@@ -1,4 +1,4 @@
-#Thu Nov 07 17:20:18 YEKT 2019
+#Sun Nov 17 13:23:33 YEKT 2019
 base.0=C\:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

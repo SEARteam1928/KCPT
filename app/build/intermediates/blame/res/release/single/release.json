@@ -132,12 +132,12 @@
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi-v24\\baseline_menu_white_18.png"
     },
     {
-        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_baseline_widgets_white_24.png.flat",
-        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_widgets_white_24.png"
-    },
-    {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\drawable_sear_logo.png.flat",
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\sear_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_baseline_widgets_white_24.png.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-mdpi\\baseline_widgets_white_24.png"
     },
     {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v24_baseline_perm_identity_white_18.png.flat",
@@ -692,6 +692,10 @@
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xhdpi\\baseline_perm_identity_white_36.png"
     },
     {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\drawable-v24_lesson_item_back.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\lesson_item_back.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi-v24_baseline_home_white_36.png.flat",
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-hdpi-v24\\baseline_home_white_36.png"
     },
@@ -898,6 +902,10 @@
     {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi-v24_baseline_event_note_white_48.png.flat",
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi-v24\\baseline_event_note_white_48.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\drawable_lesson_item_back.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\lesson_item_back.xml"
     },
     {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi_baseline_event_note_white_36.png.flat",

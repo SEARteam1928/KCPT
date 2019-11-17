@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/reg_back2"
     tools:context=".timetablefragments.UserChanges">
 
     <WebView
@@ -23,7 +22,7 @@
         android:textSize="17sp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/weather_drawable"
+        android:background="@drawable/my_material_text_background"
         />
 
 </FrameLayout>

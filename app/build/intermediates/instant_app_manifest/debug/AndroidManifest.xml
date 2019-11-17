@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.team.sear.kcpt"
     android:targetSandboxVersion="2"
-    android:versionCode="18"
-    android:versionName="2.7.1" >
+    android:versionCode="19"
+    android:versionName="2.7.2" >
 
     <uses-sdk
         android:minSdkVersion="21"

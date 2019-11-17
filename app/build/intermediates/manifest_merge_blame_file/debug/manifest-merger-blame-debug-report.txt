@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.team.sear.kcpt"
-4    android:versionCode="18"
-5    android:versionName="2.7.1" >
+4    android:versionCode="19"
+5    android:versionName="2.7.2" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
@@ -23,8 +23,8 @@
 14-->[com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\74dd02a9a4945ba632b21c1ed0a880af\play-services-measurement-api-17.2.1\AndroidManifest.xml:24:5-68
 14-->[com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\74dd02a9a4945ba632b21c1ed0a880af\play-services-measurement-api-17.2.1\AndroidManifest.xml:24:22-65
 15    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-15-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:26:5-82
-15-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:26:22-79
+15-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:26:5-82
+15-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:26:22-79
 16    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 16-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\5a051075abde9f6af5c212648b12f0a7\play-services-measurement-17.2.1\AndroidManifest.xml:26:5-110
 16-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\5a051075abde9f6af5c212648b12f0a7\play-services-measurement-17.2.1\AndroidManifest.xml:26:22-107
@@ -121,11 +121,11 @@
 63             but set to not exported to explicitly avoid allowing another app to call it.
 64        -->
 65        <service
-65-->[com.google.firebase:firebase-messaging:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\c84d9c517ebd1da1765c78059fcfa626\jetified-firebase-messaging-20.0.0\AndroidManifest.xml:28:9-34:19
+65-->[com.google.firebase:firebase-messaging:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\c1d56c798e70aaac460860c25d247fbb\jetified-firebase-messaging-20.0.1\AndroidManifest.xml:28:9-34:19
 66            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-66-->[com.google.firebase:firebase-messaging:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\c84d9c517ebd1da1765c78059fcfa626\jetified-firebase-messaging-20.0.0\AndroidManifest.xml:29:13-82
+66-->[com.google.firebase:firebase-messaging:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\c1d56c798e70aaac460860c25d247fbb\jetified-firebase-messaging-20.0.1\AndroidManifest.xml:29:13-82
 67            android:exported="false" >
-67-->[com.google.firebase:firebase-messaging:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\c84d9c517ebd1da1765c78059fcfa626\jetified-firebase-messaging-20.0.0\AndroidManifest.xml:30:13-37
+67-->[com.google.firebase:firebase-messaging:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\c1d56c798e70aaac460860c25d247fbb\jetified-firebase-messaging-20.0.1\AndroidManifest.xml:30:13-37
 68            <intent-filter android:priority="-500" >
 68-->C:\Users\User\Desktop\KCPT\app\src\main\AndroidManifest.xml:46:13-48:29
 69                <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -166,11 +166,11 @@
 87                android:value="com.google.firebase.components.ComponentRegistrar" />
 87-->[com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\74dd02a9a4945ba632b21c1ed0a880af\play-services-measurement-api-17.2.1\AndroidManifest.xml:32:17-82
 88            <meta-data
-88-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:32:13-34:85
+88-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:32:13-34:85
 89                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-89-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:33:17-96
+89-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:33:17-96
 90                android:value="com.google.firebase.components.ComponentRegistrar" />
-90-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:34:17-82
+90-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:34:17-82
 91        </service>
 92
 93        <activity
@@ -198,18 +198,18 @@
 104-->[com.squareup.picasso:picasso:2.71828] C:\Users\User\.gradle\caches\transforms-2\files-2.1\77063f6f2e26d4ee04924c3d1576285b\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 105
 106        <receiver
-106-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:37:9-44:20
+106-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:37:9-44:20
 107            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-107-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:38:13-78
+107-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:38:13-78
 108            android:exported="true"
-108-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:39:13-36
+108-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:39:13-36
 109            android:permission="com.google.android.c2dm.permission.SEND" >
-109-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:40:13-73
+109-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:40:13-73
 110            <intent-filter>
-110-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:41:13-43:29
+110-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:41:13-43:29
 111                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-111-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:42:17-81
-111-->[com.google.firebase:firebase-iid:20.0.0] C:\Users\User\.gradle\caches\transforms-2\files-2.1\6a2896d8e181da27ceb58dee36bde7a8\firebase-iid-20.0.0\AndroidManifest.xml:42:25-78
+111-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:42:17-81
+111-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\User\.gradle\caches\transforms-2\files-2.1\8fdb77a6365e6a723350fafc3a781f74\firebase-iid-20.0.1\AndroidManifest.xml:42:25-78
 112            </intent-filter>
 113        </receiver>
 114

@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     private lateinit var recyclerTimeTable: RecyclerTimeTable
     private lateinit var changesFrag: ChangesFrag
+    private lateinit var userChanges: UserChanges
     private lateinit var moreFrag: MoreFrag
     private lateinit var profileFrag: ProfileFrag
 
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             try {
                 recyclerTimeTable = RecyclerTimeTable()
                 changesFrag = ChangesFrag()
+                userChanges = UserChanges()
                 moreFrag = MoreFrag()
                 profileFrag = ProfileFrag()
 
@@ -84,7 +86,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val ftrans = supportFragmentManager.beginTransaction()
         when (id) {
             R.id.bottom_today_item -> ftrans.replace(R.id.bottom_nav_container, recyclerTimeTable)
+            R.id.bottom_changes_item -> ftrans.replace(R.id.bottom_nav_container, userChanges)
+/*
             R.id.bottom_changes_item -> ftrans.replace(R.id.bottom_nav_container, changesFrag)
+*/
             R.id.bottom_main_item -> ftrans.replace(R.id.bottom_nav_container, moreFrag)
             R.id.bottom_profile_item -> ftrans.replace(R.id.bottom_nav_container, profileFrag)
             else -> {

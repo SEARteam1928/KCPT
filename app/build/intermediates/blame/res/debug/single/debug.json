@@ -1328,6 +1328,10 @@
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxxhdpi\\baseline_room_white_18.png"
     },
     {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_lesson_item_back.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable-v24\\lesson_item_back.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tt_background_tv.xml.flat",
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\tt_background_tv.xml"
     },
@@ -1614,6 +1618,10 @@
     {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_baseline_home_white_18.png.flat",
         "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\mipmap-xxhdpi\\baseline_home_white_18.png"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lesson_item_back.xml.flat",
+        "source": "C:\\Users\\User\\Desktop\\KCPT\\app\\src\\main\\res\\drawable\\lesson_item_back.xml"
     },
     {
         "merged": "C:\\Users\\User\\Desktop\\KCPT\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bottom_nav_profile.png.flat",

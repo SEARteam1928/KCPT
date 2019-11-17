@@ -9,8 +9,8 @@ android {
         applicationId "com.team.sear.kcpt"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 18
-        versionName "2.7.1"
+        versionCode 19
+        versionName "2.7.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -45,7 +45,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:17.2.1'
     implementation 'com.github.chrisbanes.photoview:library:1.2.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha02'
-    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.1'
     implementation 'com.google.firebase:firebase-database:19.2.0'
     implementation 'com.google.firebase:firebase-auth:19.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'

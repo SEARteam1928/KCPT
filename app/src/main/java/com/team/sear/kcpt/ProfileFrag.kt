@@ -38,17 +38,17 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_profile, container, false)
-        try{
-        anybodyNameTv = v!!.findViewById(R.id.anybodyNameTv)
-        studentProfileBt = v!!.findViewById(R.id.studentProfileBt)
-        studentProfileBt!!.setOnClickListener(this)
-        teacherProfileBt = v!!.findViewById(R.id.teacherProfileBt)
-        teacherProfileBt!!.setOnClickListener(this)
-        setDateBt = v!!.findViewById(R.id.setDateBt)
-        setDateBt!!.setOnClickListener(this)
-        arr = ArrayList()
-        auth = FirebaseAuth.getInstance()
-        authComplete()
+        try {
+            anybodyNameTv = v!!.findViewById(R.id.anybodyNameTv)
+            studentProfileBt = v!!.findViewById(R.id.studentProfileBt)
+            studentProfileBt!!.setOnClickListener(this)
+            teacherProfileBt = v!!.findViewById(R.id.teacherProfileBt)
+            teacherProfileBt!!.setOnClickListener(this)
+            setDateBt = v!!.findViewById(R.id.setDateBt)
+            setDateBt!!.setOnClickListener(this)
+            arr = ArrayList()
+            auth = FirebaseAuth.getInstance()
+            authComplete()
         } catch (e: Exception) {
         }
         return v
@@ -74,7 +74,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
                 arr!!.clear()
                 setFeedbackView("Преподаватели")
             }
-            R.id.setDateBt ->{
+            R.id.setDateBt -> {
                 searchDialog(initDate())
             }
             else -> {
@@ -82,18 +82,22 @@ class ProfileFrag : Fragment(), View.OnClickListener {
         }
     }
 
-    private fun sendDay(item: String){
-        database = FirebaseDatabase.getInstance()
-        user = auth!!.currentUser
-        ref = database!!.getReference("Учреждения")
-                .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
-                .child("users")
-                .child(user!!.uid)
-                .child("today")
-        ref!!.setValue(item)
+    private fun sendDay(item: String) {
+        try {
+            database = FirebaseDatabase.getInstance()
+            user = auth!!.currentUser
+            ref = database!!.getReference("Учреждения")
+                    .child("ГАПОУ ТО \"Колледж цифровых и педагогических технологий\"\"")
+                    .child("users")
+                    .child(user!!.uid)
+                    .child("today")
+            ref!!.setValue(item)
+        } catch (e: Exception) {
+
+        }
     }
 
-    private fun updateAnybodyName(){
+    private fun updateAnybodyName() {
         database = FirebaseDatabase.getInstance()
         user = auth!!.currentUser
         ref = database!!.getReference("Учреждения")
@@ -137,15 +141,17 @@ class ProfileFrag : Fragment(), View.OnClickListener {
 
     private fun searchDialog(data: ArrayList<SearchModel>) {
         SimpleSearchDialogCompat(context, "Поиск", "Что вы хотите найти?", null,
-                data, SearchResultListener { baseSearchDialogCompat, item, _ ->
+                data, SearchResultListener { baseSearchDialogCompat, _, _ ->
+/*
             sendDay(item!!.title)
+*/
             intentOnRecycler()
             activity!!.finish()
             baseSearchDialogCompat.dismiss()
         }).show()
     }
 
-    private fun intentOnRecycler(){
+    private fun intentOnRecycler() {
         val intent = Intent(context, MainActivity::class.java)
         startActivity(intent)
     }
@@ -181,6 +187,7 @@ class ProfileFrag : Fragment(), View.OnClickListener {
     private fun getItemIndex(arr: ArrayList<String>): Int {
         return arr.size
     }
+
     private fun initDate(): ArrayList<SearchModel> {
         return ArrayList<SearchModel>().also {
             it.add(SearchModel("Понедельник"))

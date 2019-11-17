@@ -1007,7 +1007,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_navigate">Navigate</string>
     <string name="todo">TODO</string>
-    <string name="version_2_5_4_nversion_code_11">Version: 2.7.1\nVersion code: 18</string>
+    <string name="version_2_5_4_nversion_code_11">Version: 2.7.2\nVersion code: 19</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AndroidThemeColorAccentYellow" ns2:ignore="NewApi">
