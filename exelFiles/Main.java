@@ -11,6 +11,7 @@ public class Main {
             Thread.sleep(2000);
             System.out.println("Deleted!");
 
+/* wget --content-disposition 'https://drive.google.com/uc?export=download&id= -O /timetable.xls -P /home/student/exelFiles */
 
             String downloadExel =
                     "wget --content-disposition " +
